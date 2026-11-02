@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.8.7)  2 NOV 2026 18:18
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.8.7)  2 NOV 2026 18:30
  restricted system commands enabled.
  file:line:error style messages enabled.
 **assignment2_gruppoDJ.tex
@@ -708,6 +708,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+[]\T1/lmr/bx/n/10 Piat-ta-for-me d'ac-
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -716,35 +721,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[3] (c:/Users/playm/IdeaProjects/HCI2026/out/assignment2_gruppoDJ.aux)
+[3]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4] (c:/Users/playm/IdeaProjects/HCI2026/out/assignment2_gruppoDJ.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
 Package rerunfilecheck Info: File `assignment2_gruppoDJ.out' has not changed.
-(rerunfilecheck)             Checksum: 3DC731F6746EFAA84990F0DC214A3342;292.
+(rerunfilecheck)             Checksum: 08CFF44BD560596130A336A5E9D8535C;1274.
 )
 
 Here is how much of LuaTeX's memory you used:
- 15675 strings out of 470118
+ 15692 strings out of 470118
  125129,794899 words of node,token memory allocated
- 568 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 6 glue, 4 kern, 1 glyph, 14 attribute, 57 glue_spec
-, 9 attribute_list, 1 write nodes
-   avail lists: 2:415,3:110,4:33,5:75,6:35,7:912,8:2,9:200,10:9,11:84
- 43778 multiletter control sequences out of 65536+600000
- 65 fonts using 4114055 bytes
- 72i,11n,75p,556b,391s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2025/texmf-
-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/pu
-blic/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><
-c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texm
-f-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/pu
-blic/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb>
-Output written on assignment2_gruppoDJ.pdf (3 pages, 148508 bytes).
+ 560 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 12 attribute, 58 glue_spec
+, 8 attribute_list, 1 write nodes
+   avail lists: 2:975,3:288,4:66,5:246,6:82,7:5262,8:1,9:491,10:9,11:727
+ 43791 multiletter control sequences out of 65536+600000
+ 70 fonts using 4383495 bytes
+ 72i,11n,75p,556b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2025/texmf
+-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2025/texmf-dist/fonts/type1/publi
+c/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:
+/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-
+dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/pub
+lic/lm/lmri10.pfb>
+Output written on assignment2_gruppoDJ.pdf (4 pages, 133670 bytes).
 
-PDF statistics: 76 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 131072)
- 25 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 92 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 131072)
+ 57 words of extra memory for PDF output out of 10000 (max. 100000000)
 
