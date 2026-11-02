@@ -1,17 +1,12 @@
 ===============================================================
 PROMPT 1
 ===============================================================
-
-- che cacchio ho scritto
-
 Devo fare un progetto, scritto in latex, per un corso di human computer interaction.
 Dobbiamo creare personas e user journey per creare un sito basato sugli utenti che lo andranno ad utilizzare. Questo sito si occupa di crowdfounding.
 Iniziamo creando una prima Personas. Quindi inventati una persona fittizia con: nome, ruolo, aggettivo rappresentativo, una sua citazione, cosa fa in una sua giornata tipo, quali sono i suoi bisogni più importanti, come vorrebbe migliorare la propria vita, cosa ostacola il raggiungimento dei suoi obiettivi e quali sono le piattaforme che usa per accedere al sito.
 
 Il pdf che ti incollo è l'analisi di un sito simile che non funziona
-
 --------
-
 
 
 Scheda Persona 1: Marco Rossi
@@ -77,8 +72,6 @@ Piattaforme di accesso
 ===============================================================
 PROMPT 2
 ===============================================================
-- che cacchio ho scritto
-
 Devo fare un progetto, scritto in latex, per un corso di human computer interaction.
 Dobbiamo creare personas e user journey per creare un sito basato sugli utenti che lo andranno ad utilizzare. Questo sito si occupa di crowdfounding.
 Ogni persona deve includere:
@@ -306,4 +299,1008 @@ Competenze digitali medio-basse. Usa WhatsApp, Facebook e la mail. \textit{Zero}
 \end{document}
 
 
+===============================================================
+PROMPT 3
+===============================================================
+Creiamo altre due personas diverse dalle precedenti, ti do un po' di informazioni e poi crea tu: sii creativo, non devono sembrare dei robot creati da un IA, usa informazioni non classiche! Età: 22 e 48, nomi: Luca Ponti e Isabel Marrano, vogliono sostenere dei progetti che gli stanno a cuore su tematiche non ancora trattate e abbastanza di nicchia. Per quanto riguarda la giornata tipo, anche lì, sii creativo e varia molto 
 
+\subsection{Persona 4: Luca Ponti (Sostenitore di Nicchia - Giovane Ricercatore)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.5cm}|p{11.5cm}|}
+\hline
+\textbf{Nome} & Luca Ponti \\ \hline
+\textbf{Età} & 22 anni \\ \hline
+\textbf{Ruolo} & Studente universitario di Biotecnologie Vegetali e fotografo amatoriale \\ \hline
+\textbf{Aggettivo} & Meticoloso \\ \hline
+\textbf{Citazione} & \textit{``Non cerco la solita campagna di massa: voglio scovare micro-progetti dimenticati sulla biodiversità alpina prima che sia troppo tardi.''} \\ \hline
+\textbf{Piattaforme d'accesso} & Smartphone (85\%), Laptop (15\%) \\ \hline
+\end{tabular}
+\caption{Profilo sintetico della Persona 4}
+\label{tab:persona4}
+\end{table}
+
+\subsubsection{Giornata Tipo}
+\begin{itemize}
+    \item \textbf{06:00 -- 07:15:} Sveglia all'alba per un'uscita fotografica in collina o in serra prima delle lezioni, monitorando sul telefono notifiche da forum di settore.
+    \item \textbf{08:30 -- 13:00:} Ore in laboratorio universitario e lezioni; nei minuti di pausa tra un corso e l'altro esplora piattaforme web alla ricerca di progetti scientifici dal basso.
+    \item \textbf{13:30 -- 15:00:} Pranzo disordinato in aula studio mentre catalogando scatti botanici e scambia idee su gruppi Telegram dedicati al micro-fundraising etico.
+    \item \textbf{16:00 -- 19:30:} Studio sul campo o sessioni di editing fotografico; test di nuove app e piattaforme esclusivamente da dispositivi mobili.
+    \item \textbf{21:00 -- 23:30:} Ascolto di podcast indipendenti, ricerca di micro-cause da supportare con piccole quote mensili e messaggistica con altri appassionati.
+\end{itemize}
+
+\subsubsection{Bisogni Principali}
+\begin{enumerate}
+    \item \textbf{Filtri di ricerca iper-specifici:} Possibilità di isolare campagne su tematiche di nicchia (es. tutela di specie vegetali rare, bio-archivi digitali) senza perdersi nei grandi trend.
+    \item \textbf{Trasparenza scientifica e aggiornamenti sul campo:} Ricevere brevi report o diari di bordo direttamente dai creatori del progetto per vedere come viene impiegato anche un piccolo contributo.
+    \item \textbf{Interfaccia Mobile-First snella:} Esperienza d'uso istantanea e senza attriti da smartphone, adatta a chi naviga in mobilità o nei momenti di pausa rapida.
+    \item \textbf{Community verticale:} Spazi di discussione o contatto diretto con i creatori per porre domande tecniche prima di effettuare la donazione.
+\end{enumerate}
+
+\subsubsection{Obiettivi di Miglioramento Personale}
+\begin{itemize}
+    \item Creare una rete di contatti nell'ambito della ricerca scientifica indipendente ed etobotanica.
+    \item Imparare a valutare la sostenibilità reale e il rigore scientifico di un progetto prima di finanziarlo.
+    \item Documentare e dare visibilità mediatica a cause di nicchia altrimenti trascurate dai grandi media.
+\end{itemize}
+
+\subsubsection{Dubbi, difficoltà e possibili ostacoli}
+\begin{itemize}
+    \item \textbf{Superficialità dei contenuti:} Frustrazione verso piattaforme che mettono in vetrina solo cause ad alto impatto emotivo ma prive di sostanza tecnica.
+    \item \textbf{Budget limitato ma frequente:} Impossibilità di effettuare grandi donazioni in una sola volta, con preferenza per micro-sostegni ricorrenti senza commissioni nascoste.
+    \item \textbf{Diffidenza sulle metriche d'impatto:} Timore che le raccolte fondi non rendano conto dei risultati concreti sul lungo periodo.
+\end{itemize}
+
+\subsection{Persona 5: Isabel Marrano (Sostenitrice di Nicchia - Restauratrice e Curatrice)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.5cm}|p{11.5cm}|}
+\hline
+\textbf{Nome} & Isabel Marrano \\ \hline
+\textbf{Età} & 48 anni \\ \hline
+\textbf{Ruolo} & Restauratrice di beni librari e consulente per collezioni private \\ \hline
+\textbf{Aggettivo} & Esigente \\ \hline
+\textbf{Citazione} & \textit{``Mi appassiona salvare le tecniche artigianali in via d'estinzione: finanzio solo chi dimostra vera perizia e rispetta le radici culturali di un territorio.''} \\ \hline
+\textbf{Piattaforme d'accesso} & Desktop/Laptop (75\%), Tablet/Smartphone (25\%) \\ \hline
+\end{tabular}
+\caption{Profilo sintetico della Persona 5}
+\label{tab:persona5}
+\end{table}
+
+\subsubsection{Giornata Tipo}
+\begin{itemize}
+    \item \textbf{07:00 -- 08:30:} Colazione lenta senza dispositivi digitali, seguita da una passeggiata nel quartiere e sosta nella bottega del caffè locale.
+    \item \textbf{09:00 -- 13:30:} Lavoro concentrato nel laboratorio di restauro: manipolazione di materiali antichi, legature a mano e perizie tecniche senza interruzioni tecnologiche.
+    \item \textbf{14:30 -- 17:00:} Appuntamenti con clienti, sopralluoghi in archivi o visite a mostre indipendenti di artigianato artistico.
+    \item \textbf{17:30 -- 19:30:} Sessione al computer nello studio: risposte a e-mail di lavoro e navigazione su portali culturali e di crowdfunding d'arte.
+    \item \textbf{21:00 -- 23:00:} Lettura di saggi, ascolto di musica vinile e discussione su forum specialistici su come preservare mestieri storici in pericolo.
+\end{itemize}
+
+\subsubsection{Bisogni Principali}
+\begin{enumerate}
+    \item \textbf{Dettaglio e approfondimento formale:} Schede progetto ricche di documentazione storica, foto ad alta risoluzione e spiegazioni sui metodi di lavoro adottati.
+    \item \textbf{Sostegno a lungo termine per l'artigianato artistico:} Una sezione dedicata alla conservazione del patrimonio immateriale, al recupero di vecchie manifatture e al design sostenibile di nicchia.
+    \item \textbf{Ricompense tangibili e di qualità:} Preferenza per sistemi di ricompensa che offrano manufatti autentici, edizioni limitate o inviti ad workshop dedicati.
+    \item \textbf{Navigazione desktop strutturata:} Un'interfaccia ampia, elegante e priva di notifiche invasive o layout caotici.
+\end{enumerate}
+
+\subsubsection{Obiettivi di Miglioramento Personale}
+\begin{itemize}
+    \item Contribuire attivamente alla trasmissione dei mestieri d'arte tradizionali alle nuove generazioni.
+    \item Costruire una collezione personale di oggetti e pubblicazioni ad alto valore etico e artigianale.
+    \item Utilizzare le proprie risorse finanziarie per sostenere un'economia della qualità contrapposta alla produzione di massa.
+\end{itemize}
+
+\subsubsection{Dubbi, difficoltà e possibili ostacoli}
+\begin{itemize}
+    \item \textbf{Diffidenza verso l'improvvisazione:} Riluttanza a sostenere progetti che mostrano una scarsa pianificazione tecnica o un approccio puramente commerciale.
+    \item \textbf{Poca pazienza per interfacce confuse:} Abbandono rapido del sito se il processo di pagamento richiede troppi passaggi o se l'estetica risulta sciatta.
+    \item \textbf{Mancanza di garanzie sulle ricompense:} Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente o realizzate con materiali di scarso valore.
+\end{itemize}
+
+===============================================================
+PROMPT 4
+===============================================================
+Unisci tutte e 5 le Personas in un unico file LaTeX completo e ben formattato.
+% ====================================================================
+% RACCOLTA COMPLETA DELLE PERSONAS
+% ====================================================================
+
+\subsection{Persona 1: Diego Parini (Progettista / Creator)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.5cm}|p{11.5cm}|}
+\hline
+\textbf{Nome} & Diego Parini \\ \hline
+\textbf{Età} & 29 anni \\ \hline
+\textbf{Ruolo} & Coordinatore di Progetto presso un'associazione no-profit \\ \hline
+\textbf{Aggettivo} & Organizzatore \\ \hline
+\textbf{Citazione} & \textit{``Voglio trasformare le idee sociali della mia comunità in progetti concreti, ma la piattaforma non deve farmi perdere tempo con errori o navigazioni confuse.''} \\ \hline
+\textbf{Piattaforme d'accesso} & Desktop/Laptop (60\%), Smartphone (40\%) \\ \hline
+\end{tabular}
+\caption{Profilo sintetico della Persona 1}
+\label{tab:persona1}
+\end{table}
+
+\subsubsection{Giornata Tipo}
+\begin{itemize}
+    \item \textbf{07:30 -- 08:30:} Controllo rapido di e-mail e notifiche dallo smartphone durante il tragitto sui mezzi pubblici.
+    \item \textbf{09:00 -- 12:00:} Coordinamento operativo delle attività dell'associazione e gestione dei volontari.
+    \item \textbf{13:00 -- 14:00:} Pausa pranzo in compagnia dei colleghi, con consultazione rapida di social media e notizie.
+    \item \textbf{15:00 -- 18:00:} Gestione dei canali di comunicazione, caricamento materiali e risposte ai sostenitori.
+    \item \textbf{19:00 -- 22:30:} Cena e tempo libero con la famiglia, con occasionali controlli di e-mail e notifiche.
+\end{itemize}
+
+\subsubsection{Bisogni Principali}
+\begin{enumerate}
+    \item \textbf{Trasparenza ed efficacia:} Raggiungere l'obiettivo economico stabilito tramite un canale affidabile e tracciabile.
+    \item \textbf{Flusso di lavoro semplice:} Un processo chiaro e guidato per la creazione, gestione e pubblicazione della campagna.
+    \item \textbf{Chiarezza informativa:} Accesso immediato a informazioni su formazione, partner, commissioni e funzionamento del servizio.
+    \item \textbf{Usabilità multi-dispositivo:} Esperienza fluida per gestire la campagna da PC e monitorare i progressi via smartphone.
+\end{enumerate}
+
+\subsubsection{Obiettivi di Miglioramento Personale}
+\begin{itemize}
+    \item Ridurre i tempi morti dovuti a burocrazia o problemi di usabilità dell'interfaccia.
+    \item Massimizzare la conversione delle visite in donazioni grazie a un layout chiaro ed efficace.
+    \item Sviluppare competenze pratiche sul crowdfunding e sul fundraising tramite sezioni formative integrate.
+\end{itemize}
+
+\subsubsection{Dubbi, difficoltà e possibili ostacoli}
+\begin{itemize}
+    \item \textbf{Mancanza di tempo:} Difficoltà nel seguire procedure complesse o poco chiare durante l'orario lavorativo.
+    \item \textbf{Diffidenza dei sostenitori:} Timore che l'interfaccia di pagamento non sia abbastanza intuitiva o sicura per i donatori meno esperti.
+    \item \textbf{Limiti tecnici:} Paura di commettere errori irreversibili durante la fase di bozza o pubblicazione del progetto.
+\end{itemize}
+
+
+\subsection{Persona 2: Mirko Falletti (Sostenitore / Donatore)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.5cm}|p{11.5cm}|}
+\hline
+\textbf{Nome} & Mirko Falletti \\ \hline
+\textbf{Età} & 65 anni \\ \hline
+\textbf{Ruolo} & Ex militare ora in pensione \\ \hline
+\textbf{Aggettivo} & Inflessibile \\ \hline
+\textbf{Citazione} & \textit{``Vivi per il tuo paese e vivrai per sempre.''} \\ \hline
+\textbf{Piattaforme d'accesso} & Desktop/Laptop (80\%), Smartphone (20\%) \\ \hline
+\end{tabular}
+\caption{Profilo sintetico della Persona 2}
+\label{tab:persona2}
+\end{table}
+
+\subsubsection{Giornata Tipo}
+\begin{itemize}
+    \item \textbf{07:30 -- 08:30:} Lettura notizie e controllo e-mail dal PC fisso durante la colazione.
+    \item \textbf{09:00 -- 13:00:} Tempo dedicato alla famiglia, supporto ai figli e attività con i nipoti.
+    \item \textbf{14:00 -- 16:00:} Riposo pomeridiano e lettura.
+    \item \textbf{18:00 -- 20:00:} Attività fisica all'aperto e cura del benessere personale.
+    \item \textbf{21:00 -- 22:30:} Visione di documentari o film in compagnia della moglie e consultazione serale del PC.
+\end{itemize}
+
+\subsubsection{Bisogni Principali}
+\begin{enumerate}
+    \item \textbf{Trasparenza e direttezza:} Donare e consultare i progetti senza distrazioni, pubblicità aggressive o passaggi superflui.
+    \item \textbf{Leggibilità ed essenzialità:} Testi ad alto contrasto, font ben visibili e una navigazione lineare e priva di termini troppo tecnici.
+    \item \textbf{Garanzia di tracciabilità:} Avere la certezza assoluta di dove vadano a finire i fondi destinati alle cause supportate.
+\end{enumerate}
+
+\subsubsection{Obiettivi di Miglioramento Personale}
+\begin{itemize}
+    \item Dedicare tempo di qualità alla famiglia recuperando gli anni trascorsi in servizio.
+    \item Contribuire attivamente a cause sociali per restituire valore alla comunità dopo l'esperienza militare.
+    \item Familiarizzare con strumenti digitali moderni senza sentirsi sopraffatto dalla tecnologia.
+\end{itemize}
+
+\subsubsection{Dubbi, difficoltà e possibili ostacoli}
+\begin{itemize}
+    \item \textbf{Barriere di accessibilità:} Elementi grafici troppo piccoli o interfacce troppo affollate che rendono faticosa la lettura.
+    \item \textbf{Sospetto sulle transazioni online:} Esitazione nell'inserire dati bancari su piattaforme che non mostrano chiaramente standard di sicurezza.
+    \item \textbf{Terminologia complessa:} Difficoltà nel comprendere termini inglesi o gergo tecnico non spiegato chiaramente.
+\end{itemize}
+
+
+\subsection{Persona 3: Alessandra Mazzoli (Attivista / Promotrice)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.5cm}|p{11.5cm}|}
+\hline
+\textbf{Nome} & Alessandra Mazzoli \\ \hline
+\textbf{Età} & 35 anni \\ \hline
+\textbf{Ruolo} & Attivista ambientale ed ecologista \\ \hline
+\textbf{Aggettivo} & Empatica \\ \hline
+\textbf{Citazione} & \textit{``Liberiamo i nostri mari dalla plastica, un gesto alla volta.''} \\ \hline
+\textbf{Piattaforme d'accesso} & Smartphone (70\%), Desktop/Laptop (30\%) \\ \hline
+\end{tabular}
+\caption{Profilo sintetico della Persona 3}
+\label{tab:persona3}
+\end{table}
+
+\subsubsection{Giornata Tipo}
+\begin{itemize}
+    \item \textbf{08:30 -- 09:30:} Colazione rapida, risveglio muscolare e controllo dei feed social legati all'ambiente.
+    \item \textbf{10:00 -- 12:00:} Ricerca di campagne ecologiche in linea con i suoi valori e condivisione di contenuti sui canali social.
+    \item \textbf{13:00 -- 14:00:} Pausa pranzo condivisa con altri volontari e sostenitori locali.
+    \item \textbf{15:00 -- 18:00:} Sensibilizzazione sul campo nelle piazze, distribuzione di materiale informativo e condivisione di link tramite QR Code.
+    \item \textbf{19:00 -- 22:30:} Cena, risposta alle interazioni online e ricerca di nuovi progetti green da sostenere o promuovere.
+\end{itemize}
+
+\subsubsection{Bisogni Principali}
+\begin{enumerate}
+    \item \textbf{Condivisione rapida e social:} Strumenti integrati per condividere istantaneamente le campagne su social media e tramite QR Code dal vivo.
+    \item \textbf{Inclusività e impatto reale:} Piattaforma che valorizzi cause ecologiche e progetti ad alto impatto sociale ed etico.
+    \item \textbf{Incentivi alla sostenibilità:} Accesso facilitato a informazioni su finanziamenti o iniziative dedicate allo sviluppo di prodotti eco-compatibili.
+    \item \textbf{Abbattimento delle barriere:} Un canale di comunicazione inclusivo che abbatta i pregiudizi e coinvolga persone di diverse estrazioni culturali.
+\end{enumerate}
+
+\subsubsection{Obiettivi di Miglioramento Personale}
+\begin{itemize}
+    \item Ampliare la portata delle sue battaglie ambientali coinvolgendo anche i più scettici.
+    \item Promuovere l'adozione di piccoli gesti quotidiani e prodotti sostenibili a tutela dell'ecosistema.
+    \item Mantenere costanza e resilienza di fronte al disinteresse o alla lentezza dei cambiamenti sociali.
+\end{itemize}
+
+\subsubsection{Dubbi, difficoltà e possibili ostacoli}
+\begin{itemize}
+    \item \textbf{Greenwashing:} Paura di sostenere o promuovere progetti che non siano autenticamente ecologici o trasparenti.
+    \item \textbf{Frizione nella condivisione dal vivo:} Difficoltà nel far accedere rapidamente le persone incontrate per strada se la pagina mobile della campagna è lenta o macchinosa.
+    \item \textbf{Saturazione di notizie:} Rischio di sentirsi sopraffatta o scoraggiata dalla mole di emergenze ambientali non affrontate adeguatamente.
+\end{itemize}
+
+
+\subsection{Persona 4: Luca Ponti (Sostenitore di Nicchia)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.5cm}|p{11.5cm}|}
+\hline
+\textbf{Nome} & Luca Ponti \\ \hline
+\textbf{Età} & 22 anni \\ \hline
+\textbf{Ruolo} & Studente universitario di Biotecnologie Vegetali e fotografo amatoriale \\ \hline
+\textbf{Aggettivo} & Meticoloso \\ \hline
+\textbf{Citazione} & \textit{``Non cerco la solita campagna di massa: voglio scovare micro-progetti dimenticati sulla biodiversità alpina prima che sia troppo tardi.''} \\ \hline
+\textbf{Piattaforme d'accesso} & Smartphone (85\%), Laptop (15\%) \\ \hline
+\end{tabular}
+\caption{Profilo sintetico della Persona 4}
+\label{tab:persona4}
+\end{table}
+
+\subsubsection{Giornata Tipo}
+\begin{itemize}
+    \item \textbf{06:00 -- 07:15:} Sveglia all'alba per un'uscita fotografica in collina o in serra prima delle lezioni, monitorando sul telefono notifiche da forum di settore.
+    \item \textbf{08:30 -- 13:00:} Ore in laboratorio universitario e lezioni; nei minuti di pausa tra un corso e l'altro esplora piattaforme web alla ricerca di progetti scientifici dal basso.
+    \item \textbf{13:30 -- 15:00:} Pranzo disordinato in aula studio mentre catalogando scatti botanici e scambia idee su gruppi Telegram dedicati al micro-fundraising etico.
+    \item \textbf{16:00 -- 19:30:} Studio sul campo o sessioni di editing fotografico; test di nuove app e piattaforme esclusivamente da dispositivi mobili.
+    \item \textbf{21:00 -- 23:30:} Ascolto di podcast indipendenti, ricerca di micro-cause da supportare con piccole quote mensili e messaggistica con altri appassionati.
+\end{itemize}
+
+\subsubsection{Bisogni Principali}
+\begin{enumerate}
+    \item \textbf{Filtri di ricerca iper-specifici:} Possibilità di isolare campagne su tematiche di nicchia (es. tutela di specie vegetali rare, bio-archivi digitali) senza perdersi nei grandi trend.
+    \item \textbf{Trasparenza scientifica e aggiornamenti sul campo:} Ricevere brevi report o diari di bordo direttamente dai creatori del progetto per vedere come viene impiegato anche un piccolo contributo.
+    \item \textbf{Interfaccia Mobile-First snella:} Esperienza d'uso istantanea e senza attriti da smartphone, adatta a chi naviga in mobilità o nei momenti di pausa rapida.
+    \item \textbf{Community verticale:} Spazi di discussione o contatto diretto con i creatori per porre domande tecniche prima di effettuare la donazione.
+\end{enumerate}
+
+\subsubsection{Obiettivi di Miglioramento Personale}
+\begin{itemize}
+    \item Creare una rete di contatti nell'ambito della ricerca scientifica indipendente ed etobotanica.
+    \item Imparare a valutare la sostenibilità reale e il rigore scientifico di un progetto prima di finanziarlo.
+    \item Documentare e dare visibilità mediatica a cause di nicchia altrimenti trascurate dai grandi media.
+\end{itemize}
+
+\subsubsection{Dubbi, difficoltà e possibili ostacoli}
+\begin{itemize}
+    \item \textbf{Superficialità dei contenuti:} Frustrazione verso piattaforme che mettono in vetrina solo cause ad alto impatto emotivo ma prive di sostanza tecnica.
+    \item \textbf{Budget limitato ma frequente:} Impossibilità di effettuare grandi donazioni in una sola volta, con preferenza per micro-sostegni ricorrenti senza commissioni nascoste.
+    \item \textbf{Diffidenza sulle metriche d'impatto:} Timore che le raccolte fondi non rendano conto dei risultati concreti sul lungo periodo.
+\end{itemize}
+
+
+\subsection{Persona 5: Isabel Marrano (Sostenitrice di Nicchia)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.5cm}|p{11.5cm}|}
+\hline
+\textbf{Nome} & Isabel Marrano \\ \hline
+\textbf{Età} & 48 anni \\ \hline
+\textbf{Ruolo} & Restauratrice di beni librari e consulente per collezioni private \\ \hline
+\textbf{Aggettivo} & Esigente \\ \hline
+\textbf{Citazione} & \textit{``Mi appassiona salvare le tecniche artigianali in via d'estinzione: finanzio solo chi dimostra vera perizia e rispetta le radici culturali di un territorio.''} \\ \hline
+\textbf{Piattaforme d'accesso} & Desktop/Laptop (75\%), Tablet/Smartphone (25\%) \\ \hline
+\end{tabular}
+\caption{Profilo sintetico della Persona 5}
+\label{tab:persona5}
+\end{table}
+
+\subsubsection{Giornata Tipo}
+\begin{itemize}
+    \item \textbf{07:00 -- 08:30:} Colazione lenta senza dispositivi digitali, seguita da una passeggiata nel quartiere e sosta nella bottega del caffè locale.
+    \item \textbf{09:00 -- 13:30:} Lavoro concentrato nel laboratorio di restauro: manipolazione di materiali antichi, legature a mano e perizie tecniche senza interruzioni tecnologiche.
+    \item \textbf{14:30 -- 17:00:} Appuntamenti con clienti, sopralluoghi in archivi o visite a mostre indipendenti di artigianato artistico.
+    \item \textbf{17:30 -- 19:30:} Sessione al computer nello studio: risposte a e-mail di lavoro e navigazione su portali culturali e di crowdfunding d'arte.
+    \item \textbf{21:00 -- 23:00:} Lettura di saggi, ascolto di musica vinile e discussione su forum specialistici su come preservare mestieri storici in pericolo.
+\end{itemize}
+
+\subsubsection{Bisogni Principali}
+\begin{enumerate}
+    \item \textbf{Dettaglio e approfondimento formale:} Schede progetto ricche di documentazione storica, foto ad alta risoluzione e spiegazioni sui metodi di lavoro adottati.
+    \item \textbf{Sostegno a lungo termine per l'artigianato artistico:} Una sezione dedicata alla conservazione del patrimonio immateriale, al recupero di vecchie manifatture e al design sostenibile di nicchia.
+    \item \textbf{Ricompense tangibili e di qualità:} Preferenza per sistemi di ricompensa che offrano manufatti autentici, edizioni limitate o inviti ad workshop dedicati.
+    \item \textbf{Navigazione desktop strutturata:} Un'interfaccia ampia, elegante e priva di notifiche invasive o layout caotici.
+\end{enumerate}
+
+\subsubsection{Obiettivi di Miglioramento Personale}
+\begin{itemize}
+    \item Contribuire attivamente alla trasmissione dei mestieri d'arte tradizionali alle nuove generazioni.
+    \item Collezionare oggetti, pubblicazioni ed edizioni speciali ad alto valore etico e artigianale.
+    \item Utilizzare le proprie risorse finanziarie per sostenere un'economia della qualità contrapposta alla produzione di massa.
+\end{itemize}
+
+\subsubsection{Dubbi, difficoltà e possibili ostacoli}
+\begin{itemize}
+    \item \textbf{Diffidenza verso l'improvvisazione:} Riluttanza a sostenere progetti che mostrano una scarsa pianificazione tecnica o un approccio puramente commerciale.
+    \item \textbf{Poca pazienza per interfacce confuse:} Abbandono rapido del sito se il processo di pagamento richiede troppi passaggi o se l'estetica risulta sciatta.
+    \item \textbf{Mancanza di garanzie sulle ricompense:} Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente o realizzate con materiali di scarso valore.
+\end{itemize}
+
+
+===============================================================
+PROMPT 5
+===============================================================
+Ora basandoti sulla personas 1, crea uno user journey inserendo:
+- obiettivo della persona;
+- azioni svolte;
+- touchpoint, cioè punti di contatto con il sito o con altri canali;
+- informazioni necessarie;
+- pensieri ed emozioni ipotizzati;
+- difficoltà o dubbi;
+- opportunità di miglioramento da tradurre nel progetto. Mi raccomando, agisci come prima, sii creativo e non aver paura di uscire dagli schemi con l'inventiva
+
+\subsection{User Journey: Diego Parini (L'ideazione e il lancio di una campagna civica)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{Fase del Percorso} & \textbf{Dettagli dello User Journey} \\ \hline
+\hline
+\textbf{1. Obiettivo della Persona} & Trovare uno spazio digitale affidabile e intuitivo per lanciare la raccolta fondi del nuovo progetto di orti urbani comunitari, senza perdere ore in configurazioni ostiche. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Navigazione dal cellulare sulla piattaforma mentre è in piedi sul tram (ore 08:00).
+    \item Lettura rapida della sezione ``Come funziona'' e delle FAQ sulle commissioni.
+    \item Apertura di una bozza di progetto inserendo titolo e prime descrizioni.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Smartphone (browser mobile della piattaforma).
+    \item Banner promozionali sui social media di un'altra associazione amica.
+    \item Sezione FAQ e termini di servizio del sito.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Costi di gestione, trattenute e modalità di prelievo dei fondi.
+    \item Requisiti legali per aprire una campagna come no-profit.
+    \item Semplicità e velocità del processo di onboarding iniziale.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Ho pochissimo tempo prima di arrivare in ufficio, svediamo se questo sito è davvero così semplice come dicono o se devo mettermi col pc fisso stasera... Spero non chiedano diecimila documenti subito.''} (Curiosità mista a impazienza). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Interfaccia mobile leggermente compressa nella visualizzazione delle tabelle dei costi.
+    \item Timore di fare passaggi falsi non potendo testare la bozza in anteprima immediata.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Onboarding rapido guidato:} Introdurre un assistente virtuale passo-passo (wizard) ottimizzato per mobile e un calcolatore di costi trasparente e visibile fin dalla prima schermata. \\ \hline
+\hline
+\textbf{2. Obiettivo della Persona} & Strutturare la campagna caricando contenuti multimediali efficaci, storie coinvolgenti e obiettivi di budget chiari per i futuri donatori. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Passaggio al PC in ufficio (ore 15:30) per caricare foto ad alta risoluzione e il video di presentazione.
+    \item Stesura della storia del progetto e impostazione dei diversi livelli di ricompensa/donazione.
+    \item Salvataggio della bozza e condivisione del link privato con il board dell'associazione per un parere rapido.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Dashboard di creazione campagna da Desktop.
+    \item Servizio di cloud storage locale per recuperare le immagini.
+    \item Chat interna o canale di messaggistica con il team di lavoro.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Suggerimenti di scrittura persuasiva (storytelling) integrati nella pagina.
+    \item Formati e limiti di peso accettati per foto e video.
+    \item Anteprima fedele di come apparirà la pagina sia su PC che su smartphone.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Il testo rende bene, ma ho paura che il video sia troppo pesante e non si carichi. Voglio che la pagina ispiri fiducia immediata a chi arriva dai nostri social.''} (Concentrazione, senso di responsabilità). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Mancanza di un feedback visivo immediato sulla formattazione del testo descrittivo.
+    \item Dubbio su come strutturare i 'tier' di donazione per renderli appetibili.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Modelli e suggerimenti intelligenti (Smart Templates):} Integrare sezioni pre-compilate e consigli contestuali basati su campagne di successo simili per guidare il progettista nella stesura. \\ \hline
+\hline
+\textbf{3. Obiettivo della Persona} & Verificare l'affidabilità della piattaforma e completare la validazione formale prima di schiacciare il tasto di pubblicazione definitiva. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Invio della richiesta di revisione al team di moderazione della piattaforma.
+    \item Lettura delle linee guida sulla sicurezza dei pagamenti da mostrare ai sostenitori diffidenti.
+    \item Controllo dello stato della pratica tramite le notifiche ricevute via e-mail.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Casella di posta elettronica (notifiche di stato).
+    \item Sezione centro assistenza / ticket di supporto della piattaforma.
+    \item Pagina di riepilogo pre-pubblicazione.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Tempistiche certe di approvazione della campagna (es. ``entro 24 ore'').
+    \item Contatti diretti o chat con un operatore in caso di intoppi burocratici.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Spero che i controlli non vadano per le lunghe, abbiamo pianificato la conferenza stampa per giovedì e il link deve essere attivo per forza!'''} (Ansia da scadenza, trepidazione). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Sensazione di 'scatola nera' durante l'attesa dell'approvazione senza un tracciamento chiaro in tempo reale.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Tracker di moderazione in tempo reale:} Fornire una barra di avanzamento dello status di approvazione (es. \textit{In coda $\rightarrow$ In revisione $\rightarrow$ Approvato}) con stima esatta dei tempi d'attesa. \\ \hline
+\hline
+\textbf{4. Obiettivo della Persona} & Monitorare l'andamento delle prime donazioni e ringraziare la community direttamente in mobilità. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Apertura dell'app/sito mobile dallo smartphone durante la pausa pranzo (ore 13:30).
+    \item Visualizzazione delle notifiche di donazione e dei commenti di incoraggiamento dei sostenitori.
+    \item Invio di un messaggio di aggiornamento e ringraziamento alla bacheca pubblica del progetto.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Smartphone (notifiche push o web-app mobile).
+    \item Pannello di controllo "Creator" semplificato.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Statistiche in tempo reale (totale raccolto, numero donatori, giorni rimanenti).
+    \item Strumenti rapidi per pubblicare post di aggiornamento sui social direttamente dalla piattaforma.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Fantastico, le prime notifiche stanno arrivando dai vicini di quartiere! Devo pubblicare subito un grazie per mantenere alta l'energia della campagna.''} (Entusiasmo, gratificazione). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Difficoltà nel rispondere singolarmente ai donatori se la rubrica messaggi mobile è poco responsiva.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Mini-dashboard Creator Mobile-Optimized:} Creare una vista rapida per smartphone dedicata ai creatori, con pulsanti one-tap per ringraziare i donatori o condividere grafiche pre-compilate dello status della raccolta. \\ \hline
+\end{tabular}
+\caption{User Journey dettagliato della Persona 1 (Diego Parini)}
+\label{tab:user_journey_diego}
+\end{table}
+
+===============================================================
+PROMPT 6
+===============================================================
+
+Ora partendo dalla personas 2, una alla volta fino alle 5, crea uno user journey inserendo:
+- obiettivo della persona;
+- azioni svolte;
+- touchpoint, cioè punti di contatto con il sito o con altri canali;
+- informazioni necessarie;
+- pensieri ed emozioni ipotizzati;
+- difficoltà o dubbi;
+- opportunità di miglioramento da tradurre nel progetto. Mi raccomando, agisci come prima, sii creativo e non aver paura di uscire dagli schemi con l'inventiva. Al termine di questo messaggio, quando ti scriverò continua, vai alla personas successiva
+
+\subsection{User Journey: Mirko Falletti (Il sostenitore cauto e concreto)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{Fase del Percorso} & \textbf{Dettagli dello User Journey} \\ \hline
+\hline
+\textbf{1. Obiettivo della Persona} & Trovare una causa locale o nazionale seria, a favore di famiglie di militari o comunità in difficoltà, da sostenere in modo trasparente e diretto. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Accensione del PC fisso nello studio di casa dopo cena (ore 21:00).
+    \item Ricerca su Google o clic su un link condiviso tramite e-mail da un vecchio collega.
+    \item Navigazione nella homepage della piattaforma, alla ricerca di una categoria di progetti chiara.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Desktop/Laptop (browser web da schermo grande).
+    \item Link ricevuto via e-mail o da un forum di associati/veterani.
+    \item Menu di navigazione e barra di ricerca principale della piattaforma.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Garanzie ufficiali sull'affidabilità dell'ente promotore.
+    \item Indicazione immediata dell'impatto e della percentuale di fondi destinata direttamente alla causa.
+    \item Layout leggibile con caratteri nitidi e ad alto contrasto.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Spero che non sia uno di quei siti moderni pieni di video che partono da soli o scritte minuscole... Voglio solo capire chi c'è dietro questo progetto e se sono persone serie.''} (Diffidenza iniziale, prudenza). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Disturbo visivo di fronte a banner animati, pop-up invasivi o terminologia inglese non traducibile.
+    \item Incertezza sulla reale legittimità dell'associazione promotrice.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Badge di Verifica \& Modalità Alta Leggibilità:} Introdurre bollini di certificazione visibili sugli enti verificati e un'opzione per ingrandire il font/semplificare l'interfaccia con un solo clic. \\ \hline
+\hline
+\textbf{2. Obiettivo della Persona} & Analizzare in dettaglio la scheda della campagna selezionata per verificare come verranno impiegati i fondi prima di decidere l'importo. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Lettura approfondita del testo descrittivo del progetto e controllo del prospetto di spesa.
+    \item Verifica dei documenti allegati o dei link ai canali ufficiali dell'associazione.
+    \item Selezione dell'opzione di donazione singola (rifiutando sottoscrizioni ricorrenti automatiche).
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Scheda dettaglio della campagna (sezione ``Trasparenza'' o ``Budget'').
+    \item Modale/Pulsante ``Dona Ora'' con scelta dell'importo.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Ripartizione chiara di dove va ogni singolo euro donato (grafico a torta o tabella semplice).
+    \item Assenza di caselle pre-spuntate per donazioni mensili o mancie alla piattaforma non richieste.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Vedo che hanno specificato esattamente quanti mattoni e materiali acquisteranno. Bene. Non voglio sorprese sul conto corrente il mese prossimo.''} (Soddisfazione, bisogno di controllo). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Paura che cliccando su ``Dona'' scatti un abbonamento automatico indesiderato.
+    \item Dubbio su cosa sia la ``tip'' o ``commissione facoltativa'' per la piattaforma se spiegata in modo ambiguo.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Ripartizione Trasparente del Budget \& Check-out Diretto:} Mostrare un breakdown chiaro dei fondi e un selettore di donazione unico/ricorrente senza trabocchetti o spunte pre-impostate. \\ \hline
+\hline
+\textbf{3. Obiettivo della Persona} & Effettuare il pagamento online in modo sicuro e senza intoppi tecnici o procedure di autenticazione troppo astruse. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Inserimento dei dati della carta di credito o selezione di un metodo tradizionale (es. Bonifico/PostePay).
+    \item Conferma della transazione dall'applicazione della propria banca sullo smartphone.
+    \item Attesa del messaggio di conferma a schermo.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Form di pagamento (gateway bancario sicuro).
+    \item App bancaria personale sullo smartphone (per autorizzazione OTP/SPID).
+    \item Schermata di ringraziamento e conferma avvenuta donazione.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Indicazione esplicita della sicurezza della connessione (icona del lucchetto, certificati SSL).
+    \item Ricevuta scaricabile immediatamente in formato PDF da stampare e archiviare.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Ecco, adesso mi chiede il codice di verifica sullo smartphone... Spero di fare in tempo prima che scada la sessione.''} (Lieve tensione da prestazione tecnologica). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Disorientamento se la pagina di pagamento reindirizza su un sito esterno non brandizzato.
+    \item Mancanza di una ricevuta fiscale chiara e stampabile da mostrare al commercialista o tenere per i propri registri.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Receipt Generator Istantaneo:} Generare al termine della transazione un PDF pulito e stampabile in un clic con il riepilogo della donazione e i riferimenti fiscali per la deducibilità. \\ \hline
+\hline
+\textbf{4. Obiettivo della Persona} & Verificare periodicamente che i fondi abbiano prodotto il risultato promesso, senza dover accedere ai social media. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Apertura dell'e-mail di riepilogo mensile inviata dalla piattaforma.
+    \item Lettura del report fotografico sullo stato di avanzamento dei lavori sostenuti.
+    \item Eventuale salvataggio dell'aggiornamento nella cartella dedicata del PC.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item E-mail periodica di aggiornamento (Newsletter dedicata ai sostenitori).
+    \item Link al report di impatto sul sito web.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Resoconto sintetico dei risultati raggiunti grazie al contributo della community.
+    \item Nessun tono spinto verso nuove donazioni, ma pura rendicontazione etica.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Mi hanno inviato la foto della struttura ultimata direttamente via e-mail. È così che si lavora, la serietà prima di tutto.''} (Orgoglio, senso di compiutezza, fiducia consolidata). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Rischio che gli aggiornamenti vadano a finire nella cartella Spam o che richiedano l'accesso tramite credenziali dimenticate.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Aggiornamenti "No-Login" via E-mail:} Inviare report di avanzamento formattati come lettere formali/report in PDF direttamente nella casella di posta, leggibili senza dover effettuare il login alla piattaforma. \\ \hline
+\end{tabular}
+\caption{User Journey dettagliato della Persona 2 (Mirko Falletti)}
+\label{tab:user_journey_mirko}
+\end{table}
+
+\subsection{User Journey: Alessandra Mazzoli (L'attivista dinamica e promotrice di rete)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{Fase del Percorso} & \textbf{Dettagli dello User Journey} \\ \hline
+\hline
+\textbf{1. Obiettivo della Persona} & Scovare progetti ecologici ad alto impatto etico che necessitano di visibilità e verificare che non si tratti di un'operazione di greenwashing. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Navigazione veloce da smartphone durante la colazione (ore 08:45) o nei tempi morti fra un appuntamento e l'altro.
+    \item Filtraggio delle campagne nella categoria ``Ambiente e Sostenibilità''.
+    \item Controllo delle certificazioni ambientali dell'associazione e della filiera dei prodotti proposti.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Smartphone (app mobile o sito web responsive).
+    \item Link condivisi in gruppi Instagram/Telegram di attivismo locale.
+    \item Sezione ``Certificazioni ed Etica'' della scheda progetto.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Dettagli trasparenti sull'impatto ecologico (es. kg di plastica rimossi, alberi piantati).
+    \item Assenza di partnership con aziende controverse o poco etiche.
+    \item Presenza di materiale informativo chiaro e condivisibile.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Questa causa contro la plastica nei mari ha un potenziale enorme, ma devo assicurarmi che sia un progetto vero prima di metterci la faccia e diffonderlo ai miei contatti.''} (Entusiasmo cauto, spirito critico). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Mancanza di dati chiari sulla tracciabilità delle azioni dichiarate dal progetto.
+    \item Difficoltà nel distinguere le campagne a reale impatto sociale da quelle puramente commerciali.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Bollino Eco-Trust \& Impact Index:} Inserire un indicatore visivo d'impatto ecologico certificato e una scheda con il bilancio sociale del promotore immediatamente consultabile. \\ \hline
+\hline
+\textbf{2. Obiettivo della Persona} & Aderire alla campagna con un contributo e ottenere strumenti digitali o materiali per ingaggiare la propria rete sia online che di persona. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Donazione rapida effettuata direttamente da smartphone tramite sistema di pagamento istantaneo (es. Apple Pay/Google Pay/Satispay).
+    \item Generazione automatica di un kit di promozione (link di referral e QR Code personalizzato).
+    \item Download della grafica del progetto da condividere nelle stories dei canali social.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Modale di pagamento istantaneo su mobile.
+    \item Dashboard "Ambassador / Promotore" della campagna.
+    \item Generatore automatico di QR Code e asset grafici per social media.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Disponibilità di QR Code ad alta risoluzione pronti da stampare o mostrare dallo schermo dello smartphone.
+    \item Testi brevi ed efficaci (pitch) da utilizzare nelle caption dei social o da spiegare a voce.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Fantastico! Se ho il QR Code pronto sul telefono posso farlo scansione subito ai ragazzi durante la sensibilizzazione in piazza oggi pomeriggio!''} (Energia, senso di efficacia). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Link di condivisione troppo lunghi o assenza di formati grafici pronti per le stories Instagram/TikTok.
+    \item Processo di donazione macchinoso che rallenta la conversione quando mostra il progetto dal vivo agli sconosciuti.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Social \& Street Ambassador Kit:} Fornire un pulsante ``Diventa Promotore'' che genera istantaneamente un QR Code e immagini ottimizzate per i vari social con il tracciamento del proprio impatto di rete. \\ \hline
+\hline
+\textbf{3. Obiettivo della Persona} & Coinvolgere le persone incontrate sul campo (piazze, eventi, banchetti) facilitando l'accesso immediato alla campagna. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Attività sul campo nelle piazze (ore 16:30): mostra il QR Code dal proprio smartphone ai passanti interessati.
+    \item Guida le persone a compilare i pochi campi necessari per una donazione rapida o una firma di sostegno.
+    \item Monitora dal vivo se le persone riescono ad accedere alla pagina senza blocchi.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Smartphone della persona incontrata per strada (landing page mobile d'atterraggio da QR Code).
+    \item Interazione umana diretta supportata dall'interfaccia digitale.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Caricamento ultrarapido della landing page anche con connessione dati lenta (4G/3G).
+    \item Messaggio d'impatto chiaro e sintetico nei primi 3 secondi di schermata.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Spero che la pagina si carichi subito, la gente in strada ha fretta e se il sito ci mette 5 secondi a caricare perdo l'attenzione del passante.''} (Adrenalina, determinazione). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Landing page pesante che fallisce il caricamento con una connessione mobile instabile.
+    \item Form di registrazione o donazione troppo lunghi che scoraggiano l'utente occasionale per strada.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Ultra-Light Landing Page Mobile:} Progettare pagine di destinazione super-leggere per chi scansiona da QR Code, con possibilità di micro-donazione o iscrizione in 2 soli tap. \\ \hline
+\hline
+\textbf{4. Obiettivo della Persona} & Verificare i risultati del proprio lavoro di sensibilizzazione e mantenere ingaggiata la community creata. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Consultazione serale (ore 21:30) delle metriche del proprio link/QR Code di promozione.
+    \item Pubblicazione di un ringraziamento sui social condividendo il traguardo parziale raggiunto dalla campagna.
+    \item Partecipazione ai commenti e alle discussioni nella bacheca etica della piattaforma.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Dashboard del promotore (statistiche di rete).
+    \item Canali social personali (Instagram, Telegram, LinkedIn).
+    \item Bacheca aggiornamenti e commenti della piattaforma.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Numero di persone ingaggiate tramite il proprio QR Code/link.
+    \item Totale dei fondi raccolti grazie all'azione di condivisione diretta.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Vedere che grazie ai miei scatti e ai QR in piazza siamo riusciti a raccogliere altri 500 euro mi dà una carica pazzesca per la prossima azione!''} (Orgoglio, realizzazione, forte senso di appartenenza). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Impossibilità di vedere il proprio impatto di rete indiretto (es. donazioni portate dalla condivisione di un amico).
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Gamification Etica \& Gamified Advocacy:} Introdurre un sistema di badge etici e grafici di impatto di rete (es. ``Grazie a te 12 persone hanno donato e rimosso 50kg di plastica'') facilmente ricondivisibili sui social. \\ \hline
+\end{tabular}
+\caption{User Journey dettagliato della Persona 3 (Alessandra Mazzoli)}
+\label{tab:user_journey_alessandra}
+\end{table}
+
+\subsection{User Journey: Luca Ponti (Il sostenitore meticoloso di micro-cause scientifiche)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{Fase del Percorso} & \textbf{Dettagli dello User Journey} \\ \hline
+\hline
+\textbf{1. Obiettivo della Persona} & Scovare micro-progetti di conservazione botanica o archivi digitali sulla biodiversità alpina, ignorati dalle grandi raccolte fondi di massa. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Esplorazione rapida da smartphone durante la pausa tra una lezione di biotecnologie e il laboratorio (ore 13:15).
+    \item Utilizzo di filtri avanzati per sottocategoria e parole chiave iper-specifiche (es. \textit{``flora alpina''}, \textit{``specie a rischio''}).
+    \item Salvataggio tra i preferiti dei progetti che presentano una scheda tecnica ben argomentata.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Smartphone (app o sito web mobile responsive).
+    \item Motore di ricerca interno con filtri di nicchia.
+    \item Link segnalati su gruppi Telegram o forum di appassionati di botanica.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Sistema di tag e categorie altamente dettagliato (non solo la generica categoria ``Ambiente'').
+    \item Schede sintetiche con chiare premesse metodologiche e scientifiche.
+    \item Indicazione del team di ricerca o dei referenti del micro-progetto.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Spero di non dovere scorrere cinquanta campagne generiche sui gattini prima di trovare un vero progetto di tutela della flora locale... Serve un filtro per trovare chi fa ricerca seria dal basso.''} (Pazienza selettiva, scetticismo verso il mainstream). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Tendenza della piattaforma a mostrare in prima pagina solo le campagne virali ad alto impatto emotivo.
+    \item Difficoltà nel reperire progetti con budget ridotti ma di alto valore scientifico.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Filtri di Ricerca Verticali \& Sezione ``Hidden Gems'':} Permettere l'esplorazione per tag specifici e creare una sezione dedicata ai micro-progetti emergenti o scientifici di nicchia. \\ \hline
+\hline
+\textbf{2. Obiettivo della Persona} & Analizzare il rigore e la sostenibilità tecnica del progetto scelto prima di vincolare le proprie limitate risorse da studente. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Esame approfondito della scheda tecnica e dei documenti/pdf allegati dai ricercatori.
+    \item Invio di una domanda diretta tramite la chat interna al team del progetto per chiarire la metodologia sul campo.
+    \item Lettura delle recensioni o delle credenziali accademiche/accettazioni etiche dei promotori.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Scheda dettagliata del progetto da smartphone.
+    \item Modulo di contatto/Q\&A diretto con i creatori.
+    \item Allegati tecnici e report scaricabili in PDF.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Metriche di successo chiare e verificabili (es. numero di campioni rilevati, ettari mappati).
+    \item Trasparenza sui costi delle attrezzature scientifiche o delle uscite sul campo.
+    \item Risposte rapide e competenti da parte dei creatori della campagna.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Il progetto è ottimo, ma voglio capire come intendono conservare i semi raccolti. Invio un messaggio al team: se rispondono in modo preciso, attivo una donazione mensile.''} (Rigore analitico, ricerca di contatto etico). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Assenza di uno spazio dove porre domande pubbliche o tecniche senza dover inviare una mail formale.
+    \item Schede descritte solo con uno storytelling emotivo ma prive di dati metodologici concreti.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Scheda Tecnica "Peer-to-Peer Q\&A":} Integrare una tab ``Dati & Metodologia'' affiancata a una sezione Q\&A pubblica dove i sostenitori possono chiedere dettagli tecnici ai promotori. \\ \hline
+\hline
+\textbf{3. Obiettivo della Persona} & Impostare un sostegno finanziario ricorrente di piccolo taglio (micro-donazione) in linea con le proprie disponibilità economiche da universitario. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Selezione dell'opzione di micro-donazione mensile (es. 5€/mese).
+    \item Pagamento rapido con portafoglio digitale da smartphone (Apple Pay/Google Pay).
+    \item Spunta dell'opzione per ricevere aggiornamenti in formato ``diario di bordo''.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Selettore di importo flessibile con opzione ``Micro-donazione ricorrente''.
+    \item Gateway di pagamento digitale rapido da mobile.
+    \item Schermata di avvenuta sottoscrizione.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Garanzia di totale assenza di commissioni a sorpresa addebitate sullo studente.
+    \item Massima facilità di disdetta o pausa del contributo in qualsiasi momento con un solo tap.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Non posso dare 100€ in una volta, ma 5€ al mese per un anno sono fattibili. L'importante è che possa disattivare l'addebito dall'app se ho un mese stretto con gli esami.''} (Pragmatismo economico, senso di continuità). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Paura di rimanere vincolato a contratti o abbonamenti difficili da cancellare.
+    \item Importi minimi di donazione prefissati troppo elevati (es. partire da 20€ anziché da 2€ o 5€).
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Micro-Supporter Subscriptions:} Permettere piani di micro-sostegno personalizzabili (a partire da 1€ o 3€/mese) con gestione trasparente e cancellazione immediata in un tap dal profilo utente. \\ \hline
+\hline
+\textbf{4. Obiettivo della Persona} & Seguire l'evoluzione dei rilevamenti botanici e condividere gli avanzamenti scientifici nei propri cerchi accademici. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Ricezione di notifiche push o mail con il "Diario di Bordo" inviato periodicamente dai ricercatori.
+    \item Consultazione delle nuove foto e dei dati pubblicati dagli esperti direttamente da smartphone durante le pause studio.
+    \item Condivisione del report o delle foto su forum di settore o gruppi universitari.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Notifiche push dell'app mobile o e-mail dedicate.
+    \item Sezione ``Diario di Bordo / Aggiornamenti'' del progetto.
+    \item Pulsante rapido di condivisione dati su gruppi di discussione (Telegram/Discord).
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Aggiornamenti autentici dal campo (foto non patinate, dati grezzi, diari sul campo).
+    \item Possibilità di scaricare o visualizzare campioni di dati pubblicati dal team.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Hanno appena pubblicato le coordinate fotografiche della specie che stanno tutelando... Vedere i dati veri che arrivano dalla montagna è fantastico, vale ogni centesimo versato.''} (Entusiasmo scientifico, gratificazione). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Aggiornamenti generici inviati troppo di rado o privi di reale contenuto di approfondimento.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Field Log Updates & Open Data Feed:} Creare una funzionalità di feed dinamico dove i ricercatori possono postare brevi note dal campo (foto, brevi video, log di dati) fruibili in formato story/timeline dai micro-sostenitori. \\ \hline
+\end{tabular}
+\caption{User Journey dettagliato della Persona 4 (Luca Ponti)}
+\label{tab:user_journey_luca}
+\end{table}
+
+\subsection{User Journey: Isabel Marrano (La sostenitrice esigente di beni culturali e artigianato)}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{3.2cm}|p{11.8cm}|}
+\hline
+\textbf{Fase del Percorso} & \textbf{Dettagli dello User Journey} \\ \hline
+\hline
+\textbf{1. Obiettivo della Persona} & Individuare progetti di recupero di antichi mestieri d'arte o di restauro di beni librari/artistici in cerca di finanziamenti etici. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Navigazione dal computer fisso dello studio durante il tardo pomeriggio (ore 18:00), sorseggiando un tè.
+    \item Filtraggio delle campagne nelle sezioni ``Patrimonio Culturale'', ``Artigianato Artistico'' e ``Design Sostenibile''.
+    \item Selezione di schede progetto che mostrano un'estetica curata e foto ad alta risoluzione.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Desktop/Laptop (schermo ampio, browser web ad alta risoluzione).
+    \item Portali di notizie d'arte, riviste di settore o newsletter culturali indipendenti.
+    \item Galleria dei progetti in evidenza sulla piattaforma.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Presentazione estetica impeccabile e assenza di pubblicità o elementi grafici caotici.
+    \item Dettagli chiari sulle radici territoriali e culturali della bottega o del progetto.
+    \item Presenza di immagini di grande formato che mostrino la lavorazione manuale nei dettagli.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Voglio capire se dietro questa campagna per il recupero della legatoria storica c'è vera maestria o solo una buona operazione di marketing... L'immagine di copertina è bella, approfondiamo.''} (Curiosità selettiva, occhio critico e raffinato). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Fastidio di fronte a layout sciatto, testo troppo piccolo o moduli di navigazione confusamente organizzati.
+    \item Sospetto di scarsa professionalità se la descrizione è sintetica o priva di fonti storiche e tecniche.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Layout "Editorial & Heritage":} Offrire un modello grafico per schede progetto orientato al design editoriale, con supporto a immagini ad altissima risoluzione e sezioni dedicate al valore storico/artigianale. \\ \hline
+\hline
+\textbf{2. Obiettivo della Persona} & Valutare il progetto e selezionare un livello di donazione che offra un'opera o una ricompensa tangibile ad alto valore etico. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Lettura approfondita della storia del laboratorio e delle biografie dei maestri artigiani.
+    \item Esame delle ricompense offerte (es. un volume rilegato a mano in edizione limitata o un invito a un workshop).
+    \item Confronto tra i diversi livelli di supporto per scegliere la ricompensa più autentica e significativa.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Scheda estesa del progetto (tab ``La Storia'' e ``Il Processo Creativo'').
+    \item Modulo dei livelli di ricompensa (Rewards / Tier di supporto) su desktop.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Descrizione dettagliata dei materiali utilizzati per le ricompense (es. carte pregiate, inchiostri naturali).
+    \item Stima realistica dei tempi di produzione e di spedizione dei manufatti.
+    \item Trasparenza sui costi di produzione vs la quota destinata direttamente all'attività della bottega.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Questa edizione speciale in 50 esemplari numerati è uno splendido esempio di artigianato. Se sostengo il progetto a questo livello, so di finanziare la trasmissione di un mestiere che sta scomparendo.''} (Sensazione di valore, appagamento culturale). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Incertezza sulla qualità effettiva delle ricompense o timore di ritardi indefiniti nella consegna.
+    \item Mancanza di dettagli sull'origine dei materiali impiegati per realizzare l'oggetto.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Scheda Ricompensa Tracciabile \& Certificato d'Autenticità:} Creare schede ricompensa trasparenti che includano la tracciabilità delle materie prime e un certificato digitale di autenticità rilasciato dal creatore. \\ \hline
+\hline
+\textbf{3. Obiettivo della Persona} & Finalizzare il contributo importante tramite un processo di pagamento sicuro, elegante e privo di intoppi. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Selezione della quota di donazione con ricompensa (es. 150€).
+    \item Inserimento sicuro dell'indirizzo di spedizione e dei dati bancari/carta di credito su PC.
+    \item Revisione finale del riepilogo dell'ordine e invio della conferma.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Carrello e pagina di checkout per desktop.
+    \item Form di inserimento dati di fatturazione e spedizione.
+    \item E-mail di conferma ordine personalizzata con lettera del maestro artigiano.
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Garanzia sulla sicurezza delle transazioni e sulla tutela dei dati personali.
+    \item Ricevuta dettagliata con l'indicazione specifica della ricompensa prenotata.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Il processo è stato fluido e composto. Apprezzo che il sito non mi chieda di condividere l'acquisto su tre social network diversi appena ho finito di pagare.''} (Rassicurazione, apprezzamento per la sobrietà). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Richieste invasive di condivisione social obbligatoria o popup rumorosi alla fine della transazione.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Elegant Checkout \& Discrete Receipt:} Progettare un flusso di cassa essenziale ed sobrio, che consenta di inviare ringraziamenti personali via mail o ricevere una conferma discreta senza forzare l'uso dei social network. \\ \hline
+\hline
+\textbf{4. Obiettivo della Persona} & Tracciare lo stato di lavorazione del manufatto prenotato e fruire del report finale del progetto di restauro. \\ \hline
+\textbf{Azioni Svolte} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Consultazione della newsletter mensile inviata dal laboratorio con foto delle fasi di lavorazione artigianale.
+    \item Riconferma dell'indirizzo di spedizione all'avvicinarsi della data di invio della ricompensa.
+    \item Ricezione del pacco a casa e verifica del materiale prodotto.
+\end{itemize} \\ \hline
+\textbf{Touchpoint} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item E-mail di aggiornamento sulla produzione (``Dietro le quinte del laboratorio'').
+    \item Notifica di tracciamento della spedizione postale/corriere.
+    \item Oggetto fisico ricevuto (con packaging curato ed etico).
+\end{itemize} \\ \hline
+\textbf{Informazioni Necessarie} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Aggiornamenti puntuali in caso di ritardi nella produzione artigianale.
+    \item Codice di tracciamento chiaro per la consegna del manufatto.
+\end{itemize} \\ \hline
+\textbf{Pensieri ed Emozioni} &
+\textit{``Il volume è arrivato ed è di una fattura straordinaria. Sostenere questo maestro è stata la scelta giusta: questa piattaforma seleziona davvero eccellenze.''} (Fidelizzazione, ammirazione, senso di appartenenza a una rete di valore). \\ \hline
+\textbf{Difficoltà o Dubbi} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Silenzio prolungato da parte del creatore durante i mesi di lavorazione manuale.
+\end{itemize} \\ \hline
+\textbf{Opportunità di Progetto} &
+\textbf{Craftsmanship Progress Tracker:} Inserire una timeline visiva di produzione per i creatori artigianali, che aggiorna automaticamente i sostenitori sulle fasi del processo (es. \textit{Reperimento materiali $\rightarrow$ Lavorazione a mano $\rightarrow$ Controllo qualità $\rightarrow$ Spedito}). \\ \hline
+\end{tabular}
+\caption{User Journey dettagliato della Persona 5 (Isabel Marrano)}
+\label{tab:user_journey_isabel}
+\end{table}
