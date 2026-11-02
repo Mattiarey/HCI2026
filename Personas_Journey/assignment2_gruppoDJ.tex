@@ -15,6 +15,7 @@
 \usepackage{fancyhdr}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{enumitem} % Fondamentale per gli elenchi puntati nelle tabelle
 
 % --- COLORI E CONFIGURAZIONE CODE HIGHLIGHTING ---
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -83,15 +84,11 @@
 % ==========================================
     \section{Introduzione}
     Giacomo
-    % ==========================================
+% ==========================================
 
 % =======================================
     \section{Definizione delle Personas}
 % =======================================
-
-% ====================================================================
-% RACCOLTA COMPLETA DELLE PERSONAS
-% ====================================================================
 
 \subsection{Persona 1: Diego Parini (Progettista / Creator)}
 
@@ -342,6 +339,10 @@
 \end{itemize}
 
 
+% =======================================
+    \section{User Journey delle Personas}
+% =======================================
+
 \subsection{User Journey: Diego Parini (L'ideazione e il lancio di una campagna civica)}
 
 \begin{table}[h!]
@@ -466,6 +467,7 @@
 \label{tab:user_journey_diego}
 \end{table}
 
+
 \subsection{User Journey: Mirko Falletti (Il sostenitore cauto e concreto)}
 
 \begin{table}[h!]
@@ -588,6 +590,7 @@
 \caption{User Journey dettagliato della Persona 2 (Mirko Falletti)}
 \label{tab:user_journey_mirko}
 \end{table}
+
 
 \subsection{User Journey: Alessandra Mazzoli (L'attivista dinamica e promotrice di rete)}
 
@@ -713,6 +716,7 @@
 \label{tab:user_journey_alessandra}
 \end{table}
 
+
 \subsection{User Journey: Luca Ponti (Il sostenitore meticoloso di micro-cause scientifiche)}
 
 \begin{table}[h!]
@@ -778,7 +782,7 @@
     \item Schede descritte solo con uno storytelling emotivo ma prive di dati metodologici concreti.
 \end{itemize} \\ \hline
 \textbf{Opportunità di Progetto} &
-\textbf{Scheda Tecnica "Peer-to-Peer Q\&A":} Integrare una tab ``Dati & Metodologia'' affiancata a una sezione Q\&A pubblica dove i sostenitori possono chiedere dettagli tecnici ai promotori. \\ \hline
+\textbf{Scheda Tecnica "Peer-to-Peer Q\&A":} Integrare una tab ``Dati \& Metodologia'' affiancata a una sezione Q\&A pubblica dove i sostenitori possono chiedere dettagli tecnici ai promotori. \\ \hline
 \hline
 \textbf{3. Obiettivo della Persona} & Impostare un sostegno finanziario ricorrente di piccolo taglio (micro-donazione) in linea con le proprie disponibilità economiche da universitario. \\ \hline
 \textbf{Azioni Svolte} &
@@ -833,11 +837,12 @@
     \item Aggiornamenti generici inviati troppo di rado o privi di reale contenuto di approfondimento.
 \end{itemize} \\ \hline
 \textbf{Opportunità di Progetto} &
-\textbf{Field Log Updates & Open Data Feed:} Creare una funzionalità di feed dinamico dove i ricercatori possono postare brevi note dal campo (foto, brevi video, log di dati) fruibili in formato story/timeline dai micro-sostenitori. \\ \hline
+\textbf{Field Log Updates \& Open Data Feed:} Creare una funzionalità di feed dinamico dove i ricercatori possono postare brevi note dal campo (foto, brevi video, log di dati) fruibili in formato story/timeline dai micro-sostenitori. \\ \hline
 \end{tabular}
 \caption{User Journey dettagliato della Persona 4 (Luca Ponti)}
 \label{tab:user_journey_luca}
 \end{table}
+
 
 \subsection{User Journey: Isabel Marrano (La sostenitrice esigente di beni culturali e artigianato)}
 
@@ -875,7 +880,7 @@
     \item Sospetto di scarsa professionalità se la descrizione è sintetica o priva di fonti storiche e tecniche.
 \end{itemize} \\ \hline
 \textbf{Opportunità di Progetto} &
-\textbf{Layout "Editorial & Heritage":} Offrire un modello grafico per schede progetto orientato al design editoriale, con supporto a immagini ad altissima risoluzione e sezioni dedicate al valore storico/artigianale. \\ \hline
+\textbf{Layout "Editorial \& Heritage":} Offrire un modello grafico per schede progetto orientato al design editoriale, con supporto a immagini ad altissima risoluzione e sezioni dedicate al valore storico/artigianale. \\ \hline
 \hline
 \textbf{2. Obiettivo della Persona} & Valutare il progetto e selezionare un livello di donazione che offra un'opera o una ricompensa tangibile ad alto valore etico. \\ \hline
 \textbf{Azioni Svolte} &
