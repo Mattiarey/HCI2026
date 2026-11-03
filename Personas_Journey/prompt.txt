@@ -1304,3 +1304,39 @@ Ora partendo dalla personas 2, una alla volta fino alle 5, crea uno user journey
 \caption{User Journey dettagliato della Persona 5 (Isabel Marrano)}
 \label{tab:user_journey_isabel}
 \end{table}
+
+
+
+
+
+===============================================================
+PROMPT 7 - SITO WEB
+===============================================================
+Dobbiamo realizzare un primo prototipo di sito web (HTML e CSS) basandoci sulle personas e gli user journey. Si tratta di un sito di crowdfunding e dobbiamo ispirarci ad un sito precedentemente analizzato, nel PDF allegato è presente proprio codesta analisi. Progetta il sito in ampiezza, definendo le principali sezioni, le voci di menu e la struttura di navigazione. Sviluppa poi in profondità almeno un percorso completo e significativo, collegato a una delle personas.
+È richiesta la versione desktop. Devi creare almeno 8 pagine del sito con contenuti o funzioni differenti tra loro
+
+Vengono fornite le pagine web con i file CSS incorporati all'interno
+
+===============================================================
+PROMPT 8 - SITO WEB
+===============================================================
+Forniscimi le diverse pagine web HTML ma dividi il CSS in uno o più file dedicati!
+
+Vengono fornite le pagine web ed un file CSS diviso, la struttura viene quindi migliorata
+
+===============================================================
+PROMPT 9 - SITO WEB
+===============================================================
+C'è un problema nella ricerca di cause, progetti, partner. La ricerca effettivamente non funziona! Inoltre nella pagina esplora progetti, vediamo solo il singolo progetto presente, vorrei che rendessi più dinamica questa parte aggiungendo progetti inventati. Anche aggiungendo (solo se necessario) altre parti di codice o memorizzazione
+
+Viene aggiunto un file javascript contenente degli esempi di progetti e la ricerca diventa più interattiva, i progetti però puntano tutti alla stessa pagina del progetto iniziale e la ricerca dei progetti non è funzionante
+
+===============================================================
+PROMPT 10 - SITO WEB
+===============================================================
+problemi rilevati: cerca.html ha ancora problemi, se inserisco qualunque carattere, anche riconducibile ad un effettivo progetto spariscono tutti e ancora, se rimuovo il mio input, non ricompaiono! Inoltre il filtraggio non funziona
+
+cerca.html viene rivoluzionato, in particolare nella gestione degli eventi con il suo file javascript dedicato.
+Ora funziona la ricerca come i filtri e i diversi progetti hanno una propria pagina dedicata.
+
+

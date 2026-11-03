@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Definizione delle variabili locali della palette Ginger */
+:root {
+    /* Palette Colori Ginger */
+    --ginger-orange: #ff8c00;
+    --ginger-orange-hover: #e07b00;
+    --ginger-navy: #1e3a8a;
+    --ginger-light-bg: #f8fafc;
+    --ginger-card-border: #e2e8f0;
+
+    /* Colori Generali */
+    --text-main: #0f172a;
+
+    /* Font principale */
+    --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Stili Globali del Documento */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    background-color: var(--ginger-light-bg);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* Classi di utilità opzionali per riprodurre le utility Tailwind nel tuo HTML */
+.bg-ginger-orange { background-color: var(--ginger-orange); }
+.bg-ginger-navy { background-color: var(--ginger-navy); }
+.bg-ginger-light { background-color: var(--ginger-light-bg); }
+
+.text-ginger-orange { color: var(--ginger-orange); }
+.text-ginger-navy { color: var(--ginger-navy); }
+
+.border-ginger-card { border-color: var(--ginger-card-border); }
+
+/* Effetti Hover */
+.bg-ginger-orange:hover,
+.hover\:bg-ginger-orangeHover:hover {
+    background-color: var(--ginger-orange-hover);
+}

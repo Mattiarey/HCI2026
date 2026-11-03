@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Sostieni il Progetto - GINGER Lab</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">⚡ GINGER Lab</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs-container">
+        <a href="dettaglio-progetto.html">← Torna alla scheda progetto</a>
+    </div>
+
+    <main style="max-width:700px;">
+        <div class="card-box">
+            <h1 style="color:var(--dark-blue); font-size:1.8rem; margin-bottom:1.5rem;">Completa la tua Donazione</h1>
+            <p style="margin-bottom:1.5rem; color:var(--text-muted);">Stai sostenendo: <strong>Orti Urbani Comunitari - Quartiere Nord</strong></p>
+
+            <form id="donation-form" onsubmit="handleDonation(event)">
+                <div class="form-group" id="amount-group">
+                    <label>Seleziona l'Importo</label>
+                    <div style="display:flex; gap:1rem; margin-bottom:0.5rem;">
+                        <button type="button" class="btn-outline amt-btn" onclick="setAmount(10)">10 €</button>
+                        <button type="button" class="btn-primary amt-btn" onclick="setAmount(25)">25 €</button>
+                        <button type="button" class="btn-outline amt-btn" onclick="setAmount(50)">50 €</button>
+                    </div>
+                    <input type="number" id="custom-amount" class="form-control" placeholder="Inserisci importo personalizzato (€)" value="25" min="1" required>
+                    <div class="error-message">Inserisci un importo valido superiore a 0€.</div>
+                </div>
+
+                <div style="background:#f1f5f9; padding:1rem; border-radius:6px; margin-bottom:1.5rem; font-size:0.88rem;">
+                    🔒 <strong>Donazione Singola Garantita:</strong> Nessuna commissione nascosta o abbonamento ricorrente automatico.
+                </div>
+
+                <div class="form-group">
+                    <label>Metodo di Pagamento</label>
+                    <select class="form-control" id="payment-method">
+                        <option value="card">Carta di Credito / Debito (Visa, Mastercard)</option>
+                        <option value="satispay">Satispay / Bancomat Pay</option>
+                        <option value="transfer">Bonifico Bancario Diretto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label><input type="checkbox" id="tax-receipt" checked> Richiedi ricevuta fiscale valida per la deducibilità delle donazioni (PDF)</label>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width:100%; padding:0.9rem; font-size:1.1rem; margin-top:1rem;">Conferma e Dona ORA</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal Successo con Feedback Interattivo -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content">
+            <div style="font-size:3.5rem; margin-bottom:1rem;">🎉</div>
+            <h2 style="color:var(--dark-blue); margin-bottom:0.8rem;">Donazione Effettuata con Successo!</h2>
+            <p style="color:var(--text-muted); margin-bottom:1.5rem;" id="modal-text">Grazie per aver sostenuto il progetto. Abbiamo inviato il riepilogo e la ricevuta fiscale alla tua email.</p>
+            <div style="display:flex; gap:1rem; justify-content:center;">
+                <a href="dashboard.html" class="btn-primary">Vai alla tua Dashboard</a>
+                <a href="index.html" class="btn-outline">Torna alla Home</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+    </footer>
+
+    <script>
+        function setAmount(val) {
+            document.getElementById('custom-amount').value = val;
+            document.querySelectorAll('.amt-btn').forEach(btn => {
+                btn.className = 'btn-outline amt-btn';
+            });
+            event.target.className = 'btn-primary amt-btn';
+        }
+
+        function handleDonation(event) {
+            event.preventDefault();
+            const amt = document.getElementById('custom-amount').value;
+            if(!amt || amt <= 0) {
+                document.getElementById('amount-group').classList.add('error');
+                return;
+            }
+            document.getElementById('amount-group').classList.remove('error');
+            document.getElementById('modal-text').innerHTML = `Hai donato con successo <strong>${amt} €</strong> al progetto Orti Urbani Comunitari. La ricevuta fiscale PDF è pronta.`;
+            document.getElementById('success-modal').classList.add('active');
+        }
+    </script>
+</body>
+</html>

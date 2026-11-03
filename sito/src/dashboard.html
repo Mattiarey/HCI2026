@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Area Riservata Creator - GINGER Lab</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">⚡ GINGER Lab</a>
+            <ul class="nav-links">
+                <li><a href="cerca.html">Esplora Progetti</a></li>
+                <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
+                <li><a href="funzionamento.html">Come Funziona</a></li>
+                <li><a href="partner.html">Partner</a></li>
+                <li><a href="dashboard.html" class="active">Area Riservata</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs-container">
+        <a href="index.html">Home</a> / <strong>Area Riservata Creator</strong>
+    </div>
+
+    <main>
+        <div class="card-box" style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+                <h1 style="color:var(--dark-blue); font-size:1.8rem;">Pannello di Controllo: Diego Parini</h1>
+                <p style="color:var(--text-muted);">Campagna attiva: <strong>Orti Urbani Comunitari - Quartiere Nord</strong></p>
+            </div>
+            <a href="dettaglio-progetto.html" class="btn-outline">Vedi Pagina Pubblica</a>
+        </div>
+
+        <!-- Tracker di Moderazione in Tempo Reale (Soluzione alla "scatola nera" emersa nello User Journey) -->
+        <div class="card-box">
+            <h3 style="color:var(--dark-blue); margin-bottom:1.2rem;">Stato di Avanzamento della Pratica</h3>
+            <div style="display:flex; justify-content:space-between; position:relative;">
+                <div style="text-align:center; flex:1;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:white; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;">✓</div>
+                    <span style="font-size:0.85rem; font-weight:600;">1. Bozza Creata</span>
+                </div>
+                <div style="text-align:center; flex:1;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:white; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;">✓</div>
+                    <span style="font-size:0.85rem; font-weight:600;">2. Documenti Inviati</span>
+                </div>
+                <div style="text-align:center; flex:1;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:var(--primary-orange); color:white; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;">3</div>
+                    <span style="font-size:0.85rem; font-weight:600; color:var(--primary-orange);">In Revisione (Approvazione entro 24h)</span>
+                </div>
+                <div style="text-align:center; flex:1;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:#e2e8f0; color:#64748b; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;">4</div>
+                    <span style="font-size:0.85rem; color:var(--text-muted);">Pubblicazione Ufficiale</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 2fr 1fr; gap:1.5rem;">
+            <div class="card-box">
+                <h3 style="color:var(--dark-blue); margin-bottom:1rem;">Dati e Contenuto Bozza</h3>
+                <div class="form-group">
+                    <label>Titolo della Campagna</label>
+                    <input type="text" class="form-control" value="Orti Urbani Comunitari - Quartiere Nord">
+                </div>
+                <div class="form-group">
+                    <label>Descrizione della storia</label>
+                    <textarea class="form-control" rows="3">Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord...</textarea>
+                </div>
+            </div>
+
+            <div class="card-box">
+                <h3 style="color:var(--dark-blue); margin-bottom:1rem;">Kit del Progettista</h3>
+                <button class="btn-primary" style="width:100%; margin-bottom:0.8rem;">Scarica QR Code Campagna</button>
+                <button class="btn-secondary" style="width:100%;">Genera Anteprima Social</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+    </footer>
+</body>
+</html>
