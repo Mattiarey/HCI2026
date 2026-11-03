@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=1200">
     <title>Lancia la tua Campagna - GINGER Lab</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/lancia-campagna.js" defer></script>
 </head>
 <body>
     <header>
@@ -81,32 +82,5 @@
     <footer>
         <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
     </footer>
-
-    <script>
-        function handleCampaign(event) {
-            event.preventDefault();
-            const title = document.getElementById('p-title').value.trim();
-            const budget = document.getElementById('p-budget').value;
-            let isValid = true;
-
-            if(!title) {
-                document.getElementById('title-group').classList.add('error');
-                isValid = false;
-            } else {
-                document.getElementById('title-group').classList.remove('error');
-            }
-
-            if(!budget || budget < 100) {
-                document.getElementById('budget-group').classList.add('error');
-                isValid = false;
-            } else {
-                document.getElementById('budget-group').classList.remove('error');
-            }
-
-            if(isValid) {
-                document.getElementById('draft-modal').classList.add('active');
-            }
-        }
-    </script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=1200">
     <title>Sostieni il Progetto - GINGER Lab</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/checkout.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,7 +21,8 @@
     <main style="max-width:700px;">
         <div class="card-box">
             <h1 style="color:var(--dark-blue); font-size:1.8rem; margin-bottom:1.5rem;">Completa la tua Donazione</h1>
-            <p style="margin-bottom:1.5rem; color:var(--text-muted);">Stai sostenendo: <strong>Orti Urbani Comunitari - Quartiere Nord</strong></p>
+
+            <p>Stai sostenendo: <strong id="breadcrumb-title"></strong></p>
 
             <form id="donation-form" onsubmit="handleDonation(event)">
                 <div class="form-group" id="amount-group">
@@ -56,7 +58,6 @@
         </div>
     </main>
 
-    <!-- Modal Successo con Feedback Interattivo -->
     <div class="modal-overlay" id="success-modal">
         <div class="modal-content">
             <div style="font-size:3.5rem; margin-bottom:1rem;">🎉</div>
@@ -72,27 +73,5 @@
     <footer>
         <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
     </footer>
-
-    <script>
-        function setAmount(val) {
-            document.getElementById('custom-amount').value = val;
-            document.querySelectorAll('.amt-btn').forEach(btn => {
-                btn.className = 'btn-outline amt-btn';
-            });
-            event.target.className = 'btn-primary amt-btn';
-        }
-
-        function handleDonation(event) {
-            event.preventDefault();
-            const amt = document.getElementById('custom-amount').value;
-            if(!amt || amt <= 0) {
-                document.getElementById('amount-group').classList.add('error');
-                return;
-            }
-            document.getElementById('amount-group').classList.remove('error');
-            document.getElementById('modal-text').innerHTML = `Hai donato con successo <strong>${amt} €</strong> al progetto Orti Urbani Comunitari. La ricevuta fiscale PDF è pronta.`;
-            document.getElementById('success-modal').classList.add('active');
-        }
-    </script>
 </body>
 </html>

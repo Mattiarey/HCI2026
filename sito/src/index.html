@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=1200">
     <title>GINGER Lab - Crowdfunding per Comunità e Idee Etiche</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js" defer></script>
 </head>
 <body>
     <header>
@@ -135,16 +136,5 @@
         </div>
         <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
     </footer>
-
-    <script>
-        function handleHomeSearch(event) {
-            if (event.key === 'Enter') {
-                const query = event.target.value.trim();
-                if (query) {
-                    window.location.href = `cerca.html?q=${encodeURIComponent(query)}`;
-                }
-            }
-        }
-    </script>
 </body>
 </html>
