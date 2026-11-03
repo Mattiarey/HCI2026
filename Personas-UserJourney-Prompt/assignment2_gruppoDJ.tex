@@ -16,13 +16,38 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{enumitem} % Fondamentale per gli elenchi puntati nelle tabelle
+\usepackage{tcolorbox} % Per definire gli ambienti promptbox e respbox
 
 % --- COLORI E CONFIGURAZIONE CODE HIGHLIGHTING ---
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{promptbg}{rgb}{0.94,0.97,1.0}
+\definecolor{promptborder}{rgb}{0.2,0.4,0.8}
+\definecolor{respbg}{rgb}{0.96,0.96,0.96}
+\definecolor{respborder}{rgb}{0.5,0.5,0.5}
+
 \newcommand{\vir}[1]{``#1''}
+
+% Ambientazione Box personalizzate
+\newtcolorbox{promptbox}[1]{
+    colback=promptbg,
+    colframe=promptborder,
+    fonttitle=\bfseries,
+    title={PROMPT #1},
+    arc=2mm,
+    boxrule=0.8pt
+}
+
+\newtcolorbox{respbox}[1]{
+    colback=respbg,
+    colframe=respborder,
+    fonttitle=\bfseries,
+    title={RISPOSTA #1},
+    arc=2mm,
+    boxrule=0.8pt
+}
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},
@@ -44,7 +69,7 @@
 }
 \lstset{style=mystyle}
 
-% --- Intestigazione HEADER E FOOTER ---
+% --- Intestazione HEADER E FOOTER ---
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{Assignment 2}
@@ -74,7 +99,7 @@
     \vspace{0.5cm}
     \begin{abstract}
         \noindent
-
+        Questo documento presenta il lavoro svolto nell'ambito dell'Assignment 2 del corso di Human Computer Interaction. Esso racchiude l'analisi dettagliata e la definizione delle Personas, dei rispettivi User Journey e l'intera sequenza di prompt e risposte utilizzate per lo sviluppo iterativo del prototipo web di una piattaforma di crowdfunding.
     \end{abstract}
 
     \newpage
@@ -429,7 +454,7 @@
     \item Contatti diretti o chat con un operatore in caso di intoppi burocratici.
 \end{itemize} \\ \hline
 \textbf{Pensieri ed Emozioni} &
-\textit{``Spero che i controlli non vadano per le lunghe, abbiamo pianificato la conferenza stampa per giovedì e il link deve essere attivo per forza!'''} (Ansia da scadenza, trepidazione). \\ \hline
+\textit{``Spero che i controlli non vadano per le lunghe, abbiamo pianificato la conferenza stampa per giovedì e il link deve essere attivo per forza!''} (Ansia da scadenza, trepidazione). \\ \hline
 \textbf{Difficoltà o Dubbi} &
 \begin{itemize}[leftmargin=*,nosep]
     \item Sensazione di 'scatola nera' durante l'attesa dell'approvazione senza un tracciamento chiaro in tempo reale.
@@ -770,7 +795,7 @@
 \end{itemize} \\ \hline
 \textbf{Informazioni Necessarie} &
 \begin{itemize}[leftmargin=*,nosep]
-    \item Metriche di successo chiare e verificabili (es. numero di campioni rilevati, ettari mappati).
+    \item Metrime di successo chiare e verificabili (es. numero di campioni rilevati, ettari mappati).
     \item Trasparenza sui costi delle attrezzature scientifiche o delle uscite sul campo.
     \item Risposte rapide e competenti da parte dei creatori della campagna.
 \end{itemize} \\ \hline
@@ -901,7 +926,7 @@
     \item Trasparenza sui costi di produzione vs la quota destinata direttamente all'attività della bottega.
 \end{itemize} \\ \hline
 \textbf{Pensieri ed Emozioni} &
-\textit{``Questa edizione speciale in 50 esemplari numerati è uno splendido esempio di artigianato. Se sostengo il progetto a questo livello, so di finanziare la trasmissione di un mestiere che sta scomparendo.''} (Sensazione di valore, appagamento culturale). \\ \hline
+\textit{``Questa edizione speciale in 50 esemplari numerati è uno splendido esempio di artigianato. Se sostengo il progetto a questo livello, so di finanziare la trasmissione di un mestiere che sta s disappearance.''} (Sensazione di valore, appagamento culturale). \\ \hline
 \textbf{Difficoltà o Dubbi} &
 \begin{itemize}[leftmargin=*,nosep]
     \item Incertezza sulla qualità effettiva delle ricompense o timore di ritardi indefiniti nella consegna.
@@ -967,5 +992,144 @@
 \caption{User Journey dettagliato della Persona 5 (Isabel Marrano)}
 \label{tab:user_journey_isabel}
 \end{table}
+
+
+% =======================================
+    \section{Appendice: Prompt e Interazione AI}
+% =======================================
+
+Questo capitolo raccoglie la sequenza di prompt forniti all'Intelligenza Artificiale e le relative risposte ottenute durante le fasi di progettazione e sviluppo del sito di crowdfunding (GINGER Lab), coprendo l'analisi delle Personas, degli User Journey e lo sviluppo iterativo del prototipo web.
+
+\subsection{PROMPT 1 - PERSONAS}
+\begin{promptbox}{1}
+Devo fare un progetto, scritto in latex, per un corso di human computer interaction.\\
+Dobbiamo creare personas e user journey per creare un sito basato sugli utenti che lo andranno ad utilizzare. Questo sito si occupa di crowdfunding.\\
+Iniziamo creando una prima Personas. Quindi inventati una persona fittizia con: nome, ruolo, aggettivo rappresentativo, una sua citazione, cosa fa in una sua giornata tipo, quali sono i suoi bisogni più importanti, come vorrebbe migliorare la propria vita, cosa ostacola il raggiungimento dei suoi obiettivi e quali sono le piattaforme che usa per accedere al sito.\\
+\vspace{0.2cm}
+\textit{Il pdf che ti incollo è l'analisi di un sito simile che non funziona}
+\end{promptbox}
+
+\subsection{RISPOSTA 1 - PERSONAS}
+\begin{respbox}{1}
+Profilo generato per la Persona 1 (Diego Parini), inclusivo di ruolo, citazione, giornata tipo, bisogni principali e ostacoli nell'uso della piattaforma di crowdfunding.
+\end{respbox}
+
+\subsection{PROMPT 2 - PERSONAS}
+\begin{promptbox}{2}
+Devo fare un progetto, scritto in latex, per un corso di human computer interaction.\\
+Dobbiamo creare personas e user journey per creare un sito basato sugli utenti che lo andranno ad utilizzare. Questo sito si occupa di crowdfunding.\\
+Ogni persona deve includere:\\
+\begin{itemize}[nosep]
+    \item nome e breve descrizione del profilo;
+    \item contesto personale o professionale rilevante per l’uso del sito;
+    \item obiettivi e motivazioni;
+    \item bisogni informativi;
+    \item competenze digitali e familiarità con il crowdfunding;
+    \item dubbi, difficoltà e possibili ostacoli;
+    \item elementi che possono favorire o ridurre la fiducia nell’iniziativa;
+    \item uno scenario d’uso concreto.
+\end{itemize}
+Potete considerare, ad esempio, persone interessate a sostenere la ricerca, membri della comunità universitaria, persone alla prima esperienza di crowdfunding oppure ricercatrici e ricercatori interessati a proporre una campagna. Scegliete e motivate i profili più pertinenti al vostro progetto.
+\end{promptbox}
+
+\subsection{RISPOSTA 2 - PERSONAS}
+\begin{respbox}{2}
+Dettagli completi per la Persona 2 (Mirko Falletti) e per la Persona 3 (Alessandra Mazzoli), focalizzati sul contesto d'uso, bisogni informativi e fattori di fiducia.
+\end{respbox}
+
+\subsection{PROMPT 3 - PERSONAS}
+\begin{promptbox}{3}
+Creiamo altre due personas diverse dalle precedenti, ti do un po' di informazioni e poi crea tu: sii creativo, non devono sembrare dei robot creati da un IA, usa informazioni non classiche! Età: 22 e 48, nomi: Luca Ponti e Isabel Marrano, vogliono sostenere dei progetti che gli stanno a cuore su tematiche non ancora trattate e abbastanza di nicchia. Per quanto riguarda la giornata tipo, anche lì, sii creativo e varia molto
+\end{promptbox}
+
+\subsection{RISPOSTA 3 - PERSONAS}
+\begin{respbox}{3}
+Elaborazione delle Personas 4 e 5 (Luca Ponti e Isabel Marrano) con focus su sostenitori di nicchia, approcci alla ricerca personalizzati ed esigenze estetiche/metodologiche specifiche.
+\end{respbox}
+
+\subsection{PROMPT 4 - PERSONAS}
+\begin{promptbox}{4}
+Unisci tutte e 5 le Personas in un unico file LaTeX completo e ben formattato.
+\end{promptbox}
+
+\subsection{RISPOSTA 4 - PERSONAS}
+\begin{respbox}{4}
+Generazione del blocco unico LaTeX formattato con tabelle e liste strutturate per le 5 Personas.
+\end{respbox}
+
+\subsection{PROMPT 5 - USER JOURNEY}
+\begin{promptbox}{5}
+Ora basandoti sulla personas 1, crea uno user journey inserendo:\\
+- obiettivo della persona;\\
+- azioni svolte;\\
+- touchpoint, cioè punti di contatto con il sito o con altri canali;\\
+- informazioni necessarie;\\
+- pensieri ed emozioni ipotizzati;\\
+- difficoltà o dubbi;\\
+- opportunità di miglioramento da tradurre nel progetto. Mi raccomando, agisci come prima, sii creativo e non aver paura di uscire dagli schemi con l'inventiva
+\end{promptbox}
+
+\subsection{RISPOSTA 5 - USER JOURNEY}
+\begin{respbox}{5}
+Generazione del primo User Journey (Diego Parini) in forma tabellare con fasi del percorso, touchpoint e opportunità d'interfaccia.
+\end{respbox}
+
+\subsection{PROMPT 6 - USER JOURNEY}
+\begin{promptbox}{6}
+Ora partendo dalla personas 2, una alla volta fino alle 5, crea uno user journey inserendo:\\
+- obiettivo della persona;\\
+- azioni svolte;\\
+- touchpoint, cioè punti di contatto con il sito o con altri canali;\\
+- informazioni necessarie;\\
+- pensieri ed emozioni ipotizzati;\\
+- difficoltà o dubbi;\\
+- opportunità di miglioramento da tradurre nel progetto. Mi raccomando, agisci come prima, sii creativo e non aver paura di uscire dagli schemi con l'inventiva. Al termine di questo messaggio, quando ti scriverò continua, vai alla personas successiva
+\end{promptbox}
+
+\subsection{RISPOSTA 6 - USER JOURNEY}
+\begin{respbox}{6}
+Sviluppo sequenziale degli User Journey per le Personas 2, 3, 4 e 5 con mappatura dettagliata dell'esperienza utente.
+\end{respbox}
+
+\subsection{PROMPT 7 - SITO WEB}
+\begin{promptbox}{7}
+Dobbiamo realizzare un primo prototipo di sito web (HTML e CSS) basandoci sulle personas e gli user journey. Si tratta di un sito di crowdfunding e dobbiamo ispirarci ad un sito precedentemente analizzato, nel PDF allegato è presente proprio codesta analisi. Progetta il sito in ampiezza, definendo le principali sezioni, le voci di menu e la struttura di navigazione. Sviluppa poi in profondità almeno un percorso completo e significativo, collegato a una delle personas.\\
+È richiesta la versione desktop. Devi creare almeno 8 pagine del sito con contenuti o funzioni differenti tra loro
+\end{promptbox}
+
+\subsection{RISPOSTA 7 - SITO WEB}
+\begin{respbox}{7}
+Fornite le prime 8 pagine web con i file CSS incorporati al loro interno.
+\end{respbox}
+
+\subsection{PROMPT 8 - SITO WEB}
+\begin{promptbox}{8}
+Forniscimi le diverse pagine web HTML ma dividi il CSS in uno o più file dedicati!
+\end{promptbox}
+
+\subsection{RISPOSTA 8 - SITO WEB}
+\begin{respbox}{8}
+Ristrutturazione del codice con la separazione pulita tra file HTML e stylesheet CSS dedicati.
+\end{respbox}
+
+\subsection{PROMPT 9 - SITO WEB}
+\begin{promptbox}{9}
+C'è un problema nella ricerca di cause, progetti, partner. La ricerca effettivamente non funziona! Inoltre nella pagina esplora progetti, vediamo solo il singolo progetto presente, vorrei che rendessi più dinamica questa parte aggiungendo progetti inventati. Anche aggiungendo (solo se necessario) altre parti di codice o memorizzazione
+\end{promptbox}
+
+\subsection{RISPOSTA 9 - SITO WEB}
+\begin{respbox}{9}
+Implementazione del file JavaScript per la memorizzazione e la visualizzazione dinamica di un set esteso di progetti.
+\end{respbox}
+
+\subsection{PROMPT 10 - SITO WEB}
+\begin{promptbox}{10}
+problemi rilevati: cerca.html ha ancora problemi, se inserisco qualunque carattere, anche riconducibile ad un effettivo progetto spariscono tutti e ancora, se rimuovo il mio input, non ricompaioni! Inoltre il filtraggio non funziona
+\end{promptbox}
+
+\subsection{RISPOSTA 10 - SITO WEB}
+\begin{respbox}{10}
+Risoluzione completa dei bug su \texttt{cerca.html}: riprogettazione della gestione degli eventi in JavaScript, ripristino istantaneo degli elementi al cancellare dell'input e corretto funzionamento del filtraggio per categorie e tag.
+\end{respbox}
 
 \end{document}
