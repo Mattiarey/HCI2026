@@ -136,7 +136,7 @@ function renderProjects(projects) {
         card.innerHTML = `
                     <div>
                         <div class="${p.bg} h-40 flex items-center justify-center text-5xl relative">
-                            <img src="${p.icon}" alt="${p.title}" >
+                            <img src="${p.icon}" style="width: 100%; height: 115%; object-fit: cover;"  alt="${p.title}" >
                             <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm">
                                 ${p.badge}
                             </span>
