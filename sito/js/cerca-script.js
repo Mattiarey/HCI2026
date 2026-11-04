@@ -9,9 +9,9 @@ const allProjects = [
         raised: 3250,
         goal: 5000,
         percent: 65,
-        icon: "🥦",
+        icon: "../img/img_orto.png",
         bg: "bg-slate-200",
-        description: "Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord per realizzarvi 20 lotti di orti urbani condivisi."
+        desc: "Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord per realizzarvi 20 lotti di orti urbani condivisi."
     },
     {
         id: 2,
@@ -22,9 +22,9 @@ const allProjects = [
         raised: 8800,
         goal: 10000,
         percent: 88,
-        icon: "🌊",
+        icon: "../img/img_mare.png",
         bg: "bg-blue-100",
-        description: "Campagna straordinaria di pulizia delle spiagge con imbarcazioni ecologiche e laboratori di sensibilizzazione per le scuole."
+        desc: "Campagna straordinaria di pulizia delle spiagge con imbarcazioni ecologiche e laboratori di sensibilizzazione per le scuole."
     },
     {
         id: 3,
@@ -35,9 +35,9 @@ const allProjects = [
         raised: 1260,
         goal: 3000,
         percent: 42,
-        icon: "🏔️",
+        icon: "../img/img_flora.png",
         bg: "bg-emerald-100",
-        description: "Creazione di un archivio digitale e botanico protetto per preservare le specie di flora alpina minacciate dal riscaldamento globale."
+        desc: "Creazione di un archivio digitale e botanico protetto per preservare le specie di flora alpina minacciate dal riscaldamento globale."
     },
     {
         id: 4,
@@ -48,9 +48,9 @@ const allProjects = [
         raised: 14250,
         goal: 15000,
         percent: 95,
-        icon: "📜",
+        icon: "../img/img_storia.png",
         bg: "bg-amber-100",
-        description: "Restauro di torchi storici e macchinari del Settecento per tramandare l'arte della legatoria artigianale alle nuove generazioni."
+        desc: "Restauro di torchi storici e macchinari del Settecento per tramandare l'arte della legatoria artigianale alle nuove generazioni."
     },
     {
         id: 5,
@@ -61,9 +61,9 @@ const allProjects = [
         raised: 4100,
         goal: 7500,
         percent: 54,
-        icon: "🎠",
+        icon: "../img/img_parcogiochi.png",
         bg: "bg-orange-100",
-        description: "Installazione di giochi accessibili a bambini con disabilità motorie e sensoriali all'interno del parco principale."
+        desc: "Installazione di giochi accessibili a bambini con disabilità motorie e sensoriali all'interno del parco principale."
     },
     {
         id: 6,
@@ -74,9 +74,9 @@ const allProjects = [
         raised: 2800,
         goal: 4000,
         percent: 70,
-        icon: "🤖",
+        icon: "../img/img_robotica.png",
         bg: "bg-purple-100",
-        description: "Fornitura di kit di robotica educativa e stampanti 3D per tre scuole medie situate in aree periferiche disagiate."
+        desc: "Fornitura di kit di robotica educativa e stampanti 3D per tre scuole medie situate in aree periferiche disagiate."
     },
     {
         id: 7,
@@ -87,9 +87,9 @@ const allProjects = [
         raised: 6300,
         goal: 9000,
         percent: 70,
-        icon: "🐾",
+        icon: "../img/img_animali.png",
         bg: "bg-pink-100",
-        description: "Riqualificazione energetica con pannelli solari e ampliamento dei box per il rifugio di animali domestici in difficoltà."
+        desc: "Riqualificazione energetica con pannelli solari e ampliamento dei box per il rifugio di animali domestici in difficoltà."
     },
     {
         id: 8,
@@ -100,9 +100,9 @@ const allProjects = [
         raised: 9500,
         goal: 12000,
         percent: 79,
-        icon: "🏛️",
+        icon: "../img/img_storia.png",
         bg: "bg-teal-100",
-        description: "Intervento conservativo urgente sugli affreschi medievali della pieve di San Lorenzo per evitarne il degrado definitivo."
+        desc: "Intervento conservativo urgente sugli affreschi medievali della pieve di San Lorenzo per evitarne il degrado definitivo."
     }
 ];
 
@@ -136,7 +136,7 @@ function renderProjects(projects) {
         card.innerHTML = `
                     <div>
                         <div class="${p.bg} h-40 flex items-center justify-center text-5xl relative">
-                            ${p.icon}
+                            <img src="${p.icon}" alt="${p.title}" >
                             <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm">
                                 ${p.badge}
                             </span>
@@ -146,7 +146,7 @@ function renderProjects(projects) {
                                 <a href="dettaglio-progetto.html?id=${p.id}" class="hover:text-ginger-orange transition-colors">${p.title}</a>
                             </h3>
                             <p class="text-xs text-slate-500 mb-3 font-medium">by ${p.author}</p>
-                            <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">${p.description}</p>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">${p.desc}</p>
                         </div>
                     </div>
                     <div class="px-5 pb-5 pt-0">
@@ -178,7 +178,7 @@ function filterProjects() {
             p.title.toLowerCase().includes(query) ||
             p.author.toLowerCase().includes(query) ||
             p.badge.toLowerCase().includes(query) ||
-            p.description.toLowerCase().includes(query);
+            p.desc.toLowerCase().includes(query);
 
         // Match Categoria
         const matchesCategory = checkedBoxes.includes(p.category);
