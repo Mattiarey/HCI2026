@@ -10,6 +10,11 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{fancyhdr}
@@ -105,48 +110,18 @@
 
 \newpage
 
-    \vspace{0.5cm}
-    \noindent
-    \textbf{Indice dei Contenuti:}
-    \begin{itemize}
-        \item \textbf{1. Definizione delle Personas}
-        \begin{itemize}
-            \item 1.1 Persona 1: Diego Parini (Progettista / Creator)
-            \item 1.2 Persona 2: Mirko Falletti (Sostenitore / Donatore)
-            \item 1.3 Persona 3: Alessandra Mazzoli (Attivista / Promotrice)
-            \item 1.4 Persona 4: Luca Ponti (Sostenitore di Nicchia)
-            \item 1.5 Persona 5: Isabel Marrano (Sostenitrice di Nicchia)
-        \end{itemize}
-        \item \textbf{2. User Journey delle Personas}
-        \begin{itemize}
-            \item 2.1 Diego Parini (L'ideazione e il lancio di una campagna civica)
-            \item 2.2 Mirko Falletti (Il sostenitore cauto e concreto)
-            \item 2.3 Alessandra Mazzoli (L'attivista dinamica e promotrice di rete)
-            \item 2.4 Luca Ponti (Il sostenitore meticoloso di micro-cause scientifiche)
-            \item 2.5 Isabel Marrano (La sostenitrice esigente di beni culturali e artigianato)
-        \end{itemize}
-        \item[] \textbf{3. Appendice: Prompt e Interazione AI}
-        \begin{itemize}
-            \item Prompt 1: Creazione della prima Persona (Diego Parini)
-            \item Prompt 2: Criteri dettagliati per le Personas (Mirko Falletti e Alessandra Mazzoli)
-            \item Prompt 3: Creazione di altre due Personas (Luca Ponti e Isabel Marrano)
-            \item Prompt 4: Unione di tutte e 5 le Personas in un unico file LaTeX
-            \item Prompt 5: Creazione del primo User Journey (Diego Parini)
-            \item Prompt 6: Creazione sequenziale degli User Journey (da Persona 2 a 5)
-            \item Prompt 7: Progettazione del primo prototipo di sito web (8 pagine)
-            \item Prompt 8: Separazione del CSS in file dedicati
-            \item Prompt 9: Correzione della ricerca e aggiunta di progetti dinamici
-            \item Prompt 10: Risoluzione dei bug su cerca.html
-            \item Prompt 11: Correzione del nome del progetto nella pagina checkout.html
-        \end{itemize}
-    \end{itemize}
-    \newpage
+    % --- INDICE AUTOMATICO ---
+    \tableofcontents
+
+\newpage
 
 % =======================================
     \section{Definizione delle Personas}
+    \label{sec:personas}
 % =======================================
 
 \subsection{Persona 1: Diego Parini (Progettista / Creator)}
+\label{subsec:persona1}
 
 \begin{table}[h!]
 \centering
@@ -201,6 +176,7 @@ Paura di commettere errori irreversibili durante la fase di bozza o pubblicazion
 
 
 \subsection{Persona 2: Mirko Falletti (Sostenitore / Donatore)}
+\label{subsec:persona2}
 
 \begin{table}[h!]
 \centering
@@ -253,6 +229,7 @@ Difficoltà nel comprendere termini inglesi o gergo tecnico non spiegato chiaram
 
 
 \subsection{Persona 3: Alessandra Mazzoli (Attivista / Promotrice)}
+\label{subsec:persona3}
 
 \begin{table}[h!]
 \centering
@@ -307,6 +284,7 @@ Rischio di sentirsi sopraffatta o scoraggiata dalla mole di emergenze ambientali
 
 
 \subsection{Persona 4: Luca Ponti (Sostenitore di Nicchia)}
+\label{subsec:persona4}
 
 \begin{table}[h!]
 \centering
@@ -361,6 +339,7 @@ Timore che le raccolte fondi non rendano conto dei risultati concreti sul lungo 
 
 
 \subsection{Persona 5: Isabel Marrano (Sostenitrice di Nicchia)}
+\label{subsec:persona5}
 
 \begin{table}[h!]
 \centering
@@ -414,9 +393,11 @@ Abbandono rapido del sito se il processo di pagamento richiede troppi passaggi o
 Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente o realizzate con materiali di scarso valore.
 % =======================================
     \section{User Journey delle Personas}
+    \label{sec:userjourney}
 % =======================================
 
     \subsection{Diego Parini (L'ideazione e il lancio di una campagna civica)}
+    \label{subsec:uj1}
 
     \begin{enumerate}
 
@@ -467,6 +448,7 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
 
 
     \subsection{Mirko Falletti (Il sostenitore cauto e concreto)}
+    \label{subsec:uj2}
 
     \begin{enumerate}
 
@@ -517,6 +499,7 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
 
 
     \subsection{Alessandra Mazzoli (L'attivista dinamica e promotrice di rete)}
+    \label{subsec:uj3}
 
     \begin{enumerate}
 
@@ -544,7 +527,7 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         \begin{itemize}
             \item \textbf{Obiettivo:} Coinvolgere le persone incontrate sul campo (piazze, eventi, banchetti) facilitando l'accesso immediato alla campagna.
             \item \textbf{Azioni svolte:} Attività nelle piazze (ore 16:30); mostra il QR Code dal proprio smartphone ai passanti; li guida a compilare i pochi campi necessari per una firma o micro-donazione.
-            \item \textbf{Touchpoint:} Smartphone della persona incontrata per strada (landing page d'atterraggio da QR Code), interazione umana diretta.
+            \item \textbf{Touchpoint:} Smartphone della persona incontrata per strada (landing page d'atterraggio da QR Code), interazione humana diretta.
             \item \textbf{Informazioni necessarie:} Caricamento ultrarapido della landing page anche con connessione mobile lenta (4G/3G), messaggio sintetico nei primi 3 secondi di schermata.
             \item \textbf{Pensieri ed emozioni:} \textit{``Spero che la pagina si carichi subito, la gente in strada ha fretta e se il sito ci mette 5 secondi a caricare perdo l'attenzione del passante.''} (Adrenalina, determinazione).
             \item \textbf{Difficoltà o dubbi:} Pagine pesanti che falliscono il caricamento su reti instabili; moduli di registrazione troppo lunghi che scoraggiano l'utente occasionale.
@@ -567,6 +550,7 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
 
 
     \subsection{Luca Ponti (Il sostenitore meticoloso di micro-cause scientifiche)}
+    \label{subsec:uj4}
 
     \begin{enumerate}
 
@@ -617,6 +601,7 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
 
 
     \subsection{Isabel Marrano (La sostenitrice esigente di beni culturali e artigianato)}
+    \label{subsec:uj5}
 
     \begin{enumerate}
 
@@ -647,7 +632,7 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
             \item \textbf{Touchpoint:} Carrello e pagina di checkout per desktop, form di inserimento dati di fatturazione, e-mail di conferma ordine.
             \item \textbf{Informazioni necessarie:} Garanzia sulla sicurezza delle transazioni, tutela dei dati personali, ricevuta dettagliata con l'indicazione specifica della ricompensa prenotata.
             \item \textbf{Pensieri ed emozioni:} \textit{``Il processo è stato fluido e composto. Apprezzo che il sito non mi chieda di condividere l'acquisto su tre social network diversi appena ho finito di pagare.''} (Rassicurazione e apprezzamento per la sobrietà).
-            \item \textbf{Difficoltà o dubbi:} Richieste invasive di condivisione social obbligatoria o pop-up rumorosi alla fine della transazione che rovinerebbero l'esperienza.
+            \item \textbf{Difficoltà o dubbi:} Richieste invasive di condivisione social obbligatoria o pop-up rumorosi alla fine della transazione che rovinerebbero l’esperienza.
         \end{itemize}
 
         \item \textbf{Tracciamento della produzione e ricezione}
@@ -666,10 +651,13 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
     \noindent\textbf{Opportunità di Progetto Emergenti:} Per soddisfare i requisiti estetici e qualitativi di utenti come Isabel, la piattaforma dovrebbe fornire: un layout di tipo ``Editorial \& Heritage'' che valorizzi immagini ad altissima risoluzione e testi storici; una sezione per schede ricompensa trasparenti arricchite con tracciabilità delle materie prime e certificati digitali di autenticità; un flusso di checkout elegante e sobrio (senza spinte alla condivisione forzata); e un \textit{Craftsmanship Progress Tracker} visivo che mantenga aggiornato il sostenitore sulle fasi della lavorazione artigianale (es. reperimento materiali $\rightarrow$ lavorazione $\rightarrow$ controllo qualità).
 % =======================================
     \section{Appendice: Prompt e Interazione AI}
+    \label{sec:appendice}
 % =======================================
 
     Questo capitolo raccoglie la sequenza di prompt forniti all'Intelligenza Artificiale e le relative risposte ottenute durante le fasi di progettazione e sviluppo del sito di crowdfunding (GINGER Lab), coprendo l'analisi delle Personas, degli User Journey e lo sviluppo iterativo del prototipo web.
 
+    \subsection{Prompt 1: Creazione della prima Persona (Diego Parini)}
+    \label{prompt:1}
     \begin{promptbox}{1}
         Devo fare un progetto, scritto in latex, per un corso di human computer interaction.\\
         Dobbiamo creare personas e user journey per creare un sito basato sugli utenti che lo andranno ad utilizzare. Questo sito si occupa di crowdfunding.\\
@@ -682,6 +670,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Profilo generato per la Persona 1 (Diego Parini), inclusivo di ruolo, citazione, giornata tipo, bisogni principali e ostacoli nell'uso della piattaforma di crowdfunding.
     \end{respbox}
 
+    \subsection{Prompt 2: Criteri dettagliati per le Personas (Mirko Falletti e Alessandra Mazzoli)}
+    \label{prompt:2}
     \begin{promptbox}{2}
         Devo fare un progetto, scritto in latex, per un corso di human computer interaction.\\
         Dobbiamo creare personas e user journey per creare un sito basato sugli utenti che lo andranno ad utilizzare. Questo sito si occupa di crowdfunding.\\
@@ -701,6 +691,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Dettagli completi per la Persona 2 (Mirko Falletti) e per la Persona 3 (Alessandra Mazzoli), focalizzati sul contesto d'uso, bisogni informativi e fattori di fiducia.
     \end{respbox}
 
+    \subsection{Prompt 3: Creazione di altre due Personas (Luca Ponti e Isabel Marrano)}
+    \label{prompt:3}
     \begin{promptbox}{3}
         Creiamo altre due personas diverse dalle precedenti, ti do un po' di informazioni e poi crea tu: sii creativo, non devono sembrare dei robot creati da un IA, usa informazioni non classiche! Età: 22 e 48, nomi: Luca Ponti e Isabel Marrano, vogliono sostenere dei progetti che gli stanno a cuore su tematiche non ancora trattate e abbastanza di nicchia. Per quanto riguarda la giornata tipo, anche lì, sii creativo e varia molto
     \end{promptbox}
@@ -709,6 +701,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Elaborazione delle Personas 4 e 5 (Luca Ponti e Isabel Marrano) con focus su sostenitori di nicchia, approcci alla ricerca personalizzati ed esigenze estetiche/metodologiche specifiche.
     \end{respbox}
 
+    \subsection{Prompt 4: Unione di tutte e 5 le Personas in un unico file LaTeX}
+    \label{prompt:4}
     \begin{promptbox}{4}
         Unisci tutte e 5 le Personas in un unico file LaTeX completo e ben formattato.
     \end{promptbox}
@@ -717,6 +711,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Generazione del blocco unico LaTeX formattato con tabelle e liste strutturate per le 5 Personas.
     \end{respbox}
 
+    \subsection{Prompt 5: Creazione del primo User Journey (Diego Parini)}
+    \label{prompt:5}
     \begin{promptbox}{5}
         Ora basandoti sulla personas 1, crea uno user journey inserendo:\\
         - obiettivo della persona;\\
@@ -732,6 +728,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Generazione del primo User Journey (Diego Parini) in forma tabellare con fasi del percorso, touchpoint e opportunità d'interfaccia.
     \end{respbox}
 
+    \subsection{Prompt 6: Creazione sequenziale degli User Journey (da Persona 2 a 5)}
+    \label{prompt:6}
     \begin{promptbox}{6}
         Ora partendo dalla personas 2, una alla volta fino alle 5, crea uno user journey inserendo:\\
         - obiettivo della persona;\\
@@ -747,6 +745,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Sviluppo sequenziale degli User Journey per le Personas 2, 3, 4 e 5 con mappatura dettagliata dell'esperienza utente.
     \end{respbox}
 
+    \subsection{Prompt 7: Progettazione del primo prototipo di sito web (8 pagine)}
+    \label{prompt:7}
     \begin{promptbox}{7}
         Dobbiamo realizzare un primo prototipo di sito web (HTML e CSS) basandoci sulle personas e gli user journey. Si tratta di un sito di crowdfunding e dobbiamo ispirarci ad un sito precedentemente analizzato, nel PDF allegato è presente proprio codesta analisi. Progetta il sito in ampiezza, definendo le principali sezioni, le voci di menu e la struttura di navigazione. Sviluppa poi in profondità almeno un percorso completo e significativo, collegato a una delle personas.\\
         È richiesta la versione desktop. Devi creare almeno 8 pagine del sito con contenuti o funzioni differenti tra loro
@@ -756,6 +756,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Fornite le prime 8 pagine web con i file CSS incorporati al loro interno.
     \end{respbox}
 
+    \subsection{Prompt 8: Separazione del CSS in file dedicati}
+    \label{prompt:8}
     \begin{promptbox}{8}
         Forniscimi le diverse pagine web HTML ma dividi il CSS in uno o più file dedicati!
     \end{promptbox}
@@ -764,6 +766,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Ristrutturazione del codice con la separazione pulita tra file HTML e stylesheet CSS dedicati.
     \end{respbox}
 
+    \subsection{Prompt 9: Correzione della ricerca e aggiunta di progetti dinamici}
+    \label{prompt:9}
     \begin{promptbox}{9}
         C'è un problema nella ricerca di cause, progetti, partner. La ricerca effettivamente non funziona! Inoltre nella pagina esplora progetti, vediamo solo il singolo progetto presente, vorrei che rendessi più dinamica questa parte aggiungendo progetti inventati. Anche aggiungendo (solo se necessario) altre parti di codice o memorizzazione
     \end{promptbox}
@@ -772,6 +776,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Implementazione del file JavaScript per la memorizzazione e la visualizzazione dinamica di un set esteso di progetti.
     \end{respbox}
 
+    \subsection{Prompt 10: Risoluzione dei bug su cerca.html}
+    \label{prompt:10}
     \begin{promptbox}{10}
         problemi rilevati: cerca.html ha ancora problemi, se inserisco qualunque carattere, anche riconducibile ad un effettivo progetto spariscono tutti e ancora, se rimuovo il mio input, non ricompaioni! Inoltre il filtraggio non funziona
     \end{promptbox}
@@ -780,6 +786,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Risoluzione completa dei bug su \texttt{cerca.html}: riprogettazione della gestione degli eventi in JavaScript, ripristino istantaneo degli elementi al cancellare dell'input e corretto funzionamento del filtraggio per categorie e tag.
     \end{respbox}
 
+    \subsection{Prompt 11: Correzione del nome del progetto nella pagina checkout.html}
+    \label{prompt:11}
     \begin{promptbox}{11}
         Problemi rilevati: Nella pagina checkout.html la scritta "Stai sostenendo: " indica sempre lo stesso progetto.
     \end{promptbox}
@@ -788,6 +796,8 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
         Modifica del codice JavaScript per la pagina checkout.html in modo che la scritta "Stai sostenendo: " rifletta correttamente il progetto selezionato dall'utente, utilizzando variabili dinamiche e aggiornamento del DOM.
     \end{respbox}
 
+    \subsection{Prompt 12: Inserimento dell'indice all'inizio del file}
+    \label{prompt:12}
     \begin{promptbox}{12}
         Analizza il contenuto di questo file LaTeX e aggiungi nella parte inziale l'indice mancante. Regole da seguire: Mantieni l'indentazione utilizzata in tutto il file già presente nel risultato prodotto. Non modificare nulla al di fuori della table of contents. Restituiscimi la nuova parte generata da inserire nel file 
     \end{promptbox}
@@ -795,5 +805,29 @@ Timore che le ricompense promesse dai creatori vengano ritardate indefinitamente
     \begin{respbox}{12}
         Modifica del codice LaTeX della relazione per inserire l'indice correlato al contenuto di essa
     \end{respbox}
+
+    \subsection{Prompt 13: Connessione dei singoli prompt}
+    \label{prompt:13}
+    \begin{promptbox}{13}
+	Inserisci i tag mancanti nel resto del file per rendere funzionanti i link dell'indice e restituiscimi il file LaTeX finale. Regole: Non modificare l'indentazione fornita. Modifica solo lo stretto necessario che ti ho indicato.
+    \end{promptbox}
+
+    \begin{respbox}{13}
+        Integrazione della funzionalità di connessione e referenziazione puntuale dei singoli prompt all'interno dell'indice generale e della documentazione.
+    \end{respbox}
+
+
+\newpage
+
+% =======================================
+    \section{Considerazioni Finali}
+    \label{sec:conclusioni}
+% =======================================
+
+    Il percorso di progettazione svolto attraverso l'Assignment 2 ha permesso di applicare concretamente i principi di Human Computer Interaction (HCI) nello sviluppo di una piattaforma di crowdfunding moderna e centrata sull'utente. 
+
+    L'analisi approfondita delle Personas e dei rispettivi User Journey si è rivelata fondamentale per identificare i reali bisogni, le criticità e le aspettative di diverse tipologie di utenti: dai creator di associazioni no-profit ai sostenitori più tradizionalisti, passando per attivisti, studenti e professionisti di nicchia. 
+
+    Il processo iterativo guidato dai prompt e dalle interazioni con l'intelligenza artificiale ha consentito non solo di strutturare una solida documentazione formale, ma anche di tradurre i requisiti emersi in un prototipo web funzionale (GINGER Lab). Attraverso la risoluzione mirata dei problemi legati alla ricerca dinamica, alla gestione dei filtri, alla personalizzazione del carrello e alla strutturazione pulita del codice, il prototipo finale risponde efficacemente ai criteri di usabilità, trasparenza e accessibilità richiesti in ambito accademico e professionale.
 
 \end{document}
