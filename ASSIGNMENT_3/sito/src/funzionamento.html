@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Come Funziona il Crowdfunding - GINGER Lab</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/funzionamento.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🌍 GINGER Lab</a>
+            <div class="search-bar-header">
+                <input type="text" id="home-search-input" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event)">
+            </div>
+            <ul class="nav-links">
+                <li><a href="cerca.html">Esplora Progetti</a></li>
+                <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
+                <li><a href="funzionamento.html" class="active">Come Funziona</a></li>
+                <li><a href="partner.html">Partner</a></li>
+                <li><a href="dashboard.html" class="btn-outline">Area Riservata</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs-container">
+        <a href="index.html">Home</a> / <strong>Come Funziona</strong>
+    </div>
+
+    <main>
+        <div style="text-align:center; max-width:700px; margin:0 auto 3rem;">
+            <h1 style="color:var(--dark-blue); font-size:2.4rem; margin-bottom:1rem;">Come Funziona GINGER Lab</h1>
+            <p style="color:var(--text-muted); font-size:1.1rem;">Un modello trasparente basato sul crowdfunding civico e di comunità per trasformare idee in realtà tangibili.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:2rem; margin-bottom:3rem;">
+            <div class="card-box" style="text-align:center;">
+                <div style="font-size:3rem; margin-bottom:1rem;">💡</div>
+                <h3 style="color:var(--dark-blue); margin-bottom:0.8rem;">1. Proponi o Scegli</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted);">I progettisti presentano iniziative ad alto impatto sociale, culturale o ambientale. I sostenitori esplorano i progetti verificati.</p>
+            </div>
+            <div class="card-box" style="text-align:center;">
+                <div style="font-size:3rem; margin-bottom:1rem;">🤝</div>
+                <h3 style="color:var(--dark-blue); margin-bottom:0.8rem;">2. Sostieni con Trasparenza</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted);">Ogni donazione è tracciata e destinata a obiettivi di budget chiari. Zero costi nascosti o abbonamenti automatici indesiderati.</p>
+            </div>
+            <div class="card-box" style="text-align:center;">
+                <div style="font-size:3rem; margin-bottom:1rem;">🚀</div>
+                <h3 style="color:var(--dark-blue); margin-bottom:0.8rem;">3. Realizza l'Impatto</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted);">Se il target viene raggiunto, i fondi vengono erogati e il progetto prende vita sotto gli occhi della comunità.</p>
+            </div>
+        </div>
+
+        <div class="card-box">
+            <h2 style="color:var(--dark-blue); margin-bottom:1.2rem;">Domande Frequenti (FAQ)</h2>
+            <div style="margin-bottom:1.5rem;">
+                <h4 style="color:var(--text-dark); margin-bottom:0.3rem;">Il crowdfunding è sicuro?</h4>
+                <p style="color:var(--text-muted); font-size:0.95rem;">Sì, utilizziamo gateway di pagamento certificati e conformi ai massimi standard di sicurezza bancaria europea (PSD2).</p>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+                <h4 style="color:var(--text-dark); margin-bottom:0.3rem;">Posso ottenere agevolazioni fiscali?</h4>
+                <p style="color:var(--text-muted); font-size:0.95rem;">Sì, per le donazioni a favore di enti riconosciuti (ETS/ODV) è possibile richiedere la ricevuta fiscale per la detrazione o deduzione.</p>
+            </div>
+            <div>
+                <h4 style="color:var(--text-dark); margin-bottom:0.3rem;">Cosa succede se non si raggiunge l'obiettivo?</h4>
+                <p style="color:var(--text-muted); font-size:0.95rem;">GINGER Lab adotta un modello flessibile o a soglia verificata: i fondi vengono gestiti in totale trasparenza con rendicontazione costante ai sostenitori.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="color:royalblue; margin-bottom:0.8rem;">🌍 GINGER Lab</h3>
+                <p>Piattaforma di crowdfunding civico e sviluppo locale.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Esplora</h4>
+                <ul class="footer-links">
+                    <li><a href="cerca.html">Tutti i Progetti</a></li>
+                    <li><a href="partner.html">I Nostri Partner</a></li>
+                    <li><a href="funzionamento.html">Come Funziona</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Progettisti</h4>
+                <ul class="footer-links">
+                    <li><a href="lancia-campagna.html">Lancia Campagna</a></li>
+                    <li><a href="dashboard.html">Area Creator</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Trasparenza</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Condizioni d'Uso</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Scheda Progetto - GINGER Lab</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/dettaglio-progetto-load.js" defer></script>
+    <script src="../js/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🌍 GINGER Lab</a>
+            <div class="search-bar-header">
+                <input type="text" id="home-search-input" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event)">
+            </div>
+            <ul class="nav-links">
+                <li><a href="cerca.html">Esplora Progetti</a></li>
+                <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
+                <li><a href="funzionamento.html">Come Funziona</a></li>
+                <li><a href="partner.html">Partner</a></li>
+                <li><a href="dashboard.html" class="btn-outline">Area Riservata</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb dinamica -->
+    <div class="breadcrumbs-container">
+        <a href="index.html">Home</a> / <a href="cerca.html">Progetti</a> / <strong id="breadcrumb-title">Scheda Progetto</strong>
+    </div>
+
+    <main>
+        <div style="display:grid; grid-template-columns: 2fr 1fr; gap:2.5rem; margin-top:1rem;">
+            <div>
+                <h1 id="proj-title" style="color:var(--dark-blue); font-size:2.2rem; margin-bottom:0.5rem;">Caricamento Progetto...</h1>
+                <p id="proj-meta" style="color:var(--text-muted); margin-bottom:1.5rem;"></p>
+
+                <div id="proj-img-box" style="width:100%; height:340px; background:#e2e8f0; background-size:cover; background-position:center; align-items:center; border-radius:10px;"></div>
+                <div style="display:flex; justify-content:space-between; margin-top:1rem; margin-bottom:1.5rem;"></div>
+                
+                <div class="card-box">
+                    <h2 style="color:var(--dark-blue); margin-bottom:1rem;">La Storia del Progetto</h2>
+                    <p id="proj-desc" style="margin-bottom:1rem;"></p>
+                    
+                    <h3 style="color:var(--dark-blue); margin-top:1.5rem; margin-bottom:0.8rem;">Trasparenza e Destinazione del Budget</h3>
+                    <ul id="proj-budget-list" style="margin-left:1.5rem; margin-bottom:1rem;">
+                        <li><strong>50%:</strong> Preparazione iniziale e materiali di base.</li>
+                        <li><strong>30%:</strong> Attuazione operativa e acquisto strumenti.</li>
+                        <li><strong>20%:</strong> Attività aperte alla comunità e laboratori didattici.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar di Donazione -->
+            <div>
+                <div class="card-box" style="position:sticky; top:100px;">
+                    <div id="proj-raised" style="font-size:2rem; font-weight:800; color:var(--dark-blue);">0 €</div>
+                    <p id="proj-goal-text" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">raccolti su un obiettivo di 0 €</p>
+                    
+                    <div class="progress-bar-bg" style="height:10px;"><div id="proj-progress" class="progress-bar-fill" style="width:0%;"></div></div>
+
+                    <div style="display:flex; justify-content:space-between; margin-top:1rem; margin-bottom:1.5rem; font-size:0.9rem;">
+                        <span><strong id="proj-donors">42</strong> donatori</span>
+                        <span><strong>18</strong> giorni rimasti</span>
+                    </div>
+
+                    <a id="donate-btn" href="checkout.html" class="btn-primary" style="width:100%; padding:0.9rem; font-size:1.1rem; text-align:center;" onclick="setProject(breadcrumb-title.getCurrentTexture())">Sostieni Questo Progetto</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+    </footer>
+</body>
+</html>

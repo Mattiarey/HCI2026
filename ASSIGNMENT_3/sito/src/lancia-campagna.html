@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Lancia la tua Campagna - GINGER Lab</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/lancia-campagna.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">🌍 GINGER Lab</a>
+            <div class="search-bar-header">
+                <input type="text" id="home-search-input" aria-label="Cerca cause, progetti, partner" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event)">
+            </div>
+            <ul class="nav-links">
+                <li><a href="cerca.html">Esplora Progetti</a></li>
+                <li><a href="lancia-campagna.html" class="active">Lancia una Campagna</a></li>
+                <li><a href="funzionamento.html">Come Funziona</a></li>
+                <li><a href="partner.html">Partner</a></li>
+                <li><a href="dashboard.html" class="btn-outline">Area Riservata</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs-container">
+        <a href="index.html">Home</a> / <strong>Lancia una Campagna</strong>
+    </div>
+
+    <main>
+        <div style="text-align:center; max-width:700px; margin:0 auto 2.5rem;">
+            <h1 style="color:var(--dark-blue); font-size:2.2rem; margin-bottom:0.8rem;">Trasforma la tua idea sociale in un progetto concreto</h1>
+            <p style="color:var(--text-muted);">Processo guidato e senza burocrazia complessa. Compila i primi dati per aprire la tua bozza.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem;">
+            <div class="card-box">
+                <h2 style="color:var(--dark-blue); font-size:1.3rem; margin-bottom:1.2rem;">Crea la tua Bozza in 3 passaggi</h2>
+                <form id="campaign-form" onsubmit="handleCampaign(event)">
+                    <div class="form-group" id="title-group">
+                        <label for="p-title">Titolo del Progetto *</label>
+                        <input type="text" id="p-title" class="form-control" placeholder="Es. Recupero Parco Gioco Comunale" required>
+                        <div class="error-message">Il titolo del progetto è obbligatorio.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="p-cat">Categoria Principale</label>
+                        <select id="p-cat" class="form-control">
+                            <option>Sociale & Comunità</option>
+                            <option>Ambiente & Ecologia</option>
+                            <option>Biodiversità & Scienza</option>
+                            <option>Artigianato & Cultura</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="budget-group">
+                        <label for="p-budget">Obiettivo indicativo di Raccolta (€) *</label>
+                        <input type="number" id="p-budget" class="form-control" placeholder="Es. 4000" min="100" required>
+                        <div class="error-message">Inserisci un obiettivo di raccolta valido (min. 100€).</div>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%; padding:0.8rem;">Apri Bozza e Continua →</button>
+                </form>
+            </div>
+
+            <div class="card-box" style="background:var(--gray-bg);">
+                <h3 style="color:var(--dark-blue); margin-bottom:1rem;">Perché scegliere GINGER Lab?</h3>
+                <ul style="margin-left:1.2rem; line-height:1.8; color:var(--text-muted);">
+                    <li><strong>Affiancamento dedicato:</strong> Un tutor segue la preparazione della tua campagna.</li>
+                    <li><strong>Trasparenza totale:</strong> Zero costi nascosti o sorprese finali sulle trattenute.</li>
+                    <li><strong>Formazione integrata:</strong> Accesso gratuito ai corsi della Ginger Academy.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Successo Bozza -->
+    <div class="modal-overlay" id="draft-modal">
+        <div class="modal-content">
+            <div style="font-size:3.5rem; margin-bottom:1rem;">🚀</div>
+            <h2 style="color:var(--dark-blue); margin-bottom:0.8rem;">Bozza creata con successo!</h2>
+            <p style="color:var(--text-muted); margin-bottom:1.5rem;">La tua bozza è stata salvata correttamente nell'Area Riservata. Ora puoi completare la descrizione e inviare la pratica in revisione.</p>
+            <a href="dashboard.html" class="btn-primary" style="width:100%;">Vai alla tua Dashboard Creator</a>
+        </div>
+    </div>
+
+    <footer>
+        <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+    </footer>
+</body>
+</html>
