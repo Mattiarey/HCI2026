@@ -132,18 +132,20 @@ function renderProjects(projects) {
 
     projects.forEach(p => {
         const card = document.createElement('div');
-        card.className = 'bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex flex-col justify-between';
+        // AGGIUNTO 'relative' QUI SOTTO: serve a delimitare l'area del link esteso
+        card.className = 'bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex flex-col justify-between relative';
         card.innerHTML = `
                     <div>
                         <div class="${p.bg} h-40 flex items-center justify-center text-5xl relative">
-                            <img src="${p.icon}" style="width: 100%; height: 115%; object-fit: cover;"  alt="${p.title}" >
-                            <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm">
+                            <img src="${p.icon}" style="width: 100%; height: 115%; object-fit: cover;" alt="${p.title}">
+                            <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm z-20">
                                 ${p.badge}
                             </span>
                         </div>
                         <div class="p-5">
                             <h3 class="font-bold text-slate-800 text-base mb-1 leading-snug">
-                                <a href="dettaglio-progetto.html?id=${p.id}" class="hover:text-ginger-orange transition-colors">${p.title}</a>
+                                <!-- AGGIUNTO 'stretched-link' QUI SOTTO -->
+                                <a href="dettaglio-progetto.html?id=${p.id}" class="stretched-link hover:text-ginger-orange transition-colors">${p.title}</a>
                             </h3>
                             <p class="text-xs text-slate-500 mb-3 font-medium">by ${p.author}</p>
                             <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">${p.desc}</p>
