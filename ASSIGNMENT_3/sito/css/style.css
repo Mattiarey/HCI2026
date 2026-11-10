@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 /* ==========================================
    STYLE.CSS - CROWDFUNDING PLATFORM (GINGER LAB)
-   Progettato in conformità con l'analisi euristica e i requisiti di interattività
+   Progettato in conformità con l'analisi euristica, i requisiti di interattività e l'accessibilità (WCAG)
    ========================================== */
 
 :root {
+    /* Palette Colori Principale */
     --primary-green: #00ff1ab4;
     --primary-hover: #00ff1a6d;
     --dark-blue: #1e3a8a;
@@ -14,23 +17,75 @@
     --gray-bg: #f1f5f9;
     --success-green: #00ff1aeb;
     --error-red: #ef4444;
+
+    /* Alias per classi utility custom (Tailwind/Ginger) */
+    --ginger-green: var(--primary-green);
+    --ginger-green-hover: var(--primary-hover);
+    --ginger-navy: var(--dark-blue);
+    --ginger-light-bg: var(--bg-light);
+    --ginger-card-border: var(--gray-border);
+    --text-main: var(--text-dark);
+
+    /* Ombre e Font */
     --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* --- STILI GLOBALI DEL DOCUMENTO --- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
 body {
+    font-family: var(--font-family-sans);
     background-color: var(--bg-light);
     color: var(--text-dark);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     line-height: 1.5;
+}
+
+/* --- CLASSI DI ACCESSIBILITÀ (WCAG) --- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 1000;
+    text-decoration: none;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Estensione area cliccabile card senza duplicare link ARIA */
+.stretched-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
 }
 
 /* --- HEADER & NAVIGATION --- */
@@ -113,6 +168,7 @@ header {
     color: var(--primary-green);
 }
 
+/* --- PULSANTI --- */
 .btn-primary {
     background-color: var(--primary-green);
     color: white !important;
@@ -183,7 +239,7 @@ header {
     text-decoration: underline;
 }
 
-/* --- LAYOUT --- */
+/* --- LAYOUT PRINCIPALE --- */
 main {
     max-width: 1200px;
     margin: 1.5rem auto 3rem;
@@ -229,7 +285,7 @@ main {
     align-items: center;
 }
 
-/* --- CARDS & GRIDS --- */
+/* --- CARDS & GRIDS PROGETTI --- */
 .grid-projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -246,6 +302,7 @@ main {
     display: flex;
     flex-direction: column;
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; /* Necessario per .stretched-link */
 }
 
 .project-card:hover {
@@ -327,6 +384,90 @@ main {
     color: var(--text-dark);
 }
 
+/* --- UTILITIES, FORMS & MODALS --- */
+.card-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--gray-border);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-green);
+    outline: none;
+}
+
+.error-message {
+    color: var(--error-red);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+.form-group.error .form-control {
+    border-color: var(--error-red);
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+/* --- MODAL FEEDBACK --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
 /* --- FOOTER --- */
 footer {
     background-color: #0f172a;
@@ -378,122 +519,7 @@ footer {
     font-size: 0.85rem;
 }
 
-/* --- UTILITIES, FORMS & MODALS --- */
-.card-box {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid var(--gray-border);
-    box-shadow: var(--card-shadow);
-    margin-bottom: 1.5rem;
-}
-
-.form-group {
-    margin-bottom: 1.2rem;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-    font-size: 0.9rem;
-}
-
-.form-control {
-    width: 100%;
-    padding: 0.7rem 0.9rem;
-    border: 1px solid var(--gray-border);
-    border-radius: 6px;
-    font-size: 0.95rem;
-}
-
-.form-control:focus {
-    border-color: var(--primary-green);
-    outline: none;
-}
-
-.error-message {
-    color: var(--error-red);
-    font-size: 0.8rem;
-    margin-top: 0.3rem;
-    display: none;
-}
-
-.form-group.error .form-control {
-    border-color: var(--error-red);
-}
-
-.form-group.error .error-message {
-    display: block;
-}
-
-/* Modal Feedback */
-.modal-overlay {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(15, 23, 42, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.modal-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.modal-content {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 12px;
-    max-width: 480px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-}
-
-.modal-overlay.active .modal-content {
-    transform: translateY(0);
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-/* Definizione delle variabili locali della palette Ginger */
-:root {
-    /* Palette Colori Ginger */
-    --ginger-green: #00ff1ab4;
-    --ginger-green-hover: #00ff1a6d;
-    --ginger-navy: #1e3a8a;
-    --ginger-light-bg: #f8fafc;
-    --ginger-card-border: #e2e8f0;
-
-    /* Colori Generali */
-    --text-main: #0f172a;
-
-    /* Font principale */
-    --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-/* Stili Globali del Documento */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: var(--font-family-sans);
-    background-color: var(--ginger-light-bg);
-    color: var(--text-main);
-    line-height: 1.5;
-}
-
+/* --- TAILWIND CUSTOM UTILITIES / OVERRIDES --- */
 .bg-ginger-green { background-color: var(--ginger-green); }
 .bg-ginger-navy { background-color: var(--ginger-navy); }
 .bg-ginger-light { background-color: var(--ginger-light-bg); }
@@ -503,7 +529,6 @@ body {
 
 .border-ginger-card { border-color: var(--ginger-card-border); }
 
-/* Effetti Hover */
 .bg-ginger-green:hover,
 .hover\:bg-ginger-greenHover:hover {
     background-color: var(--ginger-green-hover);

@@ -2,70 +2,75 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Nostri Partner - GINGER Lab</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/partner.js" defer></script>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">🌍 GINGER Lab</a>
-            <div class="search-bar-header">
-                <input type="text" id="home-search-input" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event)">
-            </div>
-            <ul class="nav-links">
-                <li><a href="cerca.html">Esplora Progetti</a></li>
-                <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
-                <li><a href="funzionamento.html">Come Funziona</a></li>
-                <li><a href="partner.html" class="active">Partner</a></li>
-                <li><a href="dashboard.html" class="btn-outline">Area Riservata</a></li>
-            </ul>
-        </nav>
-    </header>
+<a href="#main-content" class="skip-link">Salta al contenuto principale</a>
 
-    <div class="breadcrumbs-container">
-        <a href="index.html">Home</a> / <strong>Partner</strong>
-    </div>
+<header>
+    <nav class="navbar" aria-label="Navigazione principale">
+        <a href="index.html" class="logo">🌍 GINGER Lab</a>
+        <form class="search-bar-header" role="search" onsubmit="return false;">
+            <label for="home-search-input" class="sr-only">Cerca cause, progetti, partner</label>
+            <input type="search" id="home-search-input" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event)">
+        </form>
+        <ul class="nav-links">
+            <li><a href="cerca.html">Esplora Progetti</a></li>
+            <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
+            <li><a href="funzionamento.html">Come Funziona</a></li>
+            <li><a href="partner.html" class="active" aria-current="page">Partner</a></li>
+            <li><a href="dashboard.html" class="btn-outline">Area Riservata</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <h1 style="color:var(--dark-blue); font-size:2.2rem; margin-bottom:0.8rem;">Enti e Istituzioni Partner</h1>
-        <p style="color:var(--text-muted); margin-bottom:2rem;">Lavoriamo con università, istituti di credito e fondazioni per co-finanziare i progetti della comunità.</p>
+<nav class="breadcrumbs-container" aria-label="Breadcrumb">
+    <a href="index.html">Home</a> / <strong aria-current="page">Partner</strong>
+</nav>
 
-        <!-- Griglia Partner con Tutti i Link Cliccabili (Risoluzione Problema Link) -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-    
-        <a href="https://www.unito.it" target="_blank" class="card-box" style="text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; padding: 1rem; box-sizing: border-box;">
+<main id="main-content">
+    <h1 style="color:var(--dark-blue); font-size:2.2rem; margin-bottom:0.8rem;">Enti e Istituzioni Partner</h1>
+    <p style="color:var(--text-muted); margin-bottom:2rem;">Lavoriamo con università, istituti di credito e fondazioni per co-finanziare i progetti della comunità.</p>
+
+    <!-- Griglia Partner con Tutti i Link Cliccabili -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+
+        <a href="https://www.unito.it" class="card-box" style="text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; padding: 1rem; box-sizing: border-box;">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem; transform: translateY(8px);">
                 <img src="../img/img_UniTo.png" alt="Logo Università degli Studi di Torino" style="width: 50%; height: auto; border-radius: 10px;">
             </div>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto; margin-bottom: 0;">Visita sito ufficiale ↗</p>
         </a>
 
-        <a href="https://www.intesasanpaolo.com/" target="_blank" class="card-box" style="text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; padding: 1rem; box-sizing: border-box;">
+        <a href="https://www.intesasanpaolo.com/" class="card-box" style="text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; padding: 1rem; box-sizing: border-box;">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem; transform: translateY(14px);">
                 <img src="../img/img_intesa.png" alt="Logo Banca Intesa Sanpaolo" style="width: 70%; height: auto; border-radius: 10px;">
             </div>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto; margin-bottom: 0;">Visita sito ufficiale ↗</p>
         </a>
 
-        <a href="https://www.reply.com/it" target="_blank" class="card-box" style="text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; padding: 1rem; box-sizing: border-box;">
+        <a href="https://www.reply.com/it" class="card-box" style="text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; padding: 1rem; box-sizing: border-box;">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem; transform: translateY(17px);">
                 <img src="../img/img_reply.png" alt="Logo Reply" style="width: 90%; height: auto; border-radius: 10px;">
             </div>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto; margin-bottom: 0;">Visita sito ufficiale ↗</p>
         </a>
 
-        <a href="https://dxc.com/it" target="_blank" class="card-box" style="text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; padding: 1rem; box-sizing: border-box;">
+        <a href="https://dxc.com/it" class="card-box" style="text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; height: 100%; padding: 1rem; box-sizing: border-box;">
             <div style="font-size: 2.5rem; margin-bottom: 0.5rem; transform: translateY(33px);">
                 <img src="../img/img_dxc.png" alt="Logo DXC" style="width: 100%; height: 100%; border-radius: 10px;">
             </div>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto; margin-bottom: 0;">Visita sito ufficiale ↗</p>
         </a>
-    </main>
+    </div>
+</main>
 
-    <footer>
-        <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
-    </footer>
+<footer>
+    <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+</footer>
 </body>
 </html>

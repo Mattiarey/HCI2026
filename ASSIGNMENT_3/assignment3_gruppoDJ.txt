@@ -1,0 +1,298 @@
+
+
+Problemi critici rilevati
+    Contrasto errato tra colore e sfondo di alcune parti del sito ---> RISOLTO
+    Immagini senza alt ---> RISOLTO
+    
+    <input type="text" id="home-search-input" placeholder="Cerca cause, progetti, partner..." onkeypress ...
+    questa linea da due Problemi
+        Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.
+    soluzioni proposte
+        Repair: Add text to the input element's associated label that describes the purpose or function of the control.
+        Add a label element that surrounds the control's label. Set the for attribute on the label element to the same value as the id attribute of the control. And/or add a title attribute to the input element. And/or create a label element that contains the input element.
+    
+    1.3.1
+
+    Info and Relationships
+    1.4.1
+    Use of Color
+    1.4.3
+    Contrast (Minimum)
+    1.3.5
+    Identify Input Purpose
+    2.4.7
+    Focus Visible
+    3.3.2
+    Labels or Instructions
+    1.4.11
+    Non-Text Contrast
+    4.1.2
+    Name, Role, Value
+    1.1.1
+    Non-text Content
+
+
+    Check 213: input element, type of "text", has no text in label.
+    Check 206: input element, type of "checkbox", has no text in label.
+    Check 57: input element, type of "text", missing an associated label.
+    Check 37: Header nesting - header following h1 is incorrect.
+
+
+Accessibilità aggiunta da Gemini cacca
+
+
+==========
+Index
+==========
+Elemento o sezione: Meta Viewport
+Prima: <meta name="viewport" content="width=1200">Dopo: <meta name="viewport" content="width=device-width, initial-scale=1.0">Motivazione: Impostare una larghezza fissa (1200) blocca l'interfaccia, costringendo allo scorrimento orizzontale su schermi piccoli o quando gli utenti usano lo zoom. Risolve il criterio: "Assicurarsi che i testi ingranditi e lo zoom della pagina fino al 200% non provochino scorrimenti orizzontali, tagli e sovrapposizioni."
+
+Elemento o sezione: Navigazione rapida (Skip Link) e ID Principale
+Prima: Assente nel codice.Dopo: Aggiunta della classe CSS .sr-only, del link <a href="#main-content" class="skip-link">Salta al contenuto principale</a> a inizio pagina, e dell'identificativo <main id="main-content">.Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera (mostrati al focus) per saltare la navigazione ripetitiva e arrivare subito al contenuto principale."
+
+Elemento o sezione: Barra di ricerca
+Prima: <div class="search-bar-header"><input type="text" id="home-search-input" ...></div>Dopo: <form class="search-bar-header" role="search" onsubmit="return false;"><label for="home-search-input" class="sr-only">Cerca cause, progetti, partner</label><input type="search" id="home-search-input" ...></form>Motivazione: Risolve due criteri: "Utilizzare elementi semantici corretti come " e "Associare programmaticamente un'etichetta visibile  al proprio controllo inserendo nel suo attributo for il medesimo id del campo correlato". Per non alterare la grafica, l'etichetta è stata nascosta visivamente tramite la classe .sr-only.
+
+Elemento o sezione: Errori di formattazione attributi nella Hero Section
+Prima: <section class="hero-section" display: grid; ... e box-sizing: border-box;"">Dopo: <section class="hero-section" style="display: grid; ..." e box-sizing: border-box;">Motivazione: Correzione di sintassi HTML non valida. Una formattazione malformata può alterare la lettura del DOM (Document Object Model) da parte degli screen reader e causare fallimenti nei parser di accessibilità.
+
+Elemento o sezione: Link "Vedi tutti"
+Prima: <a href="cerca.html" style="...">Vedi tutti →</a>Dopo: <a href="cerca.html" aria-label="Vedi tutti i progetti in evidenza" style="...">Vedi tutti →</a>Motivazione: Risolve il criterio: "Compilare testi dei link che spieghino chiaramente la destinazione anche decontestualizzati, evitando diciture non informative." In un elenco di link letti da uno screen reader, "Vedi tutti" da solo non possiede significato sufficiente.
+
+Elemento o sezione: Testi alternativi (alt) delle immagini sulle Card
+Prima: Es. <img src="..." alt="Immagine raffigurante un orto del progetto" alt="Orti Urbani Comunitari"...> (Attributo doppio e dicitura errata "Immagine raffigurante...").Dopo: Es. <img src="..." alt="Orto urbano comunitario curato dai cittadini"...>Motivazione: Correzione di sintassi invalida (due attributi alt presenti contemporaneamente sul primo elemento) e applicazione del criterio: "Fornire un'alternativa testuale contestuale per le immagini informative tramite l'attributo alt". Nelle tecnologie assistive non è necessario premettere "Immagine di...", poiché il software dichiara già l'elemento come grafico.
+
+Elemento o sezione: Barre di avanzamento (Progress Bar)
+Prima: <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 65%;"></div></div>Dopo: <div class="progress-bar-bg" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso raccolta fondi: 65%"><div class="progress-bar-fill" style="width: 65%;"></div></div>Motivazione: Risolve il criterio: "Utilizzare WAI-ARIA per comunicare il tipo di widget, il ruolo, gli stati...". Senza l'uso del ruolo corretto (progressbar) e dei valori numerici in ARIA (aria-valuenow), un non vedente non avrebbe avuto alcuna conferma sull'avanzamento della campagna, per il quale fino ad ora ci si affidava unicamente alla rappresentazione visiva dei blocchi.
+
+
+========
+CERCA
+========
+Elemento o sezione: Navigazione rapida (Skip Link) e ID Principale
+Prima: Assente nel codice.Dopo: Aggiunta della classe .sr-only e .skip-link nell'head, collegamento <a href="#main-content" class="skip-link"> all'inizio del body e attributo id="main-content" sul tag <main>.Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera... per saltare la navigazione ripetitiva". Permette agli utenti che navigano da tastiera di saltare l'header e interagire subito coi filtri.
+
+Elemento o sezione: Breadcrumbs (Briciole di pane)
+Prima: <div class="breadcrumbs-container"> <a href="index.html">Home</a> / <strong>Esplora progetti</strong> </div>Dopo: <nav class="breadcrumbs-container" aria-label="Breadcrumb"> <a href="index.html">Home</a> / <strong aria-current="page">Esplora progetti</strong> </nav>Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti [...] per descrivere il contenuto in modo esplicito, evitando contenitori generici come <div>". Aggiunto aria-current="page" per specificare alla sintesi vocale quale sia la pagina in cui l'utente si trova attualmente.
+
+Elemento o sezione: Barra di ricerca dell'Header
+Prima: <div class="flex-1 max-w-md ..."> <input type="text" id="header-search"> </div>Dopo: <form role="search" onsubmit="return false;" class="..."> <label for="header-search" class="sr-only">Cerca cause...</label> <input type="search" id="header-search"> </form>Motivazione: Risolve i criteri: "Utilizzare elementi semantici corretti come <form>" e "Associare programmaticamente un'etichetta visibile <label>". Utilizzare type="search" ottimizza la tastiera sui dispositivi mobili.
+
+Elemento o sezione: Etichetta per la Ricerca Testuale (Sidebar)
+Prima: <label class="...">Ricerca Testuale</label> <input type="text" id="keyword-filter">Dopo: <label for="keyword-filter" class="...">Ricerca Testuale</label> <input type="search" id="keyword-filter">Motivazione: Risolve il criterio: "Associare programmaticamente un'etichetta visibile <label> al proprio controllo inserendo nel suo attributo for il medesimo id del campo correlato". Prima, il testo "Ricerca Testuale" era solo vicino al campo, ma non programmaticamente collegato ad esso.
+
+Elemento o sezione: Categorie di filtraggio (Sidebar)
+Prima: <div class="space-y-2.5" id="category-filters"> raggruppati sotto una semplice <label class="...">Categorie</label>Dopo: Utilizzo del tag <fieldset> per raggruppare i filtri, e di <legend> per il titolo "Categorie".Motivazione: Risolve testualmente il criterio: "Raggruppare logicamente controlli multipli (ad esempio i campi per una data) dentro l'elemento <fieldset> ed etichettarli in modo condiviso usando il tag <legend>."
+
+Elemento o sezione: Banner di Feedback sui risultati di ricerca
+Prima: <div id="search-feedback" class="...">Dopo: <div id="search-feedback" aria-live="polite" aria-atomic="true" class="...">Motivazione: Risolve il criterio: "Segnalare le comunicazioni e i cambiamenti del DOM senza spostare il focus impiegando le regioni live, con aria-live='polite'". Quando i JavaScript filtreranno i progetti, il cambiamento del numero (es. "8 Progetti" -> "3 Progetti") verrà annunciato automaticamente allo screen reader.
+
+Elemento o sezione: Associazione dei pulsanti "Ripristina/Azzera Filtri"
+Prima: <button onclick="resetFilters()">Dopo: <button onclick="resetFilters()" aria-controls="projects-grid category-filters keyword-filter">Motivazione: Risolve il criterio: "Associare i bottoni di controllo all'area live dinamica utilizzando l'attributo aria-controls." Specifica agli ausili informatici esattamente quali zone della pagina andranno a mutare premendo questo bottone.
+
+Elemento o sezione: Messaggio "Nessun progetto trovato"
+Prima: <div id="no-results" class="hidden...">Dopo: <div id="no-results" role="alert" class="hidden...">Motivazione: Risolve il criterio: "Gestire messaggi dinamici usando role='alert'". Trattandosi di un messaggio di avviso o errore cruciale generato dinamicamente, richiede l'attenzione immediata dello screen reader una volta che l'elemento perde la classe hidden.
+
+Elemento o sezione: Icone ed Emoji decorative
+Prima: Emoji inserite direttamente nel testo (🔍, 🔎, 🔄, 📭).Dopo: Isolamento all'interno di un tag <span> con attributo aria-hidden="true".Motivazione: Risolve il criterio: "Escludere le icone e le immagini decorative dalle tecnologie assistive applicando l'attributo aria-hidden='true'." Le emoji verrebbero lette letteralmente in mezzo alla frase (es. "Lente di ingrandimento rivolta a sinistra ricerca testuale"), creando rumore.
+
+Elemento o sezione: Intestazioni del Footer
+Prima: <h3> e <h4> subordinati pur in assenza di tag gerarchici superiori all'interno della stessa section.Dopo: Convertiti tutti in <h2> stilizzati allo stesso modo (tramite classi o stile in linea).Motivazione: Risolve il criterio: "Usare i tag di intestazione da <h1> a <h6> per strutturare gerarchicamente le sezioni del documento, non per regolarne la grandezza visiva." Saltare i livelli (es. passare da h1 nel main direttamente ad h3/h4 nel footer senza un h2) rompe l'albero della struttura logica della pagina.
+
+
+=========
+CHECKOUT
+=========
+Elemento o sezione: Meta Viewport
+Prima: <meta name="viewport" content="width=1200">Dopo: <meta name="viewport" content="width=device-width, initial-scale=1.0">Motivazione: Risolve il criterio: "Assicurarsi che i testi ingranditi e lo zoom della pagina fino al 200% non provochino scorrimenti orizzontali, tagli e sovrapposizioni." Rimuovere la larghezza forzata è indispensabile per la navigazione su schermi ridotti e per i software di ingrandimento dello schermo.
+
+Elemento o sezione: Navigazione rapida (Skip Link) e ID Principale
+Prima: Assente nel codice.Dopo: Inserimento del blocco CSS .skip-link, aggiunta di <a href="#main-content" class="skip-link">...</a> e <main id="main-content"...>Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera... per saltare la navigazione ripetitiva e arrivare subito al contenuto principale."
+
+Elemento o sezione: Contenitore Breadcrumbs
+Prima: <div class="breadcrumbs-container">Dopo: <nav class="breadcrumbs-container" aria-label="Breadcrumb">Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... evitando contenitori generici come <div>". Utilizzando il tag semantico <nav> unito a aria-label, si segnala in modo esplicito allo screen reader che quest'area è adibita alla navigazione contestuale.
+
+Elemento o sezione: Associazione visiva e programmatica delle Label ( e /)
+Prima: <label>Seleziona l'Importo</label>, <label>Metodo di Pagamento</label> e <label><input type="checkbox"...></label> (senza associazione esplicita).Dopo: <label for="custom-amount">, <label for="payment-method"> e <label for="tax-receipt">.Motivazione: Risolve il criterio: "Associare programmaticamente un'etichetta visibile <label> al proprio controllo inserendo nel suo attributo for il medesimo id del campo correlato". Questa è una prassi fondamentale sia per le tecnologie assistive che per ingrandire l'area cliccabile dell'input, in particolare per i dispositivi touch e i checkbox.
+
+Elemento o sezione: Associazione dinamica dei bottoni per l'importo rapido
+Prima: <button type="button" class="btn-outline amt-btn" onclick="setAmount(10)">10 €</button>Dopo: <button type="button" class="btn-outline amt-btn" onclick="setAmount(10)" aria-controls="custom-amount">10 €</button>Motivazione: Risolve il criterio correlato a: "Associare i bottoni di controllo all'area... utilizzando l'attributo aria-controls." Indica al lettore di schermo che cliccare quel pulsante andrà a modificare il valore del campo di input specifico (custom-amount).
+
+Elemento o sezione: Validazione Form e Messaggio di Errore
+Prima: <div class="error-message">...</div> e input senza referenza d'errore.Dopo: <input ... aria-describedby="amount-error"> e <div id="amount-error" class="error-message" role="alert">...</div>. Aggiunto anche l'attributo HTML standard required sul campo select del metodo di pagamento.Motivazione: Risolve i criteri: "Fornire messaggi di errore... associandoli al controllo nel markup tramite l'attributo aria-describedby" e "Gestire messaggi dinamici usando role='alert'". Quando l'errore compare, verrà annunciato immediatamente dallo screen reader e, se l'utente è focalizzato sul campo, la descrizione dell'errore sarà letta come contesto.
+
+Elemento o sezione: Icone ed Emoji (Lucchetto e Coriandoli)
+Prima: 🔒 e 🎉 inseriti direttamente come testo.Dopo: Racchiusi in un tag <span aria-hidden="true">🔒</span>.Motivazione: Risolve il criterio: "Escludere le icone e le immagini decorative dalle tecnologie assistive applicando l'attributo aria-hidden='true'." In questo modo gli screen reader non interromperanno la frase leggendo "lucchetto chiuso" o "festa".
+
+Elemento o sezione: Finestra Modale (Modal di Successo)
+Prima: <div class="modal-overlay" id="success-modal"> e <h2>Donazione Effettuata con Successo!</h2> e <p id="modal-text">...</p> (senza semantica per modali).Dopo: <div class="modal-overlay" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text"> associato a <h2 id="modal-title">...</h2>.Motivazione: Risolve il criterio: "Utilizzare WAI-ARIA per comunicare il tipo di widget, il ruolo, gli stati...". Un utente non vedente non capirà che è apparsa una modale a meno che il div non venga esplicitamente dichiarato come role="dialog" e aria-modal="true".
+
+Elemento o sezione: Titolo del Progetto Dinamico
+Prima: <p>Stai sostenendo: <strong id="breadcrumb-title"></strong></p>Dopo: <p aria-live="polite">Stai sostenendo: <strong id="breadcrumb-title"></strong></p>Motivazione: Dal momento che il titolo del progetto viene iniettato dinamicamente via JavaScript dal file checkout.js dopo il caricamento della pagina o tramite parametro dell'URL, l'attributo aria-live="polite" garantisce che il cambio del testo venga intercettato in modo sicuro dalla tecnologia assistiva, rispettando il criterio per le regioni dinamiche.
+
+
+============
+DASHBOARD
+===========
+Elemento o sezione: Meta Viewport
+Prima: <meta name="viewport" content="width=1200">Dopo: <meta name="viewport" content="width=device-width, initial-scale=1.0">Motivazione: Risolve il criterio: "Assicurarsi che i testi ingranditi e lo zoom della pagina... non provochino scorrimenti orizzontali" correggendo un'impostazione che inibisce il design responsivo (layout fisso bloccato).
+
+Elemento o sezione: Navigazione rapida (Skip Link) e ID Principale
+Prima: Assente nel codice.Dopo: Inserimento del link <a href="#main-content" class="skip-link">Salta al contenuto principale</a> in cima alla pagina e di <main id="main-content">.Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera... per saltare la navigazione ripetitiva e arrivare subito al contenuto principale."
+
+Elemento o sezione: Barra di Ricerca nell'Header
+Prima: <div class="search-bar-header"><input type="text" ...></div>Dopo: <form class="search-bar-header" role="search"><label for="home-search-input" class="sr-only">...</label><input type="search" ...></form>Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti, come <form>" e "Associare programmaticamente un'etichetta visibile <label>". Aggiunge inoltre una dichiarazione di ruolo (role="search") per definire chiaramente la funzionalità.
+
+Elemento o sezione: Breadcrumbs e Link attivi (Area Riservata)
+Prima: <div class="breadcrumbs-container">...</div> e <a href="dashboard.html" class="active">Dopo: <nav class="breadcrumbs-container" aria-label="Breadcrumb">...<strong aria-current="page">...</strong></nav> e <a ... aria-current="page"> nel menù di header.Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... evitando contenitori generici come <div>". Inoltre, lo stato visivo di pagina attiva (tramite CSS) ora ha il suo corrispondente semantico con aria-current="page".
+
+Elemento o sezione: Gerarchia delle Intestazioni (Headings)
+Prima: Presenza di <h1>, seguito direttamente da tag <h3> (es. <h3>Stato di Avanzamento...</h3>, <h3>Dati e Contenuto Bozza</h3>).Dopo: I tag <h3> sono stati convertiti in <h2>.Motivazione: Risolve il criterio: "Usare i tag di intestazione da <h1> a <h6> per strutturare gerarchicamente le sezioni del documento, non per regolarne la grandezza visiva." Saltare un livello (<h2>) distrugge l'albero dell'indice della pagina generato dagli screen reader, compromettendone la navigabilità.
+
+Elemento o sezione: Tracker di Moderazione in Tempo Reale (Stato di avanzamento)
+Prima: Contenitori <div> con l'utilizzo di testi grafici (come le spunte "✓" lette come caratteri matematici/simboli non contestualizzati). Struttura non elencata.Dopo: Sostituito il <div> principale con una lista ordinata <ol>, oscurati i cerchi grafici decorativi con aria-hidden="true" e aggiunto un testo supplementare (<span class="sr-only">Completato/Fase corrente</span>) e l'attributo aria-current="step" alla fase in corso.Motivazione: Risolve i criteri: "Escludere le icone e le immagini decorative dalle tecnologie assistive applicando l'attributo aria-hidden='true'" e l'uso semantico dei componenti. Ora lo screen reader comunicherà chiaramente che si tratta di una lista di passaggi (step), avvisando l'utente su quali siano conclusi e quale sia quello attivo.
+
+Elemento o sezione: Form delle informazioni Bozza (Titolo e Descrizione)
+Prima: <label>Titolo della Campagna</label><input type="text" ...> (etichette non collegate).Dopo: <label for="campaign-title">...</label><input type="text" id="campaign-title" ...> e lo stesso per il campo descrizione <textarea id="campaign-desc">.Motivazione: Risolve il criterio: "Associare programmaticamente un'etichetta visibile <label> al proprio controllo inserendo nel suo attributo for il medesimo id del campo correlato." Assicura che, attivando o leggendo l'input, venga letta la corretta intestazione.
+
+Elemento o sezione: Pulsanti di Azione ("Scarica QR" e "Genera Anteprima")
+Prima: <button class="btn-primary" ...> e <button class="btn-secondary"...>Dopo: Aggiunta di type="button" a entrambi i controlli.Motivazione: Risolve il criterio: "Utilizzare l'elemento <button> per far eseguire un'azione". Sebbene il tag fosse corretto, non specificando il tipo in un ipotetico contesto futuro in cui vengano racchiusi in un modulo, il browser li interpreterebbe come type="submit", causando un potenziale invio inatteso della pagina. Esplicitare l'intento è una buona pratica tecnica.
+
+============
+DETTAGLIO-PROGETTO
+============
+Elemento o sezione: Meta Viewport
+Prima: <meta name="viewport" content="width=1200">Dopo: <meta name="viewport" content="width=device-width, initial-scale=1.0">Motivazione: Risolve il criterio: "Assicurarsi che i testi ingranditi e lo zoom della pagina fino al 200% non provochino scorrimenti orizzontali". Il blocco a 1200px invalida la responsività.
+
+Elemento o sezione: Navigazione rapida (Skip Link) e ID Principale
+Prima: Assente nel codice.Dopo: Inserimento CSS dedicato, aggiunta del link <a href="#main-content" class="skip-link">Salta al contenuto principale</a> in cima alla pagina e <main id="main-content">.Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera... per saltare la navigazione ripetitiva".
+
+Elemento o sezione: Barra di ricerca
+Prima: <div class="search-bar-header"><input type="text" ...></div>Dopo: <form class="search-bar-header" role="search"><label class="sr-only" for="home-search-input">...</label><input type="search" ...></form>Motivazione: Risolve due criteri contemporaneamente: "Utilizzare elementi semantici corretti, come <form>" e "Associare programmaticamente un'etichetta visibile <label>".
+
+Elemento o sezione: Contenitore Breadcrumb e pagina attiva
+Prima: <div class="breadcrumbs-container">...<strong id="breadcrumb-title">...</strong></div>Dopo: <nav class="breadcrumbs-container" aria-label="Breadcrumb">...<strong id="breadcrumb-title" aria-current="page">...</strong></nav>Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... per descrivere il contenuto in modo esplicito, evitando contenitori generici come <div>". Specifica inoltre programmaticamente il nodo corrente tramite aria-current="page".
+
+Elemento o sezione: Testi e dati caricati dinamicamente (Titolo, Descrizione e Statistiche Sidebar)
+Prima: Es. <h1 id="proj-title">Caricamento Progetto...</h1> senza attributi ARIA.Dopo: <h1 id="proj-title" aria-live="polite">...</h1>, <div id="proj-desc" aria-live="polite"> e <div class="card-box" ... aria-live="polite" aria-atomic="true"> per la sidebar delle donazioni.Motivazione: Risolve il criterio: "Segnalare le comunicazioni e i cambiamenti del DOM senza spostare il focus impiegando le regioni live, con aria-live='polite'". Poiché questi dati vengono manipolati e iniettati dagli script dettaglio-progetto-load.js e project.js a caricamento terminato, in assenza di questo attributo uno screen reader continuerebbe a leggere "Caricamento Progetto..." anche dopo che la pagina ha mostrato i dati reali.
+
+Elemento o sezione: Immagine di copertina gestita via CSS (background-image)
+Prima: <div id="proj-img-box" style="... background-size:cover; ..."></div>Dopo: <div id="proj-img-box" role="img" aria-label="Immagine di copertina del progetto" style="..."></div>Motivazione: Risolve il criterio: "Fornire un'alternativa testuale contestuale per le immagini informative tramite l'attributo alt." Quando si utilizzano i <div> con immagini di sfondo per mere ragioni di styling o ritaglio visivo, le tecnologie assistive li ignorano completamente credendoli contenitori vuoti. Assegnare role="img" e un'etichetta aria-label restituisce il valore semantico perso.
+
+Elemento o sezione: Barra di avanzamento fondi (Progress Bar)
+Prima: <div class="progress-bar-bg"><div id="proj-progress" class="progress-bar-fill"></div></div>Dopo: <div class="progress-bar-bg" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso raccolta fondi">...</div>Motivazione: Risolve il criterio: "Utilizzare WAI-ARIA per comunicare il tipo di widget, il ruolo, gli stati...". Definisce esplicitamente alla sintesi vocale la presenza di una barra di misurazione. (Nota per lo sviluppo: idealmente, il tuo script JavaScript dovrà anche occuparsi di aggiornare programmaticamente il valore di aria-valuenow oltre a modificare il width della barra in percentuale).
+
+Elemento o sezione: Pulsante "Sostieni Questo Progetto"
+Nota: Il pulsante era strutturato come <a id="donate-btn" href="checkout.html" class="btn-primary">. È stato mantenuto intatto, in quanto rispetta pienamente il criterio "Utilizzare... il tag <a> per navigare verso una destinazione." Pur avendo l'aspetto visivo di un bottone, l'elemento esegue un cambio di URL, quindi l'ancora (anchor tag) è la scelta semantica corretta.
+
+=========
+FUNZIONAMENTO
+=========
+Elemento o sezione: Meta Viewport
+Prima: <meta name="viewport" content="width=1200">Dopo: <meta name="viewport" content="width=device-width, initial-scale=1.0">Motivazione: Risolve il criterio: "Assicurarsi che i testi ingranditi e lo zoom della pagina fino al 200% non provochino scorrimenti orizzontali". Il blocco precedente costringeva allo scorrimento laterale su dispositivi mobili e software di zoom.
+
+Elemento o sezione: Navigazione rapida (Skip Link) e ID Principale
+Prima: Assente nel codice originale.Dopo: Aggiunta delle regole CSS dedicate, inserimento di <a href="#main-content" class="skip-link">Salta al contenuto principale</a> in cima al body e aggiunta dell'ID al tag <main id="main-content">.Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera... per arrivare subito al contenuto principale."
+
+Elemento o sezione: Barra di ricerca dell'Header
+Prima: <div class="search-bar-header"><input type="text" ...></div>Dopo: <form class="search-bar-header" role="search" onsubmit="return false;"><label for="home-search-input" class="sr-only">...</label><input type="search" ...></form>Motivazione: Risolve congiuntamente i criteri: "Utilizzare elementi semantici corretti, come <form>" e "Associare programmaticamente un'etichetta visibile <label> al proprio controllo..." (L'etichetta è stata nascosta visivamente per non alterare il layout).
+
+Elemento o sezione: Breadcrumb e Link Attivo
+Prima: <div class="breadcrumbs-container">...<strong>Come Funziona</strong></div> e <a href="funzionamento.html" class="active">Dopo: <nav class="breadcrumbs-container" aria-label="Breadcrumb">...<strong aria-current="page">...</strong></nav> e <a href="funzionamento.html" class="active" aria-current="page">Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... evitando contenitori generici come <div>". Inoltre fornisce alla sintesi vocale la posizione attuale dell'utente tramite aria-current="page".
+
+Elemento o sezione: Griglia dei passaggi ("Come Funziona")
+Prima: Un <div style="display:grid... che conteneva vari .card-box generici impostati come <div>.Dopo: Trasformato il contenitore principale in una lista ordinata <ol style="display:grid... list-style:none;...> e le singole card in elementi di lista <li>.Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... per descrivere il contenuto in modo esplicito". Trattandosi di tre fasi sequenziali (1, 2, 3), il markup migliore è una lista ordinata. Lo stile CSS list-style:none e gli azzeramenti di margin/padding prevengono qualsiasi sbavatura grafica.
+
+Elemento o sezione: Icone Emoji (Lampadina, Stretta di mano, Razzo)
+Prima: <div style="font-size:3rem; margin-bottom:1rem;">💡</div> (e simili).Dopo: Aggiunta dell'attributo aria-hidden="true" sul contenitore dell'emoji.Motivazione: Risolve il criterio: "Escludere le icone e le immagini decorative dalle tecnologie assistive applicando l'attributo aria-hidden='true'." In questo modo si evita che lo screen reader pronunci il nome dell'emoji interrompendo il flusso informativo.
+
+Elemento o sezione: Gerarchia delle Intestazioni (Grid, FAQ e Footer)
+Prima:
+
+    Le tre card del funzionamento iniziavano con <h3>.
+
+    Le FAQ utilizzavano <h4> (es. <h4>Il crowdfunding è sicuro?</h4>).
+
+    Il Footer utilizzava tag <h3> e <h4>.Dopo:
+
+    Le card del funzionamento usano ora <h2> (perché seguono l'<h1> principale) con ripristino della grandezza visiva originale tramite font-size:1.17em. È stata anche aggiunta una classe <span class="sr-only">Passo </span> per far leggere "Passo 1" al lettore di schermo.
+
+    I titoli delle singole FAQ sono stati convertiti da <h4> a <h3> (essendo figli diretti del blocco <h2 ...>Domande Frequenti</h2>), e la grandezza corretta in CSS in linea.
+
+    I titoli del footer sono stati uniformati in tag <h2>.Motivazione: Risolve rigidamente il criterio: "Usare i tag di intestazione da <h1> a <h6> per strutturare gerarchicamente le sezioni del documento, non per regolarne la grandezza visiva." La struttura del DOM non deve mai saltare livelli gerarchici. Ogni stile è stato compensato con CSS inline per farti ritrovare le esatte proporzioni di prima.
+
+
+============
+LANCIA CAMPAGNA
+===========
+Elemento o sezione: Meta Viewport
+Prima: <meta name="viewport" content="width=1200">Dopo: <meta name="viewport" content="width=device-width, initial-scale=1.0">Motivazione: Risolve il criterio: "Assicurarsi che i testi ingranditi e lo zoom della pagina... non provochino scorrimenti orizzontali, tagli e sovrapposizioni." Rimuove il blocco fisso che ostacolava l'uso di ingranditori di schermo e dispositivi mobili.
+
+Elemento o sezione: Navigazione rapida (Skip Link) e ID Principale
+Prima: Assente nel codice.Dopo: Aggiunta dello stile CSS, del link <a href="#main-content" class="skip-link">...</a> a inizio pagina e di <main id="main-content">.Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera... per saltare la navigazione ripetitiva".
+
+Elemento o sezione: Barra di Ricerca nell'Header
+Prima: <div class="search-bar-header"><input type="text" ... aria-label="..."></div>Dopo: <form class="search-bar-header" role="search"><label for="home-search-input" class="sr-only">...</label><input type="search" ...></form>Motivazione: L'attributo aria-label era accettabile, ma la lista richiede esplicitamente: "Associare programmaticamente un'etichetta visibile <label> al proprio controllo inserendo nel suo attributo for il medesimo id". Ho sostituito l'aria-label con un vero tag <label> nascosto visivamente con la classe .sr-only e ho convertito il <div> generico in un form semantico.
+
+Elemento o sezione: Breadcrumb e Pagina Attiva
+Prima: <div class="breadcrumbs-container"> e <strong>Lancia una Campagna</strong>Dopo: <nav class="breadcrumbs-container" aria-label="Breadcrumb"> e <strong aria-current="page">...</strong> (anche nel menu principale).Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... evitando contenitori generici come <div>", fornendo il contesto di navigazione per le tecnologie assistive.
+
+Elemento o sezione: Legenda dei Campi Obbligatori (Form)
+Prima: Assente (gli asterischi erano presenti ma il loro significato non era spiegato).Dopo: Inserimento del paragrafo esplicativo: <p>I campi contrassegnati con l'asterisco (*) sono obbligatori.</p> appena prima del tag <form>.Motivazione: Risolve letteralmente il criterio: "Segnalare i campi richiesti indicando il significato degli asterischi in pagina". In assenza di questa legenda, per un utente non vedente l'asterisco letto dalla sintesi vocale (es. "Titolo del progetto asterisco") risulta un mero simbolo di punteggiatura senza significato logico intrinseco.
+
+Elemento o sezione: Validazione dei Campi Input e Messaggi d'Errore
+Prima: <input required> accompagnato da un div di errore isolato <div class="error-message">...</div>.Dopo: Inserito aria-required="true" e aria-describedby="title-error" (e budget-error) sugli input. I relativi messaggi possiedono l'ID corrispondente e il role="alert".Motivazione: Risolve i criteri: "Fornire messaggi di errore... associandoli al controllo nel markup tramite l'attributo aria-describedby" e "Gestire messaggi dinamici usando role='alert'". Ora, se l'utente sbaglia la validazione e il messaggio compare, il focus e lo screen reader sapranno ricollegare immediatamente la stringa testuale rossa all'input che ha causato l'errore.
+
+Elemento o sezione: Gerarchia delle Intestazioni (Sidebar)
+Prima: <h3 style="...">Perché scegliere GINGER Lab?</h3> inserito parallelamente al form che possedeva un <h2>.Dopo: Convertito in <h2> con l'aggiunta di font-size:1.17em; per rimpicciolirlo alla grandezza di un <h3>.Motivazione: Risolve il criterio: "Usare i tag di intestazione da <h1> a <h6> per strutturare gerarchicamente le sezioni del documento, non per regolarne la grandezza visiva." Trovandosi allo stesso livello di profondità concettuale della form ("Crea la tua bozza"), il tag corretto è <h2>.
+
+Elemento o sezione: Modale di Successo (Finestra popup)
+Prima: <div> senza semantica ARIA.Dopo: Aggiunta di role="dialog", aria-modal="true", aria-labelledby="draft-modal-title", e aria-describedby="draft-modal-desc".Motivazione: Risolve il criterio: "Utilizzare WAI-ARIA per comunicare il tipo di widget, il ruolo, gli stati...". Senza queste etichette, il lettore di schermo interpreterebbe la finestra modale semplicemente come un pezzo di testo situato casualmente in fondo alla pagina, senza avvisare l'utente di essere "bloccato" all'interno di un popup (da qui la vitale importanza di aria-modal="true").
+
+Elemento o sezione: Emoji Decorativa (Razzo)
+Prima: <div style="font-size:3.5rem; margin-bottom:1rem;">🚀</div>Dopo: <div style="..." aria-hidden="true">🚀</div>Motivazione: Risolve il criterio: "Escludere le icone e le immagini decorative dalle tecnologie assistive applicando l'attributo aria-hidden='true'." In questo modo non verrà letto "razzo" a metà della frase sulla finestra modale.
+
+==========
+PARTNER
+==========
+Elemento o sezione: Meta Viewport
+Prima: <meta name="viewport" content="width=1200">Dopo: <meta name="viewport" content="width=device-width, initial-scale=1.0">Motivazione: Risolve il criterio: "Assicurarsi che i testi ingranditi e lo zoom della pagina... non provochino scorrimenti orizzontali". Il layout fisso impedisce alle media query e ai software di ingrandimento di riposizionare i contenuti in base alla larghezza dello schermo.
+
+Elemento o sezione: Navigazione rapida (Skip Link) e ID Principale
+Prima: Assente nel codice.Dopo: Inserimento delle regole CSS .skip-link, link <a href="#main-content" class="skip-link">Salta al contenuto principale</a> all'inizio della pagina e <main id="main-content">.Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera (mostrati al focus) per saltare la navigazione ripetitiva".
+
+Elemento o sezione: Barra di ricerca dell'Header
+Prima: <div class="search-bar-header"><input type="text" ...></div>Dopo: <form class="search-bar-header" role="search" onsubmit="return false;"><label for="home-search-input" class="sr-only">...</label><input type="search" ...></form>Motivazione: Risolve i criteri: "Utilizzare elementi semantici corretti, come <form>" e "Associare programmaticamente un'etichetta visibile <label> al proprio controllo". L'etichetta è stata nascosta visivamente per non alterare la veste grafica, pur restando udibile dagli screen reader.
+
+Elemento o sezione: Breadcrumb e Pagina Attiva
+Prima: <div class="breadcrumbs-container"> e link generici.Dopo: <nav class="breadcrumbs-container" aria-label="Breadcrumb"> unito a <strong aria-current="page">...</strong> e aria-current="page" applicato anche sulla voce "Partner" nel menu principale.Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... evitando contenitori generici come <div>". Dichiara la posizione attuale in modo programmatico al browser e agli ausili informatici.
+
+Elemento o sezione: Gestione Apertura Collegamenti Esterni (Target)
+Prima: <a href="..." target="_blank" class="card-box"...>Dopo: <a href="..." class="card-box"...> (rimosso target="_blank").Motivazione: Risolve il criterio: "Preferire l'apertura dei collegamenti nella finestra corrente." Aprire collegamenti in schede o finestre inattese rompe l'uso del tasto "Indietro" del browser e causa disorientamento cognitivo, un serio ostacolo di accessibilità per utenti con difficoltà visive o cognitive.
+
+Elemento o sezione: Correzione DOM (Errore di chiusura del blocco griglia)
+Prima: <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;"> aperto ma mai chiuso prima della fine del <main>.Dopo: Aggiunta del tag </div> mancante dopo l'ultimo link partner e prima della chiusura del <main>.Motivazione: Un HTML non ben formato causa un'interpretazione errata dell'albero del DOM da parte del browser e della sintesi vocale. Ho corretto la struttura del codice per renderlo validabile e predicibile.
+
+
+=======
+FORMAZIONE
+=======
+Elemento o sezione: Meta Viewport
+Prima: <meta name="viewport" content="width=1200">Dopo: <meta name="viewport" content="width=device-width, initial-scale=1.0">Motivazione: Risolve il criterio: "Assicurarsi che i testi ingranditi e lo zoom della pagina... non provochino scorrimenti orizzontali, tagli e sovrapposizioni." Rimuovere la limitazione a 1200px è il primo passo obbligatorio per l'accessibilità responsiva.
+
+Elemento o sezione: Navigazione rapida (Skip Link) e Identificativo Principale
+Prima: Assente nel codice.Dopo: Inserimento delle regole CSS .skip-link nell'header, inserimento di <a href="#main-content" class="skip-link">Salta al contenuto principale</a> in cima alla pagina e aggiunta di id="main-content" al tag <main>.Motivazione: Risolve il criterio: "Inserire 'skip link' invisibili ma raggiungibili da tastiera... per saltare la navigazione ripetitiva e arrivare subito al contenuto principale."
+
+Elemento o sezione: Breadcrumb, Navigazione e Link Attivo
+Prima: <div class="breadcrumbs-container"> contenente un tag <strong> generico. Il link di navigazione possedeva solo la classe visiva class="active".Dopo: Sostituzione con <nav class="breadcrumbs-container" aria-label="Breadcrumb">, aggiunta di aria-current="page" al tag <strong> e aggiunta dello stesso attributo al link del menu principale.Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... per descrivere il contenuto in modo esplicito, evitando contenitori generici come <div>". Dichiara in modo programmatico al browser e alle tecnologie assistive che si tratta di barre di navigazione e specifica quale sia la risorsa attualmente a video.
+
+Elemento o sezione: Elenco dei Corsi in Programma (Griglia)
+Prima: Un contenitore generico <div style="display:grid..."> con all'interno i .card-box definiti come <div>.Dopo: Trasformazione del contenitore principale in una lista non ordinata <ul> e conversione delle singole schede in elementi lista <li>. Sono state aggiunte le regole CSS in linea list-style:none; padding:0; margin:0; per rimuovere i pallini e i rientri standard delle liste, mantenendo la griglia visiva inalterata.Motivazione: Risolve il criterio: "Utilizzare elementi semantici corretti... per descrivere il contenuto in modo esplicito". Trattandosi di un elenco ripetuto di corsi o eventi, raggrupparli all'interno di una lista permette allo screen reader di preannunciare all'utente il numero totale di elementi (es. "Elenco di 2 elementi"), migliorando notevolmente l'orientamento.
+
+Elemento o sezione: Pulsanti di Azione (Iscrizione ai corsi)
+Prima: <button class="btn-primary"...>Dopo: <button type="button" class="btn-primary"...>Motivazione: Risolve tecnicamente il criterio correlato all'uso formale degli elementi interattivi. Sebbene non fosse formalmente un errore bloccante, omettere il type in un tag <button> fa sì che il browser lo interpreti di default come type="submit". Se in futuro dovessi inserire questi componenti all'interno di un modulo per la raccolta dati, il clic comporterebbe il ricaricamento inatteso della pagina. (Se nella versione finale dell'applicativo questi pulsanti dovessero reindirizzare a una pagina esterna anziché aprire una modale, sarà necessario sostituire il tag <button> con un tag <a>).
+==================
+PROBLEMI SORTI PERCHÉ GEMINI CACCA
+==================
+In esplora progetti rendere anche le immagini cliccabili
+in dashboard c'è un problema con il 3
