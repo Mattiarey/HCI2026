@@ -7,10 +7,9 @@
     <script src="../js/cerca-script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
+
 <body class="min-h-screen flex flex-col justify-between bg-slate-50 text-slate-900">
-<a href="#main-content" class="skip-link">Salta al contenuto principale</a>
 
 <!-- HEADER / NAVIGATION -->
 <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
@@ -24,7 +23,12 @@
             <label for="header-search" class="sr-only">Cerca cause, progetti, partner</label>
             <input type="search" id="header-search"
                    placeholder="Cerca cause, progetti, partner..."
-                   class="w-full pl-9 pr-4 py-2 border border-slate-300 rounded-full text-sm focus:outline-none focus:border-ginger-orange focus:ring-1 focus:ring-ginger-orange transition-all">
+                   class="w-full pl-9 pr-10 py-2 border border-slate-300 rounded-full text-sm focus:outline-none focus:border-ginger-orange focus:ring-1 focus:ring-ginger-orange transition-all">
+            
+            <!-- Pulsante di invio conforme per l'accessibilità -->
+            <button type="submit" class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 focus:outline-none" aria-label="Cerca">
+                <span aria-hidden="true">➔</span>
+            </button>
         </form>
 
         <!-- Navigation Links -->
@@ -48,7 +52,7 @@
 <main id="main-content" class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex-1">
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
-            <h1 class="text-3xl font-bold text-ginger-navy">Esplora e Filtra le Campagne</h1>
+            <p class="text-3xl font-bold text-ginger-navy">Esplora e Filtra le Campagne</p>
             <p class="text-slate-500 text-sm mt-1">Sostieni le iniziative della comunità o trova partner sul territorio.</p>
         </div>
         <button onclick="resetFilters()" class="self-start md:self-auto text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold px-3 py-2 rounded-lg transition-colors flex items-center gap-1.5" aria-controls="projects-grid category-filters keyword-filter">
@@ -82,25 +86,25 @@
             <fieldset>
                 <legend class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 w-full">Categorie</legend>
                 <div class="space-y-2.5" id="category-filters">
-                    <label class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
-                        <input type="checkbox" value="Sociale" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
-                        <span>Sociale & Comunità</span>
+                    <label for="cb1" class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
+                        <input type="checkbox" id="cb1" value="Sociale" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
+                        Sociale & Comunità
                     </label>
-                    <label class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
-                        <input type="checkbox" value="Ecologia" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
-                        <span>Ecologia & Mare</span>
+                    <label for="cb2" class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
+                        <input type="checkbox" id="cb2" value="Ecologia" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
+                        Ecologia & Mare
                     </label>
-                    <label class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
-                        <input type="checkbox" value="Biodiversità" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
-                        <span>Biodiversità & Scienza</span>
+                    <label for="cb3" class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
+                        <input type="checkbox" id="cb3" value="Biodiversità" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
+                        Biodiversità & Scienza
                     </label>
-                    <label class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
-                        <input type="checkbox" value="Artigianato" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
-                        <span>Artigianato & Patrimonio</span>
+                    <label for="cb4" class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
+                        <input type="checkbox" id="cb4" value="Artigianato" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
+                        Artigianato & Patrimonio
                     </label>
-                    <label class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
-                        <input type="checkbox" value="Innovazione" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
-                        <span>Innovazione & Istruzione</span>
+                    <label for="cb5" class="flex items-center gap-2.5 text-sm text-slate-700 cursor-pointer select-none">
+                        <input type="checkbox" id="cb5" value="Innovazione" checked class="w-4 h-4 rounded text-ginger-orange focus:ring-ginger-orange border-slate-300 filter-cb">
+                        Innovazione & Istruzione
                     </label>
                 </div>
             </fieldset>
@@ -120,7 +124,7 @@
             <!-- ZERO STATE (No Results) -->
             <div id="no-results" class="hidden bg-white border border-slate-200 rounded-2xl p-12 text-center shadow-sm" role="alert">
                 <div class="text-5xl mb-4" aria-hidden="true">📭</div>
-                <h3 class="text-xl font-bold text-ginger-navy mb-2">Nessun progetto corrisponde ai criteri</h3>
+                <p class="text-xl font-bold text-ginger-navy mb-2">Nessun progetto corrisponde ai criteri</p>
                 <p class="text-slate-500 text-sm max-w-md mx-auto mb-6">Prova a modificare i termini di ricerca o ad abilitare altre categorie di progetti.</p>
                 <button onclick="resetFilters()" class="bg-ginger-orange hover:bg-ginger-orangeHover text-white font-bold text-sm px-6 py-2.5 rounded-lg transition-colors" aria-controls="projects-grid category-filters keyword-filter">
                     Mostra tutti i progetti
@@ -134,11 +138,11 @@
 <footer class="bg-slate-900 text-slate-400 mt-16 py-10 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <div>
-            <h2 style="color:royalblue; margin-bottom:0.8rem; font-size:1.17em; font-weight:bold;">🌍 GINGER Lab</h2>
+            <p style="color:royalblue; margin-bottom:0.8rem; font-size:1.17em; font-weight:bold;">🌍 GINGER Lab</p>
             <p class="text-xs text-slate-400 leading-relaxed">Piattaforma di crowdfunding civico per sostenere l'innovazione sociale e territoriale.</p>
         </div>
         <div>
-            <h2 class="text-white text-sm font-semibold mb-3">Esplora</h2>
+            <p class="text-white text-sm font-semibold mb-3">Esplora</p>
             <ul class="space-y-2 text-xs">
                 <li><a href="cerca.html" class="hover:text-white transition-colors">Tutte le cause</a></li>
                 <li><a href="partner.html" class="hover:text-white transition-colors">Enti Partner</a></li>
@@ -146,14 +150,14 @@
             </ul>
         </div>
         <div>
-            <h2 class="text-white text-sm font-semibold mb-3">Progettisti</h2>
+            <p class="text-white text-sm font-semibold mb-3">Progettisti</p>
             <ul class="space-y-2 text-xs">
                 <li><a href="lancia-campagna.html" class="hover:text-white transition-colors">Crea Campagna</a></li>
                 <li><a href="dashboard.html" class="hover:text-white transition-colors">Area Riservata</a></li>
             </ul>
         </div>
         <div>
-            <h2 class="text-white text-sm font-semibold mb-3">Info Legal</h2>
+            <p class="text-white text-sm font-semibold mb-3">Info Legal</p>
             <ul class="space-y-2 text-xs">
                 <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
                 <li><a href="#" class="hover:text-white transition-colors">Termini & Condizioni</a></li>

@@ -145,7 +145,7 @@ function renderProjects(projects) {
                         <div class="p-5">
                             <h3 class="font-bold text-slate-800 text-base mb-1 leading-snug">
                                 <!-- AGGIUNTO 'stretched-link' QUI SOTTO -->
-                                <a href="dettaglio-progetto.html?id=${p.id}" class="stretched-link hover:text-ginger-orange transition-colors">${p.title}</a>
+                                <a href="dettaglio-progetto.html?id=${p.id}" class="stretched-link hover:text-ginger-orange transition-colors" style="text-decoration:underline;">${p.title}</a>
                             </h3>
                             <p class="text-xs text-slate-500 mb-3 font-medium">by ${p.author}</p>
                             <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">${p.desc}</p>

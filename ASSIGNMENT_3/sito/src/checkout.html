@@ -6,7 +6,6 @@
     <title>Sostieni il Progetto - GINGER Lab</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/checkout.js" defer></script>
-
 </head>
 <body>
 <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
@@ -32,10 +31,10 @@
                 <label for="custom-amount">Seleziona l'Importo</label>
                 <div style="display:flex; gap:1rem; margin-bottom:0.5rem;">
                     <button type="button" class="btn-outline amt-btn" onclick="setAmount(10)" aria-controls="custom-amount">10 €</button>
-                    <button type="button" class="btn-primary amt-btn" onclick="setAmount(25)" aria-controls="custom-amount">25 €</button>
+                    <button type="button" class="btn-outline amt-btn" onclick="setAmount(25)" aria-controls="custom-amount">25 €</button>
                     <button type="button" class="btn-outline amt-btn" onclick="setAmount(50)" aria-controls="custom-amount">50 €</button>
                 </div>
-                <input type="number" id="custom-amount" class="form-control" placeholder="Inserisci importo personalizzato (€)" value="25" min="1" required aria-describedby="amount-error">
+                <input autocomplete="" type="number" id="custom-amount" class="form-control" placeholder="Inserisci importo personalizzato (€)" min="1" required aria-describedby="amount-error">
                 <div id="amount-error" class="error-message" role="alert">Inserisci un importo valido superiore a 0€.</div>
             </div>
 
@@ -45,7 +44,7 @@
 
             <div class="form-group">
                 <label for="payment-method">Metodo di Pagamento</label>
-                <select class="form-control" id="payment-method" required>
+                <select autocomplete="" class="form-control" id="payment-method" required>
                     <option value="card">Carta di Credito / Debito (Visa, Mastercard)</option>
                     <option value="satispay">Satispay / Bancomat Pay</option>
                     <option value="transfer">Bonifico Bancario Diretto</option>

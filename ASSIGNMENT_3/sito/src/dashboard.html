@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area Riservata Creator - GINGER Lab</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/dashboard.js" defer></script>
-
 </head>
 <body>
-<a href="#main-content" class="skip-link">Salta al contenuto principale</a>
 
 <header>
     <nav class="navbar" aria-label="Navigazione principale">
         <a href="index.html" class="logo">🌍 GINGER Lab</a>
-        <form class="search-bar-header" role="search" onsubmit="return false;">
+        <form action="cerca.html" method="GET" class="search-bar-header" role="search" style="position: relative; display: flex; align-items: center;">
             <label for="home-search-input" class="sr-only">Cerca cause, progetti, partner</label>
-            <input type="search" id="home-search-input" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event)">
+            <input type="search" id="home-search-input" name="q" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event, this)" style="width: 100%; padding-right: 35px;">
+            <button type="submit" aria-label="Cerca" style="position: absolute; right: 10px; background: none; border: none; cursor: pointer; color: #64748b; font-size: 1rem;">
+                <span aria-hidden="true">➔</span>
+            </button>
         </form>
         <ul class="nav-links">
             <li><a href="cerca.html">Esplora Progetti</a></li>
             <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
             <li><a href="funzionamento.html">Come Funziona</a></li>
             <li><a href="partner.html">Partner</a></li>
-            <li><a href="dashboard.html" class="active" aria-current="page">Area Riservata</a></li>
+            <li><a href="dashboard.html" class="btn-outline-dashboard">Area Riservata</a></li>
         </ul>
     </nav>
 </header>
@@ -46,27 +46,27 @@
         <h2 style="color:var(--dark-blue); margin-bottom:1.2rem;">Stato di Avanzamento della Pratica</h2>
         <ol style="display:flex; justify-content:space-between; position:relative; list-style:none; padding:0; margin:0;">
             <li style="text-align:center; flex:1;">
-                <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:white; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">✓</div>
+                <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:blue; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">✓</div>
                 <span style="font-size:0.85rem; font-weight:600;">
                         <span class="sr-only">Completato: Fase </span>1. Bozza Creata
                     </span>
             </li>
             <li style="text-align:center; flex:1;">
-                <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:white; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">✓</div>
+                <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:blue; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">✓</div>
                 <span style="font-size:0.85rem; font-weight:600;">
                         <span class="sr-only">Completato: Fase </span>2. Documenti Inviati
                     </span>
             </li>
             <li style="text-align:center; flex:1;" aria-current="step">
-                <div style="width:36px; height:36px; border-radius:50%; background:var(--primary-orange); color:white; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">3</div>
+                <div style="width:36px; height:36px; border-radius:50%; background:yellow; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">3</div>
                 <span style="font-size:0.85rem; font-weight:600; color:var(--primary-orange);">
                         <span class="sr-only">Fase corrente: Fase 3. </span>In Revisione (Approvazione entro 24h)
                     </span>
             </li>
-            <li style="text-align:center; flex:1;">
-                <div style="width:36px; height:36px; border-radius:50%; background:#e2e8f0; color:#64748b; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">4</div>
-                <span style="font-size:0.85rem; color:var(--text-muted);">
-                        <span class="sr-only">Da completare: Fase </span>4. Pubblicazione Ufficiale
+            <li style="text-align:center; flex:1;" aria-current="step">
+                <div style="width:36px; height:36px; border-radius:50%; background:yellow; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">4</div>
+                <span style="font-size:0.85rem; font-weight:600; color:var(--primary-orange);">
+                        <span class="sr-only">Ultima fase: Fase 4. </span>4. Pubblicazione Ufficiale
                     </span>
             </li>
         </ol>
@@ -77,11 +77,11 @@
             <h2 style="color:var(--dark-blue); margin-bottom:1rem;">Dati e Contenuto Bozza</h2>
             <div class="form-group">
                 <label for="campaign-title">Titolo della Campagna</label>
-                <input type="text" id="campaign-title" class="form-control" value="Orti Urbani Comunitari - Quartiere Nord">
+                <input autocomplete="" type="text" id="campaign-title" class="form-control" value="Orti Urbani Comunitari - Quartiere Nord">
             </div>
             <div class="form-group">
                 <label for="campaign-desc">Descrizione della storia</label>
-                <textarea id="campaign-desc" class="form-control" rows="3">Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord...</textarea>
+                <textarea autocomplete="" id="campaign-desc" class="form-control" rows="3">Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord...</textarea>
             </div>
         </div>
 

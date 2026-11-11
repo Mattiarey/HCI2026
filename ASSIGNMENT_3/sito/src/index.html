@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GINGER Lab - Crowdfunding per Comunità e Idee Etiche</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/index.js" defer></script>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Salta al contenuto principale</a>
 
 <header>
     <nav class="navbar" aria-label="Navigazione principale">
         <a href="index.html" class="logo">🌍 GINGER Lab</a>
-        <form class="search-bar-header" role="search" onsubmit="return false;">
+        <form action="cerca.html" method="GET" class="search-bar-header" role="search" style="position: relative; display: flex; align-items: center;">
             <label for="home-search-input" class="sr-only">Cerca cause, progetti, partner</label>
-            <input type="search" id="home-search-input" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event)">
+            <input type="search" id="home-search-input" name="q" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event, this)" style="width: 100%; padding-right: 35px;">
+            <button type="submit" aria-label="Cerca" style="position: absolute; right: 10px; background: none; border: none; cursor: pointer; color: #64748b; font-size: 1rem;">
+                <span aria-hidden="true">➔</span>
+            </button>
         </form>
         <ul class="nav-links">
             <li><a href="cerca.html">Esplora Progetti</a></li>
@@ -55,7 +56,7 @@
             </div>
             <div class="card-body">
                 <span class="badge-tag">Sociale & Comunità</span>
-                <h3 class="card-title"><a href="dettaglio-progetto.html?id=1" style="color:inherit; text-decoration:none;">Orti Urbani Comunitari - Quartiere Nord</a></h3>
+                <h3 class="card-title"><a href="dettaglio-progetto.html?id=1" style="color:inherit;  text-decoration:underline;">Orti Urbani Comunitari - Quartiere Nord</a></h3>
                 <p class="card-author">by Associazione Rete Civica</p>
                 <div class="progress-bar-bg" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso raccolta fondi: 65%"><div class="progress-bar-fill" style="width: 65%;"></div></div>
                 <div class="card-stats">
@@ -72,7 +73,7 @@
             </div>
             <div class="card-body">
                 <span class="badge-tag">Ecologia & Mare</span>
-                <h3 class="card-title"><a href="dettaglio-progetto.html?id=2" style="color:inherit; text-decoration:none;">Mare Pulito: Rimozione Plastica dai Litorali</a></h3>
+                <h3 class="card-title"><a href="dettaglio-progetto.html?id=2" style="color:inherit; text-decoration:underline;">Mare Pulito: Rimozione Plastica dai Litorali</a></h3>
                 <p class="card-author">by EkoGuardians</p>
                 <div class="progress-bar-bg" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso raccolta fondi: 88%"><div class="progress-bar-fill" style="width: 88%;"></div></div>
                 <div class="card-stats">
@@ -89,7 +90,7 @@
             </div>
             <div class="card-body">
                 <span class="badge-tag">Biodiversità & Scienza</span>
-                <h3 class="card-title"><a href="dettaglio-progetto.html?id=3" style="color:inherit; text-decoration:none;">Bio-Archivio Flora Alpina a Rischio</a></h3>
+                <h3 class="card-title"><a href="dettaglio-progetto.html?id=3" style="color:inherit; text-decoration:underline;">Bio-Archivio Flora Alpina a Rischio</a></h3>
                 <p class="card-author">by Gruppo Ricerca Botanica</p>
                 <div class="progress-bar-bg" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso raccolta fondi: 42%"><div class="progress-bar-fill" style="width: 42%;"></div></div>
                 <div class="card-stats">
@@ -106,7 +107,7 @@
             </div>
             <div class="card-body">
                 <span class="badge-tag">Artigianato & Patrimonio</span>
-                <h3 class="card-title"><a href="dettaglio-progetto.html?id=4" style="color:inherit; text-decoration:none;">Recupero dell'Antica Legatoria Storica</a></h3>
+                <h3 class="card-title"><a href="dettaglio-progetto.html?id=4" style="color:inherit; text-decoration:underline;">Recupero dell'Antica Legatoria Storica</a></h3>
                 <p class="card-author">by Bottega de' Maffei</p>
                 <div class="progress-bar-bg" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso raccolta fondi: 95%"><div class="progress-bar-fill" style="width: 95%;"></div></div>
                 <div class="card-stats">

@@ -14,12 +14,3 @@ window.onload = function() {
     document.getElementById('proj-progress').style.width = proj.percent + '%';
     document.getElementById('donate-btn').href = `checkout.html?id=${id}&title=${encodeURIComponent(proj.title)}`;
 };
-
-function handleHomeSearch(event) {
-    if (event.key === 'Enter') {
-        const query = event.target.value.trim();
-        if (query) {
-            window.location.href = `cerca.html?q=${encodeURIComponent(query)}`;
-        }
-    }
-}

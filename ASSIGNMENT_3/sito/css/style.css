@@ -7,15 +7,15 @@
 
 :root {
     /* Palette Colori Principale */
-    --primary-green: #00ff1ab4;
-    --primary-hover: #00ff1a6d;
+    --primary-green: #10b981;
+    --primary-hover: #059669;
     --dark-blue: #1e3a8a;
     --bg-light: #f8fafc;
     --text-dark: #0f172a;
     --text-muted: #64748b;
     --gray-border: #cbd5e1;
     --gray-bg: #f1f5f9;
-    --success-green: #00ff1aeb;
+    --success-green: #22c55e;
     --error-red: #ef4444;
 
     /* Alias per classi utility custom (Tailwind/Ginger) */
@@ -123,11 +123,33 @@ header {
     flex: 1;
     max-width: 380px;
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-submit-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #64748b; /* Colore dell'icona (es. grigio slate) */
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-submit-btn:hover {
+    color: #0f172a;
 }
 
 .search-bar-header input {
     width: 100%;
-    padding: 0.5rem 1rem 0.5rem 2.2rem;
+    padding: 0.5rem 2.8rem 0.5rem 2.2rem;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
     font-size: 0.9rem;
@@ -166,6 +188,22 @@ header {
 
 .nav-links a:hover, .nav-links a.active {
     color: var(--primary-green);
+}
+
+.nav-links a.btn-outline-dashboard {
+    background: transparent;
+    border: 1px solid var(--gray-border);
+    color: var(--primary-green);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-links a.btn-outline-dashboard:hover {
+    background-color: var(--gray-bg);
 }
 
 /* --- PULSANTI --- */
