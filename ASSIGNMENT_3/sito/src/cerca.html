@@ -11,37 +11,29 @@
 
 <body class="min-h-screen flex flex-col justify-between bg-slate-50 text-slate-900">
 
-<!-- HEADER / NAVIGATION -->
-<header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+<header>
+    <nav class="navbar" aria-label="Navigazione principale">
         <!-- Logo -->
         <a href="index.html" class="logo">🌍 GINGER Lab</a>
 
-        <!-- Header Search Bar -->
-        <form role="search" onsubmit="return false;" class="flex-1 max-w-md relative hidden md:block">
-            <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400" aria-hidden="true">🔍</span>
+        <!-- Header Search Bar collegata correttamente a cerca.js -->
+        <form action="cerca.html" method="GET" class="search-bar-header" role="search" style="position: relative; display: flex; align-items: center;">
             <label for="header-search" class="sr-only">Cerca cause, progetti, partner</label>
-            <input type="search" id="header-search"
-                   placeholder="Cerca cause, progetti, partner..."
-                   class="w-full pl-9 pr-10 py-2 border border-slate-300 rounded-full text-sm focus:outline-none focus:border-ginger-orange focus:ring-1 focus:ring-ginger-orange transition-all">
-            
-            <!-- Pulsante di invio conforme per l'accessibilità -->
-            <button type="submit" class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 focus:outline-none" aria-label="Cerca">
+            <input type="search" id="header-search" name="q" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event, this)" style="width: 100%; padding-right: 35px;">
+            <button type="submit" aria-label="Cerca" style="position: absolute; right: 10px; background: none; border: none; cursor: pointer; color: #64748b; font-size: 1rem;">
                 <span aria-hidden="true">➔</span>
             </button>
         </form>
 
         <!-- Navigation Links -->
-        <nav class="navbar" aria-label="Navigazione principale">
-            <ul class="nav-links">
-                <li><a href="cerca.html" class="active" aria-current="page">Esplora Progetti</a></li>
-                <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
-                <li><a href="funzionamento.html">Come Funziona</a></li>
-                <li><a href="partner.html">Partner</a></li>
-                <li><a href="dashboard.html" class="btn-outline">Area Riservata</a></li>
-            </ul>
-        </nav>
-    </div>
+        <ul class="nav-links">
+            <li><a href="cerca.html" class="active" aria-current="page">Esplora Progetti</a></li>
+            <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
+            <li><a href="funzionamento.html">Come Funziona</a></li>
+            <li><a href="partner.html">Partner</a></li>
+            <li><a href="dashboard.html" class="btn-outline">Area Riservata</a></li>
+        </ul>
+    </nav>
 </header>
 
 <nav class="breadcrumbs-container" aria-label="Breadcrumb">

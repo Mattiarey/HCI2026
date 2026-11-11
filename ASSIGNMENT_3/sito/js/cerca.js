@@ -132,7 +132,6 @@ function renderProjects(projects) {
 
     projects.forEach(p => {
         const card = document.createElement('div');
-        // AGGIUNTO 'relative' QUI SOTTO: serve a delimitare l'area del link esteso
         card.className = 'bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex flex-col justify-between relative';
         card.innerHTML = `
                     <div>
@@ -153,7 +152,7 @@ function renderProjects(projects) {
                     </div>
                     <div class="px-5 pb-5 pt-0">
                         <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
-                            <div class="bg-ginger-orange h-full rounded-full transition-all duration-500" style="width: ${p.percent}%"></div>
+                            <div style="background-color: var(--primary-green); height: 100%; border-radius: 4px; width: ${p.percent}%"></div>
                         </div>
                         <div class="flex justify-between items-center text-xs font-semibold text-slate-700 pt-2 border-t border-slate-100">
                             <span>Raccolti: <strong class="text-slate-900">${p.raised.toLocaleString('it-IT')} €</strong></span>
