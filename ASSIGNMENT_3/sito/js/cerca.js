@@ -1,4 +1,4 @@
-// Database dei 8 progetti della piattaforma
+// Database degli 8 progetti della piattaforma
 const allProjects = [
     {
         id: 1,

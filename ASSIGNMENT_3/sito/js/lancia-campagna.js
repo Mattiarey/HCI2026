@@ -7,18 +7,17 @@ function handleCampaign(event) {
     if(!title) {
         document.getElementById('title-group').classList.add('error');
         isValid = false;
-    } else {
+    } 
+    else 
         document.getElementById('title-group').classList.remove('error');
-    }
 
     if(!budget || budget < 100) {
         document.getElementById('budget-group').classList.add('error');
         isValid = false;
-    } else {
+    } 
+    else
         document.getElementById('budget-group').classList.remove('error');
-    }
 
-    if(isValid) {
+    if(isValid)
         document.getElementById('draft-modal').classList.add('active');
-    }
 }

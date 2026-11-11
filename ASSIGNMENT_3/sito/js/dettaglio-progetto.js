@@ -1,7 +1,7 @@
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id') || '1';
-    const proj = projectsData.find(p => p.id === parseInt(id));
+    const proj = allProjects.find(p => p.id === parseInt(id));
 
     document.getElementById('proj-title').textContent = proj.title;
     document.getElementById('breadcrumb-title').textContent = proj.title;

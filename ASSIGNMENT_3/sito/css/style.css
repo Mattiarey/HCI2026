@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 /* ==========================================
    STYLE.CSS - CROWDFUNDING PLATFORM (GINGER LAB)
    Progettato in conformità con l'analisi euristica, i requisiti di interattività e l'accessibilità (WCAG)
@@ -555,19 +553,4 @@ footer {
     margin: 0 auto;
     text-align: center;
     font-size: 0.85rem;
-}
-
-/* --- TAILWIND CUSTOM UTILITIES / OVERRIDES --- */
-.bg-ginger-green { background-color: var(--ginger-green); }
-.bg-ginger-navy { background-color: var(--ginger-navy); }
-.bg-ginger-light { background-color: var(--ginger-light-bg); }
-
-.text-ginger-green { color: var(--ginger-green); }
-.text-ginger-navy { color: var(--ginger-navy); }
-
-.border-ginger-card { border-color: var(--ginger-card-border); }
-
-.bg-ginger-green:hover,
-.hover\:bg-ginger-greenHover:hover {
-    background-color: var(--ginger-green-hover);
 }
