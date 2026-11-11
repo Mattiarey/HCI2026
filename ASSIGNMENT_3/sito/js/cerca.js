@@ -111,60 +111,75 @@ function renderProjects(projects) {
     const grid = document.getElementById('projects-grid');
     const noResults = document.getElementById('no-results');
     const feedbackText = document.getElementById('feedback-text');
+    const feedbackIcon = document.getElementById('feedback-icon');
     const resultsCount = document.getElementById('results-count');
     const feedbackBanner = document.getElementById('search-feedback');
 
     grid.innerHTML = '';
-    resultsCount.textContent = `${projects.length} Progetti`;
+    resultsCount.textContent = `${projects.length} ${projects.length === 1 ? 'Progetto' : 'Progetti'}`;
+
+    feedbackBanner.classList.remove('hidden');
 
     if (projects.length === 0) {
         grid.classList.add('hidden');
         noResults.classList.remove('hidden');
-        feedbackBanner.className = "bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-xl mb-6 font-medium text-sm flex items-center justify-between";
-        feedbackText.innerHTML = `⚠️ Nessun risultato trovato per i criteri immessi.`;
+        
+        // Stile "ristretto" e di attenzione quando non ci sono riscontri
+        feedbackBanner.style.background = "linear-gradient(135deg, #991b1b 0%, #ef4444 100%)";
+        feedbackIcon.textContent = "🛡️";
+        feedbackText.innerHTML = `Nessuna corrispondenza esatta trovata. Espandi i filtri per scoprire altre iniziative.`;
         return;
     }
 
     grid.classList.remove('hidden');
     noResults.classList.add('hidden');
-    feedbackBanner.className = "bg-sky-50 border border-sky-200 text-sky-800 px-4 py-3 rounded-xl mb-6 font-medium text-sm flex items-center justify-between";
-    feedbackText.innerHTML = `🔍 Risultati della ricerca: trovati <strong>${projects.length} progetti attivi</strong>.`;
+
+    feedbackBanner.style.background = "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)";
+    
+    if (projects.length === 8) {
+        feedbackIcon.textContent = "🌍";
+        feedbackText.innerHTML = `<strong>Tutte le voci del cambiamento:</strong> l'intera rete civica di GINGER Lab è pronta a farsi sostenere.`;
+    } else if (projects.length >= 4) {
+        feedbackIcon.textContent = "💡";
+        feedbackText.innerHTML = `<strong>Fermmento sul territorio:</strong> trovate diverse iniziative allineate con le tue passioni.`;
+    } else {
+        feedbackIcon.textContent = "🎯";
+        feedbackText.innerHTML = `<strong>Scelta mirata:</strong> poche iniziative selezionate per un impatto immediato e focalizzato.`;
+    }
 
     projects.forEach(p => {
         const card = document.createElement('div');
-        card.className = 'bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex flex-col justify-between relative';
+        card.className = 'project-card';
         card.innerHTML = `
-                    <div>
-                        <div class="${p.bg} h-40 flex items-center justify-center text-5xl relative">
-                            <img src="${p.icon}" style="width: 100%; height: 115%; object-fit: cover;" alt="${p.title}">
-                            <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm z-20">
-                                ${p.badge}
-                            </span>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-slate-800 text-base mb-1 leading-snug">
-                                <!-- AGGIUNTO 'stretched-link' QUI SOTTO -->
-                                <a href="dettaglio-progetto.html?id=${p.id}" class="stretched-link hover:text-ginger-orange transition-colors" style="text-decoration:underline;">${p.title}</a>
-                            </h3>
-                            <p class="text-xs text-slate-500 mb-3 font-medium">by ${p.author}</p>
-                            <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">${p.desc}</p>
-                        </div>
-                    </div>
-                    <div class="px-5 pb-5 pt-0">
-                        <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
-                            <div style="background-color: var(--primary-green); height: 100%; border-radius: 4px; width: ${p.percent}%"></div>
-                        </div>
-                        <div class="flex justify-between items-center text-xs font-semibold text-slate-700 pt-2 border-t border-slate-100">
-                            <span>Raccolti: <strong class="text-slate-900">${p.raised.toLocaleString('it-IT')} €</strong></span>
-                            <span class="text-slate-400">Target: ${p.goal.toLocaleString('it-IT')} €</span>
-                        </div>
-                    </div>
-                `;
+            <div>
+                <div class="card-img" style="background-color: var(--gray-bg);">
+                    <img src="${p.icon}" style="width: 100%; height: 100%; object-fit: cover;" alt="${p.title}">
+                    <span class="badge-tag">
+                        ${p.badge}
+                    </span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <a href="dettaglio-progetto.html?id=${p.id}" class="stretched-link" style="text-decoration: underline; color: inherit;">${p.title}</a>
+                    </h3>
+                    <p class="card-author">by ${p.author}</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 1rem;">${p.desc}</p>
+                </div>
+            </div>
+            <div style="padding: 0 1.2rem 1.2rem 1.2rem;">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: ${p.percent}%"></div>
+                </div>
+                <div class="card-stats">
+                    <span>Raccolti: <strong style="color: var(--text-dark);">${p.raised.toLocaleString('it-IT')} €</strong></span>
+                    <span style="color: var(--text-muted);">Target: ${p.goal.toLocaleString('it-IT')} €</span>
+                </div>
+            </div>
+        `;
         grid.appendChild(card);
     });
 }
 
-// Filtro combinato Testo + Categorie
 function filterProjects() {
     const keywordSidebar = document.getElementById('keyword-filter').value.toLowerCase().trim();
     const keywordHeader = document.getElementById('header-search').value.toLowerCase().trim();
@@ -174,23 +189,31 @@ function filterProjects() {
         .map(cb => cb.value);
 
     const filtered = allProjects.filter(p => {
-        // Match testo
         const matchesQuery = !query ||
             p.title.toLowerCase().includes(query) ||
             p.author.toLowerCase().includes(query) ||
             p.badge.toLowerCase().includes(query) ||
             p.desc.toLowerCase().includes(query);
 
-        // Match Categoria
         const matchesCategory = checkedBoxes.includes(p.category);
 
         return matchesQuery && matchesCategory;
     });
 
     renderProjects(filtered);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Sincronizza i due input text
+function resetFilters() {
+    document.getElementById('keyword-filter').value = '';
+    document.getElementById('header-search').value = '';
+    document.querySelectorAll('#category-filters input[type="checkbox"]').forEach(cb => cb.checked = true);
+    renderProjects(allProjects);
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function syncSearchInputs(event) {
     const val = event.target.value;
     document.getElementById('keyword-filter').value = val;
@@ -198,15 +221,6 @@ function syncSearchInputs(event) {
     filterProjects();
 }
 
-// Reset completo
-function resetFilters() {
-    document.getElementById('keyword-filter').value = '';
-    document.getElementById('header-search').value = '';
-    document.querySelectorAll('#category-filters input[type="checkbox"]').forEach(cb => cb.checked = true);
-    renderProjects(allProjects);
-}
-
-// Setup Event Listeners e Inizializzazione
 window.addEventListener('DOMContentLoaded', () => {
     const keywordFilter = document.getElementById('keyword-filter');
     const headerSearch = document.getElementById('header-search');
@@ -216,7 +230,6 @@ window.addEventListener('DOMContentLoaded', () => {
     headerSearch.addEventListener('input', syncSearchInputs);
     categoryFilters.addEventListener('change', filterProjects);
 
-    // Lettura parametro dall'URL (es. cerca.html?q=orti)
     const urlParams = new URLSearchParams(window.location.search);
     const initialQuery = urlParams.get('q');
     if (initialQuery) {
