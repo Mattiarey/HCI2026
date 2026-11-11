@@ -100,7 +100,7 @@ const allProjects = [
         raised: 9500,
         goal: 12000,
         percent: 79,
-        icon: "../img/img_storia.png",
+        icon: "../img/img_affreschi.png",
         bg: "bg-teal-100",
         desc: "Intervento conservativo urgente sugli affreschi medievali della pieve di San Lorenzo per evitarne il degrado definitivo."
     }
