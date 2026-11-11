@@ -27,35 +27,40 @@
         <p aria-live="polite">Stai sostenendo: <strong id="breadcrumb-title"></strong></p>
 
         <form id="donation-form" onsubmit="handleDonation(event)">
-            <div class="form-group" id="amount-group">
+            <!-- Primo blocco segnalato -->
+            <div class="form-group" id="amount-group" style="display: flex; flex-direction: column; width: 100%; max-width: 100%;">
                 <label for="custom-amount">Seleziona l'Importo</label>
-                <div style="display:flex; gap:1rem; margin-bottom:0.5rem;">
+                <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem; width: 100%; max-width: 100%;">
                     <button type="button" class="btn-outline amt-btn" onclick="setAmount(10)" aria-controls="custom-amount">10 €</button>
                     <button type="button" class="btn-outline amt-btn" onclick="setAmount(25)" aria-controls="custom-amount">25 €</button>
                     <button type="button" class="btn-outline amt-btn" onclick="setAmount(50)" aria-controls="custom-amount">50 €</button>
                 </div>
-                <input autocomplete="" type="number" id="custom-amount" class="form-control" placeholder="Inserisci importo personalizzato (€)" min="1" required aria-describedby="amount-error">
+                <input autocomplete="off" type="number" id="custom-amount" class="form-control" placeholder="Inserisci importo personalizzato (€)" min="1" required aria-describedby="amount-error" style="width: 100%; max-width: 100%;">
                 <div id="amount-error" class="error-message" role="alert">Inserisci un importo valido superiore a 0€.</div>
             </div>
 
-            <div style="background:#f1f5f9; padding:1rem; border-radius:6px; margin-bottom:1.5rem; font-size:0.88rem;">
-                <span aria-hidden="true">🔒</span> <strong>Donazione Singola Garantita:</strong> Nessuna commissione nascosta o abbonamento ricorrente automatico.
+            <!-- Secondo blocco segnalato (box informativo) -->
+            <div style="display: flex; align-items: center; background: #f1f5f9; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; font-size: 0.88rem; width: 100%; max-width: 100%;">
+                <span aria-hidden="true" style="margin-right: 0.5rem;">🔒</span> 
+                <div><strong>Donazione Singola Garantita:</strong> Nessuna commissione nascosta o abbonamento ricorrente automatico.</div>
             </div>
 
-            <div class="form-group">
+            <!-- Terzo blocco segnalato -->
+            <div class="form-group" style="display: flex; flex-direction: column; width: 100%; max-width: 100%;">
                 <label for="payment-method">Metodo di Pagamento</label>
-                <select autocomplete="" class="form-control" id="payment-method" required>
+                <select autocomplete="off" class="form-control" id="payment-method" required style="width: 100%; max-width: 100%;">
                     <option value="card">Carta di Credito / Debito (Visa, Mastercard)</option>
                     <option value="satispay">Satispay / Bancomat Pay</option>
                     <option value="transfer">Bonifico Bancario Diretto</option>
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="tax-receipt"><input type="checkbox" id="tax-receipt" checked> Richiedi ricevuta fiscale valida per la deducibilità delle donazioni (PDF)</label>
+            <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.75rem; width: 100%; max-width: 100%;">
+                <input type="checkbox" id="tax-receipt" checked style="margin-top: 0.25rem;">
+                <label for="tax-receipt" style="font-weight: normal; font-size: 0.9rem; cursor: pointer; width: 100%; max-width: 100%;">Richiedi ricevuta fiscale valida per la deducibilità delle donazioni (PDF)</label>
             </div>
 
-            <button type="submit" class="btn-primary" style="width:100%; padding:0.9rem; font-size:1.1rem; margin-top:1rem;">Conferma e Dona ORA</button>
+            <button type="submit" class="btn-primary" style="width: 100%; max-width: 100%; padding: 0.9rem; font-size: 1.1rem; margin-top: 1rem;">Conferma e Dona ORA</button>
         </form>
     </div>
 </main>

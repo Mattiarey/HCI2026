@@ -24,7 +24,7 @@
             <li><a href="lancia-campagna.html" class="active" aria-current="page">Lancia una Campagna</a></li>
             <li><a href="funzionamento.html">Come Funziona</a></li>
             <li><a href="partner.html">Partner</a></li>
-            <li><a href="dashboard.html" class="btn-outline">Area Riservata</a></li>
+            <li><a href="dashboard.html" class="btn-outline-dashboard">Area Riservata</a></li>
         </ul>
     </nav>
 </header>
@@ -34,40 +34,45 @@
 </nav>
 
 <main id="main-content">
-    <div style="text-align:center; max-width:700px; margin:0 auto 2.5rem;">
+    <div style="text-align:center; max-width:700px; margin:0 auto 2.5rem; width:100%;">
         <h1 style="color:var(--dark-blue); font-size:2.2rem; margin-bottom:0.8rem;">Trasforma la tua idea sociale in un progetto concreto</h1>
         <p style="color:var(--text-muted);">Processo guidato e senza burocrazia complessa. Compila i primi dati per aprire la tua bozza.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem;">
-        <div class="card-box">
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem; width:100%; max-width:100%;">
+        <div class="card-box" style="display:flex; flex-direction:column; width:100%; max-width:100%;">
             <h2 style="color:var(--dark-blue); font-size:1.3rem; margin-bottom:1.2rem;">Crea la tua Bozza in 3 passaggi</h2>
             <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">I campi contrassegnati con l'asterisco (*) sono obbligatori.</p>
-            <form id="campaign-form" onsubmit="handleCampaign(event)">
-                <div class="form-group" id="title-group">
+            
+            <form id="campaign-form" onsubmit="handleCampaign(event)" style="display:flex; flex-direction:column; width:100%; max-width:100%;">
+                
+                <div class="form-group" id="title-group" style="display:flex; flex-direction:column; width:100%; max-width:100%;">
                     <label for="p-title">Titolo del Progetto *</label>
-                    <input autocomplete="" type="text" id="p-title" class="form-control" placeholder="Es. Recupero Parco Gioco Comunale" required aria-required="true" aria-describedby="title-error">
+                    <input autocomplete="off" type="text" id="p-title" class="form-control" placeholder="Es. Recupero Parco Gioco Comunale" required aria-required="true" aria-describedby="title-error" style="width:100%; max-width:100%;">
                     <div id="title-error" class="error-message" role="alert">Il titolo del progetto è obbligatorio.</div>
                 </div>
-                <div class="form-group">
+
+                <div class="form-group" style="display:flex; flex-direction:column; width:100%; max-width:100%;">
                     <label for="p-cat">Categoria Principale</label>
-                    <select id="p-cat" class="form-control">
-                        <option>Sociale & Comunità</option>
-                        <option>Ambiente & Ecologia</option>
-                        <option>Biodiversità & Scienza</option>
-                        <option>Artigianato & Cultura</option>
+                    <select id="p-cat" class="form-control" autocomplete="off" style="width:100%; max-width:100%;">
+                        <option value="sociale">Sociale & Comunità</option>
+                        <option value="ambiente">Ambiente & Ecologia</option>
+                        <option value="biodiversità">Biodiversità & Scienza</option>
+                        <option value="artigianato">Artigianato & Cultura</option>
                     </select>
                 </div>
-                <div class="form-group" id="budget-group">
+
+                <div class="form-group" id="budget-group" style="display:flex; flex-direction:column; width:100%; max-width:100%;">
                     <label for="p-budget">Obiettivo indicativo di Raccolta (€) *</label>
-                    <input autocomplete="" type="number" id="p-budget" class="form-control" placeholder="Es. 4000" min="100" required aria-required="true" aria-describedby="budget-error">
+                    <input autocomplete="off" type="number" id="p-budget" class="form-control" placeholder="Es. 4000" min="100" required aria-required="true" aria-describedby="budget-error" style="width:100%; max-width:100%;">
                     <div id="budget-error" class="error-message" role="alert">Inserisci un obiettivo di raccolta valido (min. 100€).</div>
                 </div>
-                <button type="submit" class="btn-primary" style="width:100%; padding:0.8rem;">Apri Bozza e Continua →</button>
+
+                <button type="submit" class="btn-primary" style="width:100%; max-width:100%; padding:0.8rem;">Apri Bozza e Continua →</button>
             </form>
         </div>
 
-        <div class="card-box" style="background:var(--gray-bg);">
+        <div class="card-box" style="background:var(--gray-bg); display:flex; flex-direction:column; width:100%; max-width:100%;">
             <h2 style="color:var(--dark-blue); margin-bottom:1rem; font-size:1.17em;">Perché scegliere GINGER Lab?</h2>
             <ul style="margin-left:1.2rem; line-height:1.8; color:var(--text-muted);">
                 <li><strong>Affiancamento dedicato:</strong> Un tutor segue la preparazione della tua campagna.</li>
