@@ -15,6 +15,7 @@
     --gray-bg: #f1f5f9;
     --success-green: #22c55e;
     --error-red: #ef4444;
+    --delete-red: rgb(255, 0, 0);
 
     /* Alias per classi utility custom (Tailwind/Ginger) */
     --ginger-green: var(--primary-green);
@@ -249,7 +250,47 @@ header {
 }
 
 .btn-secondary:hover {
-    background-color: #15296b;
+    background-color: rgb(0, 180, 255);
+}  
+
+.btn-ternary {
+    background-color: var(--dark-blue);
+    color: white !important;
+    padding: 0.55rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-ternary:hover {
+    background-color: rgb(0, 180, 255);
+}
+
+.btn-quaternary  {
+    background-color: var(--delete-red);
+    color: white !important;
+    padding: 0.55rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-quaternary:hover {
+    background-color: #b91c1c; 
 }
 
 .btn-outline {
