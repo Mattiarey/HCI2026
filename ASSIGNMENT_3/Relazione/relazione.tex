@@ -1,0 +1,52 @@
+\documentclass[11pt, a4paper]{article}
+
+% Pacchetti per la codifica e la lingua
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+% Pacchetti per layout e margini
+\usepackage{geometry}
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% Pacchetti per tabelle migliorate e grafica
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% Dati del documento
+\title{\textbf{Relazione Accessibilità Prototipo HCI}}
+\author{
+    \textbf{Gruppo: DJ} \\
+    Ughetto Luca (1145888) \\
+    Rey Mattia (1143424) \\
+}
+\date{\today}
+
+\begin{document}
+
+    \maketitle
+    \newpage
+
+    \section{Errori riscontrati con gli strumenti}
+    
+    \textit{Lorem ipusm}\dots
+
+    \newpage
+    \section{Aggiunte per garantire l'accessibilità}
+    A lezione abbiamo visto diversi tag e diverse pratiche che se implementate permettono agli utenti con disabilità di accedere al sito in maniera più semplice, fluida e veloce.
+    \paragraph{Skip link}
+    Abbiamo inserito uno \texttt{skip-link} in ogni pagina. In modo che chi accede alla pagina con un lettore riesca a saltare l'introduzione fino al contenuto principale.
+    \paragraph{Zoom}
+    Ci siamo assicurati che la pagina risultasse coerente e leggibile fino al livello di zoom $200\%$.
+    \paragraph{Coerenza dei tag}
+    Non sempre nel design originale usavamo i tag adeguati per le funzioni che coprivano. Ad esempio la barra di ricerca veniva definita con un \texttt{div} invece che con un tag più specifico come un \texttt{form} con un ruolo esplicito. Anche per i \texttt{breadcrumbs} è stata fatta un'operazione simile.
+
+    gerarchia degli h.
+    scritte in inglese lette in inglese
+    emoji isolate
+    aria tag
+    labels
+    in generale descrizioni accurate dei vari tag
+\end{document}
