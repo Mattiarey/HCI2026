@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b37e39cc-43ca-4c36-a8d5-ed1c5d8563e7" name="Changes" comment="relazione ricalibrata">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ASSIGNMENT_3/out/assignment3_gruppoDJ.aux" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ASSIGNMENT_3/out/assignment3_gruppoDJ.fdb_latexmk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ASSIGNMENT_3/out/assignment3_gruppoDJ.fls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ASSIGNMENT_3/out/assignment3_gruppoDJ.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.aux" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.fdb_latexmk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.fls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.synctex.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASSIGNMENT_3/Relazione/assignment3_gruppoDJ.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ASSIGNMENT_3/Relazione/assignment3_gruppoDJ.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASSIGNMENT_3/Relazione/relazione.tex" beforeDir="false" afterPath="$PROJECT_DIR$/ASSIGNMENT_3/Relazione/relazione.tex" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Mattiarey&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mattiarey/HCI2026.git&quot;,
+    &quot;accountId&quot;: &quot;e1d9c500-ce3f-47d0-8b9c-b1479f022ed6&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LYjziTeiEiYTvzC3dKW1zelhOm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;LaTeX.assignment2_gruppoDJ.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.assignment3_gruppoDJ.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.relazione.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git.auto.fetch.suggestion.counter&quot;: &quot;3&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\playm\IdeaProjects\HCI2026\ASSIGNMENT_3\Relazione" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <steps>
+        <latexmkCompile id="16f695a5-a413-4ea2-bae4-e9a292bf7a5d" />
+        <pdfViewer id="40804d0c-2bd3-4dbe-a197-cdbe4ee6806b" />
+      </steps>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b37e39cc-43ca-4c36-a8d5-ed1c5d8563e7" name="Changes" comment="" />
+      <created>1793638160837</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793638160837</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Inizio" />
+    <MESSAGE value="bohc" />
+    <MESSAGE value="è un inizio" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;out/assignment2_gruppoDJ.aux&#10;#&#9;out/assignment2_gruppoDJ.fdb_latexmk&#10;#&#9;out/assignment2_gruppoDJ.fls&#10;#&#9;out/assignment2_gruppoDJ.log&#10;#&#9;out/assignment2_gruppoDJ.out&#10;#&#9;out/assignment2_gruppoDJ.pdf&#10;#&#9;out/assignment2_gruppoDJ.synctex.gz&#10;#&#9;out/assignment2_gruppoDJ.toc" />
+    <MESSAGE value="Aggiustati personas e user journey" />
+    <MESSAGE value="appendice" />
+    <MESSAGE value="aggiunto link al sito" />
+    <MESSAGE value="Accessibilità 1.0" />
+    <MESSAGE value="Ora si può cliccare anche l'immagine dentro alla pagina cerca" />
+    <MESSAGE value="relazione ricalibrata" />
+    <option name="LAST_COMMIT_MESSAGE" value="relazione ricalibrata" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

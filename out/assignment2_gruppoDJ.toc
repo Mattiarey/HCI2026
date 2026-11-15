@@ -1,0 +1,49 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}Definizione delle Personas}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Persona 1: Diego Parini (Progettista / Creator)}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Giornata Tipo}{3}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Bisogni Principali}{3}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Obiettivi di Miglioramento Personale}{3}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Dubbi, difficoltà e possibili ostacoli}{3}{subsubsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.2}Persona 2: Mirko Falletti (Sostenitore / Donatore)}{4}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Giornata Tipo}{4}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Bisogni Principali}{4}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Obiettivi di Miglioramento Personale}{4}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Dubbi, difficoltà e possibili ostacoli}{4}{subsubsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.3}Persona 3: Alessandra Mazzoli (Attivista / Promotrice)}{4}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Giornata Tipo}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Bisogni Principali}{5}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Obiettivi di Miglioramento Personale}{5}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}Dubbi, difficoltà e possibili ostacoli}{5}{subsubsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.4}Persona 4: Luca Ponti (Sostenitore di Nicchia)}{5}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Giornata Tipo}{5}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Bisogni Principali}{6}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}Obiettivi di Miglioramento Personale}{6}{subsubsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.4}Dubbi, difficoltà e possibili ostacoli}{6}{subsubsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.5}Persona 5: Isabel Marrano (Sostenitrice di Nicchia)}{6}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Giornata Tipo}{6}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Bisogni Principali}{7}{subsubsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.3}Obiettivi di Miglioramento Personale}{7}{subsubsection.1.5.3}%
+\contentsline {subsubsection}{\numberline {1.5.4}Dubbi, difficoltà e possibili ostacoli}{7}{subsubsection.1.5.4}%
+\contentsline {section}{\numberline {2}User Journey delle Personas}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Diego Parini (L'ideazione e il lancio di una campagna civica)}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Mirko Falletti (Il sostenitore cauto e concreto)}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Alessandra Mazzoli (L'attivista dinamica e promotrice di rete)}{11}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Luca Ponti (Il sostenitore meticoloso di micro-cause scientifiche)}{12}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Isabel Marrano (La sostenitrice esigente di beni culturali e artigianato)}{14}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Appendice: Prompt e Interazione AI}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Prompt 1: Creazione della prima Persona (Diego Parini)}{16}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Prompt 2: Criteri dettagliati per le Personas (Mirko Falletti e Alessandra Mazzoli)}{16}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Prompt 3: Creazione di altre due Personas (Luca Ponti e Isabel Marrano)}{17}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Prompt 4: Unione di tutte e 5 le Personas in un unico file LaTeX}{17}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Prompt 5: Creazione del primo User Journey (Diego Parini)}{17}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Prompt 6: Creazione sequenziale degli User Journey (da Persona 2 a 5)}{18}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Prompt 7: Progettazione del primo prototipo di sito web (8 pagine)}{18}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Prompt 8: Separazione del CSS in file dedicati}{18}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Prompt 9: Correzione della ricerca e aggiunta di progetti dinamici}{19}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Prompt 10: Risoluzione dei bug su cerca.html}{19}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Prompt 11: Correzione del nome del progetto nella pagina checkout.html}{19}{subsection.3.11}%
+\contentsline {subsection}{\numberline {3.12}Prompt 12: Inserimento dell'indice all'inizio del file}{19}{subsection.3.12}%
+\contentsline {subsection}{\numberline {3.13}Prompt 13: Connessione dei singoli prompt}{20}{subsection.3.13}%
+\contentsline {section}{\numberline {4}Considerazioni Finali}{21}{section.4}%

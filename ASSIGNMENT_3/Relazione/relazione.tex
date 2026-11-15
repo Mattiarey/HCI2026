@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
-
+\usepackage{longtable}
 % Pacchetti per layout e margini
 \usepackage{geometry}
 \geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
@@ -30,23 +30,70 @@
     \newpage
 
     \section{Errori riscontrati con gli strumenti}
-    
-    \textit{Lorem ipusm}\dots
 
-    \newpage
+    Per verificare oggettivamente il livello di conformità del prototipo alle linee guida  abbiamo sottoposto tutte le pagine dell'applicazione all'analisi automatica tramite i validatori previsti dalla consegna.
+
+    I report iniziali hanno evidenziato diverse criticità ricorrenti, raggruppabili in quattro macro-categorie: assenza di etichette nei controlli dei moduli, errori nella gerarchia delle intestazioni, mancanza di alternative testuali per i contenuti non testuali e problemi di contrasto visivo o visibilità del focus. La Tabella~\ref{tab:errori-accessibilita} riassume le tipologie di errore individuate, gli interventi correttivi applicati e l'esito della seconda verifica effettuata post-intervento.
+
+
+\small
+\begin{longtable}{|p{3.3cm}|p{3cm}|p{4.8cm}|p{2.3cm}|}
+\caption{Riepilogo degli errori rilevati dai validatori automatici e degli interventi correttivi.}
+\label{tab:errori-accessibilita} \\
+\hline
+\textbf{Problema rilevato} & \textbf{Pagine o elementi interessati} & \textbf{Correzione effettuata} & \textbf{Esito della nuova verifica} \\
+\hline
+\endfirsthead
+
+\multicolumn{4}{c}{\textit{(Continua dalla pagina precedente)}} \\
+\hline
+\textbf{Problema rilevato} & \textbf{Pagine o elementi interessati} & \textbf{Correzione effettuata} & \textbf{Esito della nuova verifica} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{4}{r}{\textit{(Continua nella pagina successiva)}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+Campi di testo e checkbox privi di etichetta associata (\textit{AChecker Check 57, 206, 213}; WCAG 1.3.1, 3.3.2, 4.1.2) & Barra di ricerca nell'header (tutte le pagine); filtri in \texttt{cerca.html}; moduli in \texttt{checkout.html}, \texttt{dashboard.html} e \texttt{lancia-campagna.html}. & Associazione programmatica di tag \texttt{<label>} tramite attributi \texttt{for}/\texttt{id} (nascosti visivamente con classe \texttt{.sr-only} nella barra di ricerca) e raggruppamento tramite \texttt{<fieldset>} e \texttt{<legend>}. & Risolto \\
+\hline
+Salto gerarchico nei titoli di sezione (\textit{AChecker Check 37}; WCAG 1.3.1) & Intestazioni \texttt{<h3>} e \texttt{<h4>} successive a \texttt{<h1>} in \texttt{index.html}, \texttt{dashboard.html}, \texttt{funzionamento.html} e \texttt{lancia-campagna.html}. & Ristrutturazione dei livelli da \texttt{<h1>} a \texttt{<h3>} secondo una gerarchia ad albero continua, preservando le dimensioni originali tramite CSS. & Risolto \\
+\hline
+Contenuti non testuali privi di alternativa o decorativi non filtrati (WCAG 1.1.1) & Card progetti in \texttt{index.html}; copertina CSS in \texttt{dettaglio-progetto.html}; emoji e icone in tutte le pagine. & Rimozione attributi \texttt{alt} duplicati e inserimento descrizioni contestuali; aggiunta di \texttt{role="img"} e \texttt{aria-label} sui contenitori con sfondo; isolamento icone con \texttt{aria-hidden="true"}. & Risolto \\
+\hline
+Informazioni veicolate dal solo colore (WCAG 1.4.1) & Barre di avanzamento fondi (\texttt{index.html}, \texttt{dettaglio-progetto.html}) e voci attive dei menu di navigazione. & Aggiunta del ruolo \texttt{role="progressbar"} con attributi \texttt{aria-valuenow/min/max} sulle barre e inserimento di \texttt{aria-current="page"} sui link attivi. & Risolto \\
+\hline
+Contrasto cromatico insufficiente e indicatore di focus rimosso (WCAG 1.4.3, 1.4.11, 2.4.7) & Pulsanti primari, link secondari e campi \texttt{<input>} con regola \texttt{outline: none} in \texttt{style.css}. & Adeguamento della palette colori per garantire un rapporto di contrasto $\ge 4,5:1$ e ripristino di un contorno ad alto contrasto sullo stato \texttt{:focus}. & Risolto \\
+\hline
+Mancata identificazione dello scopo dei campi e regioni dinamiche mute (WCAG 1.3.5, 4.1.2) & Campi di input utente, contatore risultati in \texttt{cerca.html} e modali di conferma (\texttt{checkout.html}, \texttt{lancia-campagna.html}). & Inserimento dell'attributo \texttt{autocomplete} nei campi pertinenti; aggiunta di \texttt{aria-live="polite"} sulle aree dinamiche e \texttt{role="dialog"} sulle modali. & Parzialmente risolto \\
+\end{longtable}
+\normalsize
+
+
     \section{Aggiunte per garantire l'accessibilità}
-    A lezione abbiamo visto diversi tag e diverse pratiche che se implementate permettono agli utenti con disabilità di accedere al sito in maniera più semplice, fluida e veloce.
-    \paragraph{Skip link}
-    Abbiamo inserito uno \texttt{skip-link} in ogni pagina. In modo che chi accede alla pagina con un lettore riesca a saltare l'introduzione fino al contenuto principale.
-    \paragraph{Zoom}
-    Ci siamo assicurati che la pagina risultasse coerente e leggibile fino al livello di zoom $200\%$.
-    \paragraph{Coerenza dei tag}
-    Non sempre nel design originale usavamo i tag adeguati per le funzioni che coprivano. Ad esempio la barra di ricerca veniva definita con un \texttt{div} invece che con un tag più specifico come un \texttt{form} con un ruolo esplicito. Anche per i \texttt{breadcrumbs} è stata fatta un'operazione simile.
+    A lezione abbiamo visto diversi tag e diverse pratiche che se implementate permettono agli utenti con disabilità di accedere al sito in maniera più semplice, fluida e veloce: favorendo le tecnologie assistive e la navigazione da tastiera.  Questi problemi abbiamo notato che non vengono tutti mostrati dai validatori automatici, quindi queste aggiunte sono state fatte per la maggior parte grazie a un'analisi manuale.
 
-    gerarchia degli h.
-    scritte in inglese lette in inglese
-    emoji isolate
-    aria tag
-    labels
-    in generale descrizioni accurate dei vari tag
+    Un primo esempio degli accorgimenti che abbiamo avuto è stato sostituire i contenitori generici (\texttt{<div>}) con i tag appropriati al ruolo che devono svolgere: ad esempio il tag \texttt{<nav>} per la navigazione principale e i \texttt{breadcrumbs}, \texttt{<form role="search">} per la barra di ricerca e le liste (\texttt{<ul>}, \texttt{<ol>}) per raggruppare schede e passaggi sequenziali.
+
+    Per i campi non chiari abbiamo anche associato delle \texttt{<label>} nascoste (posizionandole fuori dallo schermo con la classe \texttt{.sr-only}) con delle spiegazioni.
+
+    Alle immagini importanti è stato assegnato un \texttt{alt} significativo e le icone e le emoji sono state escluse dalla lettura scrivendo \texttt{aria-hidden="true"}.
+
+    Oppure anche semplicemente introdurre un \texttt{alt} significativo per le immagini importanti e usare i tag giusti per i compiti giusti (ad esempio il tag \texttt{nav} per indicare i breadcrumbs al posto di un più classico tag \texttt{div}).
+    \paragraph{Navigazione da tastiera}
+    Abbiamo inserito uno \texttt{skip-link} in cima a ogni pagina, visibile al riceversi del focus, per consentire agli utenti che navigano da tastiera di saltare i blocchi ripetitivi dell'intestazione e accedere direttamente al contenuto principale.
+
+    Abbiamo anche rimosso i vincoli di larghezza fissa nel meta-tag \texttt{viewport} per garantire che lo zoom fino al $200\%$ non generi scorrimenti orizzontali o sovrapposizioni.
+
+    \paragraph{Coerenza dei tag}
+    Abbiamo riorganizzato i tag di intestazione (\texttt{<h1>}--\texttt{<h3>}) affinché rispettino una rigorosa struttura ad albero sensata (a differenza di prima): questo permette agli screen reader di generare un indice navigabile del documento, consentendo all'utente di spostarsi rapidamente tra le sezioni usando solo la tastiera.
+
+    Per i componenti interattivi abbiamo introdotto degli attributi specifici come i ruoli (ad esempio \texttt{role="progressbar"} e \texttt{role="dialog"}) e per le parti dinamiche abbiamo usato l'attributo \texttt{aria-live}.
+
+
+
+
 \end{document}

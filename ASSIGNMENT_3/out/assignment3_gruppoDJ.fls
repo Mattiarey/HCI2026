@@ -1,0 +1,6 @@
+PWD C:/Users/playm/IdeaProjects/HCI2026/ASSIGNMENT_3
+INPUT c:/texlive/2025/texmf.cnf
+INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT assignment3_gruppoDJ.tex
+OUTPUT out/assignment3_gruppoDJ.log

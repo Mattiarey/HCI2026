@@ -291,8 +291,8 @@ Prima: Un contenitore generico <div style="display:grid..."> con all'interno i .
 
 Elemento o sezione: Pulsanti di Azione (Iscrizione ai corsi)
 Prima: <button class="btn-primary"...>Dopo: <button type="button" class="btn-primary"...>Motivazione: Risolve tecnicamente il criterio correlato all'uso formale degli elementi interattivi. Sebbene non fosse formalmente un errore bloccante, omettere il type in un tag <button> fa sì che il browser lo interpreti di default come type="submit". Se in futuro dovessi inserire questi componenti all'interno di un modulo per la raccolta dati, il clic comporterebbe il ricaricamento inatteso della pagina. (Se nella versione finale dell'applicativo questi pulsanti dovessero reindirizzare a una pagina esterna anziché aprire una modale, sarà necessario sostituire il tag <button> con un tag <a>).
-==================
-PROBLEMI SORTI PERCHÉ GEMINI CACCA
-==================
-In esplora progetti rendere anche le immagini cliccabili
-in dashboard c'è un problema con il 3
+
+
+
+
+
