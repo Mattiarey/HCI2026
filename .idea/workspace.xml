@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b37e39cc-43ca-4c36-a8d5-ed1c5d8563e7" name="Changes" comment="relazione ricalibrata">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ASSIGNMENT_3/out/assignment3_gruppoDJ.aux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ASSIGNMENT_3/out/assignment3_gruppoDJ.fdb_latexmk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ASSIGNMENT_3/out/assignment3_gruppoDJ.fls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ASSIGNMENT_3/out/assignment3_gruppoDJ.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.aux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.fdb_latexmk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.fls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.synctex.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/assignment2_gruppoDJ.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASSIGNMENT_3/Relazione/assignment3_gruppoDJ.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ASSIGNMENT_3/Relazione/assignment3_gruppoDJ.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASSIGNMENT_3/Relazione/relazione.tex" beforeDir="false" afterPath="$PROJECT_DIR$/ASSIGNMENT_3/Relazione/relazione.tex" afterDir="false" />
+    <list default="true" id="b37e39cc-43ca-4c36-a8d5-ed1c5d8563e7" name="Changes" comment="Direi relazione finita. &#10;Il prossimo passo è rimettere gli skip link">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +113,8 @@
     <MESSAGE value="Accessibilità 1.0" />
     <MESSAGE value="Ora si può cliccare anche l'immagine dentro alla pagina cerca" />
     <MESSAGE value="relazione ricalibrata" />
-    <option name="LAST_COMMIT_MESSAGE" value="relazione ricalibrata" />
+    <MESSAGE value="Direi relazione finita. &#10;Il prossimo passo è rimettere gli skip link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Direi relazione finita. &#10;Il prossimo passo è rimettere gli skip link" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
