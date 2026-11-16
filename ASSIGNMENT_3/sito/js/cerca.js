@@ -227,9 +227,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const headerSearch = document.getElementById('header-search');
     const categoryFilters = document.getElementById('category-filters');
 
-    keywordFilter.addEventListener('input', syncSearchInputs);
-    headerSearch.addEventListener('input', syncSearchInputs);
-    categoryFilters.addEventListener('change', filterProjects);
+    if(keywordFilter) 
+        keywordFilter.addEventListener('input', syncSearchInputs);
+    if(headerSearch)
+        headerSearch.addEventListener('input', syncSearchInputs);
+    if(categoryFilters)
+        categoryFilters.addEventListener('change', filterProjects);
 
     const urlParams = new URLSearchParams(window.location.search);
     const initialQuery = urlParams.get('q');
@@ -237,6 +240,7 @@ window.addEventListener('DOMContentLoaded', () => {
         keywordFilter.value = initialQuery;
         headerSearch.value = initialQuery;
     }
-
-    filterProjects();
+    
+    if(keywordFilter)
+        filterProjects();
 });
