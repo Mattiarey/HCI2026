@@ -12,12 +12,12 @@
 
 <header>
     <nav class="navbar" aria-label="Navigazione principale">
-        <a href="index.html" class="logo">🌍 GINGER Lab</a>
+        <a href="index.html" class="logo"><span aria-hidden="true">🌍</span> <span lang="en">GINGER Lab</span></a>
     </nav>
 </header>
 
 <nav class="breadcrumbs-container" aria-label="Breadcrumb">
-    <a id="backlink-project" href="dettaglio-progetto.html">← Torna alla scheda progetto</a>
+    <a id="backlink-project" href="dettaglio-progetto.html"><span aria-hidden="true">←</span> Torna alla scheda progetto</a>
 </nav>
 
 <main id="main-content" style="max-width:700px;">
@@ -41,7 +41,7 @@
 
             <!-- Secondo blocco segnalato (box informativo) -->
             <div style="display: flex; align-items: center; background: #f1f5f9; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; font-size: 0.88rem; width: 100%; max-width: 100%;">
-                <span aria-hidden="true" style="margin-right: 0.5rem;">🔒</span> 
+                <span aria-hidden="true" style="margin-right: 0.5rem;">🔒</span>
                 <div><strong>Donazione Singola Garantita:</strong> Nessuna commissione nascosta o abbonamento ricorrente automatico.</div>
             </div>
 
@@ -49,8 +49,8 @@
             <div class="form-group" style="display: flex; flex-direction: column; width: 100%; max-width: 100%;">
                 <label for="payment-method">Metodo di Pagamento</label>
                 <select autocomplete="off" class="form-control" id="payment-method" style="width: 100%; max-width: 100%;">
-                    <option value="card">Carta di Credito / Debito (Visa, Mastercard)</option>
-                    <option value="satispay">Satispay / Bancomat Pay</option>
+                    <option value="card">Carta di Credito / Debito (<span lang="en">Visa</span>, <span lang="en">Mastercard</span>)</option>
+                    <option value="satispay"><span lang="en">Satispay</span> / <span lang="en">Bancomat Pay</span></option>
                     <option value="transfer">Bonifico Bancario Diretto</option>
                 </select>
             </div>
@@ -71,14 +71,14 @@
         <h2 id="modal-title" style="color:var(--dark-blue); margin-bottom:0.8rem;">Donazione Effettuata con Successo!</h2>
         <p style="color:var(--text-muted); margin-bottom:1.5rem;" id="modal-text">Grazie per aver sostenuto il progetto. Abbiamo inviato il riepilogo e la ricevuta fiscale alla tua email.</p>
         <div style="display:flex; gap:1rem; justify-content:center;">
-            <a href="dashboard.html" class="btn-primary">Vai alla tua Dashboard</a>
-            <a href="index.html" class="btn-outline">Torna alla Home</a>
+            <a href="dashboard.html" class="btn-primary">Vai alla tua <span lang="en">Dashboard</span></a>
+            <a href="index.html" class="btn-outline">Torna alla <span lang="en">Home</span></a>
         </div>
     </div>
 </div>
 
 <footer class="footer-out">
-    <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+    <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto <span lang="en">HCI</span> (Gruppo DJ)</p>
 </footer>
 </body>
 </html>

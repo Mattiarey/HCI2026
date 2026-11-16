@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b37e39cc-43ca-4c36-a8d5-ed1c5d8563e7" name="Changes" comment="Direi relazione finita. &#10;Il prossimo passo è rimettere gli skip link">
+    <list default="true" id="b37e39cc-43ca-4c36-a8d5-ed1c5d8563e7" name="Changes" comment="Rimessi gli skip-link">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASSIGNMENT_3/sito/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ASSIGNMENT_3/sito/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +115,8 @@
     <MESSAGE value="Ora si può cliccare anche l'immagine dentro alla pagina cerca" />
     <MESSAGE value="relazione ricalibrata" />
     <MESSAGE value="Direi relazione finita. &#10;Il prossimo passo è rimettere gli skip link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Direi relazione finita. &#10;Il prossimo passo è rimettere gli skip link" />
+    <MESSAGE value="Rimessi gli skip-link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rimessi gli skip-link" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

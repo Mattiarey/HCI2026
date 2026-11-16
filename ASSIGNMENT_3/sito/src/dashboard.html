@@ -10,7 +10,7 @@
 <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
 <header>
     <nav class="navbar" aria-label="Navigazione principale">
-        <a href="index.html" class="logo">🌍 GINGER Lab</a>
+        <a href="index.html" class="logo"><span aria-hidden="true">🌍</span> <span lang="en">GINGER Lab</span></a>
         <form action="cerca.html" method="GET" class="search-bar-header" role="search" style="position: relative; display: flex; align-items: center;">
             <label for="header-search" class="sr-only">Cerca cause, progetti, partner</label>
             <input type="search" id="header-search" name="q" placeholder="Cerca cause, progetti, partner..." onkeypress="handleHomeSearch(event, this)" style="width: 100%; padding-right: 35px;">
@@ -23,13 +23,13 @@
             <li><a href="lancia-campagna.html">Lancia una Campagna</a></li>
             <li><a href="funzionamento.html">Come Funziona</a></li>
             <li><a href="partner.html">Partner</a></li>
-            <li><a href="#" class="btn-outline-dashboard">Area Riservata</a></li>
+            <li><a href="#" class="btn-outline-dashboard" aria-current="page">Area Riservata</a></li>
         </ul>
     </nav>
 </header>
 
 <nav class="breadcrumbs-container" aria-label="Breadcrumb">
-    <a href="index.html">Home</a> / <strong aria-current="page">Area Riservata Creator</strong>
+    <a href="index.html">Home</a> / <strong aria-current="page">Area Riservata <span lang="en">Creator</span></strong>
 </nav>
 
 <main id="main-content">
@@ -48,61 +48,61 @@
             <li style="flex:1;">
                 <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:black; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">✓</div>
                 <span style="font-size:0.85rem; font-weight:600;">
-                        <span class="sr-only">Completato: Fase </span>1. Bozza Creata
-                    </span>
+                    <span class="sr-only">Completato: Fase </span>1. Bozza Creata
+                </span>
             </li>
             <li style="flex:1;">
                 <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:black; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">✓</div>
                 <span style="font-size:0.85rem; font-weight:600;">
-                        <span class="sr-only">Completato: Fase </span>2. Documenti Inviati
-                    </span>
+                    <span class="sr-only">Completato: Fase </span>2. Documenti Inviati
+                </span>
             </li>
             <li style="flex:1;" aria-current="step">
                 <div style="width:36px; height:36px; border-radius:50%; background:yellow; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">3</div>
                 <span style="font-size:0.85rem; font-weight:600; color:var(--primary-orange);">
-                        <span class="sr-only">Fase corrente: Fase 3. </span>In Revisione (Approvazione entro 24h)
-                    </span>
+                    <span class="sr-only">Fase corrente: Fase 3. </span>In Revisione (Approvazione entro 24h)
+                </span>
             </li>
-            <li style="flex:1;" aria-current="step">
+            <li style="flex:1;">
                 <div style="width:36px; height:36px; border-radius:50%; background:yellow; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">4</div>
                 <span style="font-size:0.85rem; font-weight:600; color:var(--primary-orange);">
-                        <span class="sr-only">Ultima fase: Fase 4. </span>4. Pubblicazione Ufficiale
-                    </span>
+                    <span class="sr-only">Ultima fase: Fase 4. </span>4. Pubblicazione Ufficiale
+                </span>
             </li>
         </ol>
     </div>
 
-<div style="display:grid; grid-template-columns: 2fr 1fr; gap:1.5rem; align-items: stretch;">
-    <div class="card-box" style="display:flex; flex-direction:column;">
-        <h2 style="color:var(--dark-blue); margin-top:0; margin-bottom:1.2rem;">Dati e Contenuto Bozza</h2>
-        <div class="form-group" style="display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1.2rem;">
-            <label for="campaign-title" style="font-weight:600;">Titolo della Campagna</label>
-            <input autocomplete="off" type="text" id="campaign-title" class="form-control" style="width:100%; box-sizing:border-box;" value="Orti Urbani Comunitari - Quartiere Nord">
+    <div style="display:grid; grid-template-columns: 2fr 1fr; gap:1.5rem; align-items: stretch;">
+        <div class="card-box" style="display:flex; flex-direction:column;">
+            <h2 style="color:var(--dark-blue); margin-top:0; margin-bottom:1.2rem;">Dati e Contenuto Bozza</h2>
+            <div class="form-group" style="display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1.2rem;">
+                <label for="campaign-title" style="font-weight:600;">Titolo della Campagna</label>
+                <input autocomplete="off" type="text" id="campaign-title" class="form-control" style="width:100%; box-sizing:border-box;" value="Orti Urbani Comunitari - Quartiere Nord">
+            </div>
+            <div class="form-group" style="display:flex; flex-direction:column; gap:0.4rem; flex:1;">
+                <label for="campaign-desc" style="font-weight:600;">Descrizione della storia</label>
+                <textarea autocomplete="off" id="campaign-desc" class="form-control" rows="3" style="width:100%; box-sizing:border-box; flex:1; resize:none;">Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord...</textarea>
+            </div>
         </div>
-        <div class="form-group" style="display:flex; flex-direction:column; gap:0.4rem; flex:1;">
-            <label for="campaign-desc" style="font-weight:600;">Descrizione della storia</label>
-            <textarea autocomplete="off" id="campaign-desc" class="form-control" rows="3" style="width:100%; box-sizing:border-box; flex:1; resize:none;">Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord...</textarea>
-        </div>
-    </div>
-    <div class="card-box" style="display:flex; flex-direction:column; justify-content:space-between; gap:1.5rem;">
+        <div class="card-box" style="display:flex; flex-direction:column; justify-content:space-between; gap:1.5rem;">
             <div style="display:flex; flex-direction:column; gap:0.8rem;">
-            <h2 style="color:var(--dark-blue); margin-top:0; margin-bottom:0.4rem;">Condividi la tua campagna</h2>
-            <button type="button" class="btn-primary" style="width:100%;">Scarica QR Code Campagna</button>
-            <button type="button" class="btn-secondary" style="width:100%;">Genera Anteprima Social</button>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:0.8rem;">
-            <h2 style="color:var(--dark-blue); margin-top:0; margin-bottom:0.4rem;">Agisci sulla bozza</h2>
-            <button type="button" class="btn-ternary" style="width:100%;">Modifica la tua bozza</button>
-            <button type="button" class="btn-quaternary" style="width:100%;">Elimina la tua bozza</button>
+                <h2 style="color:var(--dark-blue); margin-top:0; margin-bottom:0.4rem;">Condividi la tua campagna</h2>
+                <button type="button" class="btn-primary" style="width:100%;">Scarica <span lang="en">QR Code</span> Campagna</button>
+                <button type="button" class="btn-secondary" style="width:100%;">Genera Anteprima <span lang="en">Social</span></button>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:0.8rem;">
+                <h2 style="color:var(--dark-blue); margin-top:0; margin-bottom:0.4rem;">Agisci sulla bozza</h2>
+                <button type="button" class="btn-ternary" style="width:100%;">Modifica la tua bozza</button>
+                <button type="button" class="btn-quaternary" style="width:100%;">Elimina la tua bozza</button>
+            </div>
         </div>
     </div>
-</div>
 </main>
 
 <footer>
     <div class="footer-content" style="background-color: #0f172a; color: #ffffff;">
         <div>
-            <p style="color: #ffffff; margin-bottom: 0.8rem;">🌍 GINGER Lab</p>
+            <p style="color: #ffffff; margin-bottom: 0.8rem;"><span aria-hidden="true">🌍</span> <span lang="en">GINGER Lab</span></p>
             <p style="color: #e2e8f0;">Piattaforma di crowdfunding etico e sviluppo locale.</p>
         </div>
         <div class="footer-col">
@@ -117,18 +117,18 @@
             <p style="font-weight: bold;">Progettisti</p>
             <ul class="footer-links">
                 <li><a href="lancia-campagna.html">Lancia Campagna</a></li>
-                <li><a href="#">Area Creator</a></li>
+                <li><a href="#">Area <span lang="en">Creator</span></a></li>
             </ul>
         </div>
         <div class="footer-col">
             <p style="font-weight: bold;">Trasparenza</p>
             <ul class="footer-links">
                 <li><a href="#">Condizioni d'Uso</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#" lang="en">Privacy Policy</a></li>
             </ul>
         </div>
     </div>
-    <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+    <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto <span lang="en">HCI</span> (Gruppo DJ)</p>
 </footer>
 </body>
 </html>

@@ -13,7 +13,7 @@
 <header>
     <nav class="navbar" aria-label="Navigazione principale">
         <!-- Logo -->
-        <a href="index.html" class="logo">🌍 GINGER Lab</a>
+        <a href="index.html" class="logo"><span aria-hidden="true">🌍</span> <span lang="en">GINGER Lab</span></a>
 
         <!-- Header Search Bar collegata correttamente a cerca.js -->
         <form action="cerca.html" method="GET" class="search-bar-header" role="search" style="position: relative; display: flex; align-items: center;">
@@ -42,7 +42,7 @@
 <!-- MAIN CONTENT AREA -->
 <main id="main-content">
     <div style="max-width: 1200px; margin: 1.5rem auto 3rem; padding: 0 2rem; width: 100%;">
-        
+
         <!-- INTESTAZIONE CON PULSANTE RIPRISTINA FILTRI A DESTRA -->
         <div style="display: flex; width: 100%; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; gap: 1rem; flex-wrap: wrap;">
             <div>
@@ -56,7 +56,7 @@
 
         <div id="search-feedback" aria-live="polite" aria-atomic="true" class="hidden" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 0.9rem 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
             <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <span id="feedback-icon" style="font-size: 1.2rem;">✨</span>
+                <span id="feedback-icon" style="font-size: 1.2rem;" aria-hidden="true">✨</span>
                 <span id="feedback-text">Analisi della comunità in corso...</span>
             </div>
             <div id="dynamic-pill" style="background: black; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; backdrop-filter: blur(4px); white-space: nowrap;">
@@ -115,8 +115,8 @@
 
             <!-- MAIN PROJECTS GRID -->
             <div>
-                <div 
-                    id="projects-grid" class="grid-projects" aria-live="polite" style="margin-bottom: 0;">
+                <div
+                        id="projects-grid" class="grid-projects" aria-live="polite" style="margin-bottom: 0;">
                 </div>
 
                 <!-- ZERO STATE (No Results - Nascosto di default) -->
@@ -136,7 +136,7 @@
 <footer>
     <div class="footer-content" style="background-color: #0f172a; color: #ffffff;">
         <div>
-            <p style="color: #ffffff; margin-bottom: 0.8rem;">🌍 GINGER Lab</p>
+            <p style="color: #ffffff; margin-bottom: 0.8rem;"><span aria-hidden="true">🌍</span> <span lang="en">GINGER Lab</span></p>
             <p style="color: #e2e8f0;">Piattaforma di crowdfunding etico e sviluppo locale.</p>
         </div>
         <div class="footer-col">
@@ -151,18 +151,18 @@
             <p style="font-weight: bold;">Progettisti</p>
             <ul class="footer-links">
                 <li><a href="lancia-campagna.html">Lancia Campagna</a></li>
-                <li><a href="dashboard.html">Area Creator</a></li>
+                <li><a href="dashboard.html">Area <span lang="en">Creator</span></a></li>
             </ul>
         </div>
         <div class="footer-col">
             <p style="font-weight: bold;">Trasparenza</p>
             <ul class="footer-links">
                 <li><a href="#">Condizioni d'Uso</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#" lang="en">Privacy Policy</a></li>
             </ul>
         </div>
     </div>
-    <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
+    <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto <span lang="en">HCI</span> (Gruppo DJ)</p>
 </footer>
 </body>
 </html>
