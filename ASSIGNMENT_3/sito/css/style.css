@@ -55,13 +55,12 @@ body {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
 }
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 .skip-link {
@@ -176,7 +175,7 @@ header {
 
 @media (min-width: 992px) {
     #layout-grid {
-        grid-template-columns: 280px 1fr !important;
+        grid-template-columns: 280px 1fr;
     }
 }
 
@@ -218,7 +217,7 @@ header {
 /* --- PULSANTI --- */
 .btn-primary {
     background-color: var(--primary-green);
-    color: white !important;
+    color: white;
     padding: 0.55rem 1.2rem;
     border-radius: 6px;
     text-decoration: none;
@@ -238,7 +237,7 @@ header {
 
 .btn-secondary {
     background-color: var(--dark-blue);
-    color: white !important;
+    color: white;
     padding: 0.55rem 1.2rem;
     border-radius: 6px;
     text-decoration: none;
@@ -255,7 +254,7 @@ header {
 
 .btn-ternary {
     background-color: var(--dark-blue);
-    color: white !important;
+    color: white;
     padding: 0.55rem 1.2rem;
     border-radius: 6px;
     text-decoration: none;
@@ -275,7 +274,7 @@ header {
 
 .btn-quaternary  {
     background-color: var(--delete-red);
-    color: white !important;
+    color: white;
     padding: 0.55rem 1.2rem;
     border-radius: 6px;
     text-decoration: none;
@@ -576,30 +575,10 @@ main {
     transition: transform 0.3s ease;
 }
 
-
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bg-light);
-}
-
-main {
-    flex: 1 0 auto;
-}
-        
-footer {
-    flex-shrink: 0;
-    margin-top: auto;
-    background-color: #0f172a;
-    color: #94a3b8;
-    padding: 3rem 2rem 1.5rem;
-    border-top: 1px solid #1e293b;
 }
 
 .explore-layout {
