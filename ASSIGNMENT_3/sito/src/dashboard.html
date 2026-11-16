@@ -45,25 +45,25 @@
     <div class="card-box">
         <h2 style="color:var(--dark-blue); margin-bottom:1.2rem;">Stato di Avanzamento della Pratica</h2>
         <ol style="display:flex; justify-content:space-between; position:relative; list-style:none; padding:0; margin:0;">
-            <li style="text-align:center; flex:1;">
+            <li style="flex:1;">
                 <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:black; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">✓</div>
                 <span style="font-size:0.85rem; font-weight:600;">
                         <span class="sr-only">Completato: Fase </span>1. Bozza Creata
                     </span>
             </li>
-            <li style="text-align:center; flex:1;">
+            <li style="flex:1;">
                 <div style="width:36px; height:36px; border-radius:50%; background:var(--success-green); color:black; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">✓</div>
                 <span style="font-size:0.85rem; font-weight:600;">
                         <span class="sr-only">Completato: Fase </span>2. Documenti Inviati
                     </span>
             </li>
-            <li style="text-align:center; flex:1;" aria-current="step">
+            <li style="flex:1;" aria-current="step">
                 <div style="width:36px; height:36px; border-radius:50%; background:yellow; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">3</div>
                 <span style="font-size:0.85rem; font-weight:600; color:var(--primary-orange);">
                         <span class="sr-only">Fase corrente: Fase 3. </span>In Revisione (Approvazione entro 24h)
                     </span>
             </li>
-            <li style="text-align:center; flex:1;" aria-current="step">
+            <li style="flex:1;" aria-current="step">
                 <div style="width:36px; height:36px; border-radius:50%; background:yellow; display:flex; align-items:center; justify-content:center; margin:0 auto 0.5rem; font-weight:bold;" aria-hidden="true">4</div>
                 <span style="font-size:0.85rem; font-weight:600; color:var(--primary-orange);">
                         <span class="sr-only">Ultima fase: Fase 4. </span>4. Pubblicazione Ufficiale
@@ -77,11 +77,11 @@
         <h2 style="color:var(--dark-blue); margin-top:0; margin-bottom:1.2rem;">Dati e Contenuto Bozza</h2>
         <div class="form-group" style="display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1.2rem;">
             <label for="campaign-title" style="font-weight:600;">Titolo della Campagna</label>
-            <input readonly type="text" id="campaign-title" class="form-control" style="width:100%; box-sizing:border-box;" value="Orti Urbani Comunitari - Quartiere Nord">
+            <input autocomplete="off" type="text" id="campaign-title" class="form-control" style="width:100%; box-sizing:border-box;" value="Orti Urbani Comunitari - Quartiere Nord">
         </div>
         <div class="form-group" style="display:flex; flex-direction:column; gap:0.4rem; flex:1;">
             <label for="campaign-desc" style="font-weight:600;">Descrizione della storia</label>
-            <textarea readonly id="campaign-desc" class="form-control" rows="3" style="width:100%; box-sizing:border-box; flex:1; resize:none;">Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord...</textarea>
+            <textarea autocomplete="off" id="campaign-desc" class="form-control" rows="3" style="width:100%; box-sizing:border-box; flex:1; resize:none;">Vogliamo riqualificare un'area abbandonata di 1.200 mq nel Quartiere Nord...</textarea>
         </div>
     </div>
     <div class="card-box" style="display:flex; flex-direction:column; justify-content:space-between; gap:1.5rem;">
@@ -100,6 +100,34 @@
 </main>
 
 <footer>
+    <div class="footer-content" style="background-color: #0f172a; color: #ffffff;">
+        <div>
+            <p style="color: #ffffff; margin-bottom: 0.8rem;">🌍 GINGER Lab</p>
+            <p style="color: #e2e8f0;">Piattaforma di crowdfunding etico e sviluppo locale.</p>
+        </div>
+        <div class="footer-col">
+            <p style="font-weight: bold;">Esplora</p>
+            <ul class="footer-links">
+                <li><a href="cerca.html">Tutti i Progetti</a></li>
+                <li><a href="partner.html">I Nostri Partner</a></li>
+                <li><a href="funzionamento.html">Come Funziona</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p style="font-weight: bold;">Progettisti</p>
+            <ul class="footer-links">
+                <li><a href="lancia-campagna.html">Lancia Campagna</a></li>
+                <li><a href="dashboard.html">Area Creator</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p style="font-weight: bold;">Trasparenza</p>
+            <ul class="footer-links">
+                <li><a href="#">Condizioni d'Uso</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
     <p class="copyright">&copy; 2026 Università degli Studi di Torino - Progetto HCI (Gruppo DJ)</p>
 </footer>
 </body>

@@ -4,14 +4,14 @@ function handleCampaign(event) {
     const budget = document.getElementById('p-budget').value;
     let isValid = true;
 
-    if(!title) {
+    if(!title){
         document.getElementById('title-group').classList.add('error');
         isValid = false;
     } 
     else 
         document.getElementById('title-group').classList.remove('error');
 
-    if(!budget || budget < 100) {
+    if(!budget || budget < 100){
         document.getElementById('budget-group').classList.add('error');
         isValid = false;
     } 

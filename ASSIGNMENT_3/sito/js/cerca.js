@@ -120,11 +120,10 @@ function renderProjects(projects) {
 
     feedbackBanner.classList.remove('hidden');
 
-    if (projects.length === 0) {
+    if(projects.length === 0) {
         grid.classList.add('hidden');
         noResults.classList.remove('hidden');
         
-        // Stile "ristretto" e di attenzione quando non ci sono riscontri
         feedbackBanner.style.background = "linear-gradient(135deg, #991b1b 0%, #ef4444 100%)";
         feedbackIcon.textContent = "🛡️";
         feedbackText.innerHTML = `Nessuna corrispondenza esatta trovata. Espandi i filtri per scoprire altre iniziative.`;
@@ -136,13 +135,15 @@ function renderProjects(projects) {
 
     feedbackBanner.style.background = "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)";
     
-    if (projects.length === 8) {
+    if(projects.length === 8) {
         feedbackIcon.textContent = "🌍";
         feedbackText.innerHTML = `<strong>Tutte le voci del cambiamento:</strong> l'intera rete civica di GINGER Lab è pronta a farsi sostenere.`;
-    } else if (projects.length >= 4) {
+    } 
+    else if(projects.length >= 4) {
         feedbackIcon.textContent = "💡";
         feedbackText.innerHTML = `<strong>Fermmento sul territorio:</strong> trovate diverse iniziative allineate con le tue passioni.`;
-    } else {
+    } 
+    else {
         feedbackIcon.textContent = "🎯";
         feedbackText.innerHTML = `<strong>Scelta mirata:</strong> poche iniziative selezionate per un impatto immediato e focalizzato.`;
     }
@@ -232,7 +233,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const urlParams = new URLSearchParams(window.location.search);
     const initialQuery = urlParams.get('q');
-    if (initialQuery) {
+    if(initialQuery) {
         keywordFilter.value = initialQuery;
         headerSearch.value = initialQuery;
     }

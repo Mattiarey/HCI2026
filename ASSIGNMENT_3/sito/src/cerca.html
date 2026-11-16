@@ -108,19 +108,19 @@
                 </fieldset>
 
                 <!-- Action Button -->
-                <button onclick="resetFilters()" class="btn-outline" style="width: 100%; text-align: center; font-size: 0.8rem;" aria-controls="projects-grid category-filters keyword-filter">
+                <button onclick="resetFilters()" class="btn-outline" style="width: 100%; font-size: 0.8rem;" aria-controls="projects-grid category-filters keyword-filter">
                     Azzera Selezione
                 </button>
             </aside>
 
             <!-- MAIN PROJECTS GRID -->
             <div>
-                <div id="projects-grid" class="grid-projects" aria-live="polite" style="margin-bottom: 0;">
-                    <!-- Project Cards render dynamic via JS -->
+                <div 
+                    id="projects-grid" class="grid-projects" aria-live="polite" style="margin-bottom: 0;">
                 </div>
 
                 <!-- ZERO STATE (No Results - Nascosto di default) -->
-                <div id="no-results" class="card-box hidden" style="text-align: center; padding: 3rem 2rem; margin-bottom: 0;" role="alert">
+                <div id="no-results" class="card-box hidden" style="padding: 3rem 2rem; margin-bottom: 0;" role="alert">
                     <div style="font-size: 3rem; margin-bottom: 1rem;" aria-hidden="true">📭</div>
                     <p style="font-size: 1.25rem; font-weight: bold; color: var(--dark-blue); margin-bottom: 0.5rem;">Nessun progetto corrisponde ai criteri</p>
                     <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 400px; margin: 0 auto 1.5rem auto;">Prova a modificare i termini di ricerca o ad abilitare altre categorie di progetti.</p>
@@ -134,10 +134,10 @@
 </main>
 
 <footer>
-    <div class="footer-content">
+    <div class="footer-content" style="background-color: #0f172a; color: #ffffff;">
         <div>
-            <p style="color:royalblue; margin-bottom:0.8rem;">🌍 GINGER Lab</p>
-            <p>Piattaforma di crowdfunding etico e sviluppo locale.</p>
+            <p style="color: #ffffff; margin-bottom: 0.8rem;">🌍 GINGER Lab</p>
+            <p style="color: #e2e8f0;">Piattaforma di crowdfunding etico e sviluppo locale.</p>
         </div>
         <div class="footer-col">
             <p style="font-weight: bold;">Esplora</p>

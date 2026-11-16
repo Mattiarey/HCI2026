@@ -472,6 +472,12 @@ main {
 }
 
 /* --- UTILITIES, FORMS & MODALS --- */
+.main-box {
+    padding: 0 2rem 2rem 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 .card-box {
     background: white;
     padding: 2rem;
@@ -479,6 +485,25 @@ main {
     border: 1px solid var(--gray-border);
     box-shadow: var(--card-shadow);
     margin-bottom: 1.5rem;
+}
+
+.faq-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--gray-border);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+}
+
+.partner-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--gray-border);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .form-group {

@@ -22,28 +22,33 @@ function handleDonation(event) {
 
 function setProject(val) {
     const el = document.getElementById('breadcrumb-title');
-    if (el) {
+    if(el) 
         el.textContent = val;
-    }
+}
+
+function setHref(val) {
+    const link = document.getElementById('backlink-project');
+    if(link) 
+        link.href = "dettaglio-progetto.html?id=" + val;
 }
 
 window.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const titoloUrl = urlParams.get('title') || urlParams.get('progetto');
+    const id = urlParams.get('id');
 
-    if (titoloUrl) {
+    if(titoloUrl) {
         setProject(decodeURIComponent(titoloUrl));
-    } else {
-        // Fallback di default se nessun parametro è presente
+        setHref(id);
+    } 
+    else 
         setProject("Orti Urbani Comunitari - Quartiere Nord");
-    }
 });
 
 function handleHomeSearch(event) {
-    if (event.key === 'Enter') {
+    if(event.key === 'Enter') {
         const query = event.target.value.trim();
-        if (query) {
+        if(query) 
             window.location.href = `cerca.html?q=${encodeURIComponent(query)}`;
-        }
     }
 }
