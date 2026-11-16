@@ -16,7 +16,11 @@ function handleDonation(event) {
     document.getElementById('amount-group').classList.remove('error');
 
     const projectName = document.getElementById('breadcrumb-title').textContent || 'il progetto selezionato';
-    document.getElementById('modal-text').innerHTML = `Hai donato con successo <strong>${amt} €</strong> al progetto ${projectName}. La ricevuta fiscale PDF è pronta.`;
+    richiesta_ricevuta = document.querySelector('#tax-receipt').checked;
+    if(richiesta_ricevuta)
+        document.getElementById('modal-text').innerHTML = `Hai donato con successo <strong>${amt} €</strong> al progetto ${projectName}. La ricevuta fiscale PDF è pronta.`;
+    else
+        document.getElementById('modal-text').innerHTML = `Hai donato con successo <strong>${amt} €</strong> al progetto ${projectName}.`;
     document.getElementById('success-modal').classList.add('active');
 }
 
