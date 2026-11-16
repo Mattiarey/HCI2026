@@ -135,11 +135,11 @@ function renderProjects(projects) {
 
     feedbackBanner.style.background = "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)";
     
-    if(projects.length === 8) {
+    if(projects.length === allProjects.length) {
         feedbackIcon.textContent = "🌍";
-        feedbackText.innerHTML = `<strong>Tutte le voci del cambiamento:</strong> l'intera rete civica di GINGER Lab è pronta a farsi sostenere.`;
+        feedbackText.innerHTML = `<strong>Tutte le voci del cambiamento:</strong> l'intera rete civica di <span lang="en">GINGER Lab</span> è pronta a farsi sostenere.`;
     } 
-    else if(projects.length >= 4) {
+    else if(projects.length >= (allProjects.length / 2)) {
         feedbackIcon.textContent = "💡";
         feedbackText.innerHTML = `<strong>Fermmento sul territorio:</strong> trovate diverse iniziative allineate con le tue passioni.`;
     } 
