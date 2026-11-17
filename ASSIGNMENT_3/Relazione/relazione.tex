@@ -5,9 +5,19 @@
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
 \usepackage{longtable}
+\usepackage{array}
+\usepackage{titlesec}
+
 % Pacchetti per layout e margini
 \usepackage{geometry}
 \geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+\titleformat{\paragraph}[block]
+{\normalfont\normalsize\bfseries}
+{}{0pt}{}
+
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1ex}  
 
 % Pacchetti per tabelle migliorate e grafica
 \usepackage{tabularx}
@@ -37,7 +47,15 @@
 
 
 \small
-\begin{longtable}{|p{3.3cm}|p{3cm}|p{4.8cm}|p{2.3cm}|}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\LTleft}{0pt plus 1fill}
+\setlength{\LTright}{0pt plus 1fill}
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{3.1cm}|
+>{\raggedright\arraybackslash}p{4.5cm}|
+>{\raggedright\arraybackslash}p{5.5cm}|
+>{\raggedright\arraybackslash}p{2.5cm}|}
 \caption{Riepilogo degli errori rilevati dai validatori automatici e degli interventi correttivi.}
 \label{tab:errori-accessibilita} \\
 \hline
@@ -66,15 +84,14 @@ Contenuti non testuali privi di alternativa o decorativi non filtrati (WCAG 1.1.
 \hline
 Informazioni veicolate dal solo colore (WCAG 1.4.1) & Barre di avanzamento fondi (\texttt{index.html}, \texttt{dettaglio-progetto.html}) e voci attive dei menu di navigazione. & Aggiunta del ruolo \texttt{role="progressbar"} con attributi \texttt{aria-valuenow/min/max} sulle barre e inserimento di \texttt{aria-current="page"} sui link attivi. & Risolto \\
 \hline
-Contrasto cromatico insufficiente e indicatore di focus rimosso (WCAG 1.4.3, 1.4.11, 2.4.7) & Pulsanti primari, link secondari e campi \texttt{<input>} con regola \texttt{outline: none} in \texttt{style.css}. & Adeguamento della palette colori per garantire un rapporto di contrasto $\ge 4,5:1$ e ripristino di un contorno ad alto contrasto sullo stato \texttt{:focus}. & Risolto \\
+Contrasto cromatico insufficiente e indicatore di focus rimosso (WCAG 1.4.3, 1.4.11, 2.4.7) & Pulsanti primari, link secondari e campi \texttt{<input>} con regola \texttt{outline: none} in \texttt{style.css}. & Adeguamento della palette colori per garantire un rapporto di contrasto $\ge 7:1$ e ripristino di un contorno ad alto contrasto sullo stato \texttt{:focus}. & Risolto \\
 \hline
-Mancata identificazione dello scopo dei campi e regioni dinamiche mute (WCAG 1.3.5, 4.1.2) & Campi di input utente, contatore risultati in \texttt{cerca.html} e modali di conferma (\texttt{checkout.html}, \texttt{lancia-campagna.html}). & Inserimento dell'attributo \texttt{autocomplete} nei campi pertinenti; aggiunta di \texttt{aria-live="polite"} sulle aree dinamiche e \texttt{role="dialog"} sulle modali. & Parzialmente risolto \\
+Mancata identificazione dello scopo dei campi e regioni dinamiche mute (WCAG 1.3.5, 4.1.2) & Campi di input utente, contatore risultati in \texttt{cerca.html} e modali di conferma (\texttt{checkout.html}, \texttt{lancia-campagna.html}). & Inserimento dell'attributo \texttt{autocomplete} nei campi pertinenti; aggiunta di \texttt{aria-live="polite"} sulle aree dinamiche e \texttt{role="dialog"} sulle modali. & Risolto \\
 \end{longtable}
 \normalsize
 
-
     \section{Aggiunte per garantire l'accessibilità}
-    A lezione abbiamo visto diversi tag e diverse pratiche che se implementate permettono agli utenti con disabilità di accedere al sito in maniera più semplice, fluida e veloce: favorendo le tecnologie assistive e la navigazione da tastiera.  Questi problemi abbiamo notato che non vengono tutti mostrati dai validatori automatici, quindi queste aggiunte sono state fatte per la maggior parte grazie a un'analisi manuale.
+    A lezione abbiamo visto diversi tag e pratiche che se implementate permettono agli utenti con disabilità di accedere al sito in maniera più semplice, fluida e veloce: favorendo le tecnologie assistive e la navigazione da tastiera. Abbiamo però riscontrato che le verifiche automatiche non evidenziano eventuali lacune di questo tipo, queste aggiunte sono quindi state fatte principalmente grazie a un'analisi manuale.
 
     Un primo esempio degli accorgimenti che abbiamo avuto è stato sostituire i contenitori generici (\texttt{<div>}) con i tag appropriati al ruolo che devono svolgere: ad esempio il tag \texttt{<nav>} per la navigazione principale e i \texttt{breadcrumbs}, \texttt{<form role="search">} per la barra di ricerca e le liste (\texttt{<ul>}, \texttt{<ol>}) per raggruppare schede e passaggi sequenziali.
 
@@ -83,20 +100,25 @@ Mancata identificazione dello scopo dei campi e regioni dinamiche mute (WCAG 1.3
     Alle immagini importanti è stato assegnato un \texttt{alt} significativo e le icone e le emoji sono state escluse dalla lettura scrivendo \texttt{aria-hidden="true"}.
 
     Oppure anche semplicemente introdurre un \texttt{alt} significativo per le immagini importanti e usare i tag giusti per i compiti giusti (ad esempio il tag \texttt{nav} per indicare i breadcrumbs al posto di un più classico tag \texttt{div}).
+
     \paragraph{Navigazione da tastiera}
+    \par
     Abbiamo inserito uno \texttt{skip-link} in cima a ogni pagina, visibile al riceversi del focus, per consentire agli utenti che navigano da tastiera di saltare i blocchi ripetitivi dell'intestazione e accedere direttamente al contenuto principale.
 
     Abbiamo anche rimosso i vincoli di larghezza fissa nel meta-tag \texttt{viewport} per garantire che lo zoom fino al $200\%$ non generi scorrimenti orizzontali o sovrapposizioni.
 
     \paragraph{Coerenza dei tag}
+    \par
     Abbiamo riorganizzato i tag di intestazione (\texttt{<h1>}--\texttt{<h3>}) affinché rispettino una rigorosa struttura ad albero sensata (a differenza di prima): questo permette agli screen reader di generare un indice navigabile del documento, consentendo all'utente di spostarsi rapidamente tra le sezioni usando solo la tastiera.
 
     Per i componenti interattivi abbiamo introdotto degli attributi specifici come i ruoli (ad esempio \texttt{role="progressbar"} e \texttt{role="dialog"}) e per le parti dinamiche abbiamo usato l'attributo \texttt{aria-live}.
 
     \paragraph{Link intelligenti}
+    \par
     Abbiamo modificato i link dei footer e della barra di navigazione per fare in modo che se un link fa riferimento alla medesima pagina in cui è contenuto, alla sua pressione si viene portati alla cima della pagina e non c'è un ricaricamento completo della stessa
 
     \paragraph{Accessibilità per non vedenti}
+    \par
     Abbiamo specificato, dove necessario, la presenza della lingua inglese per rendere più user-friendly il sito nei confronti delle persone non vedenti che usano tool come NVDA
 
 \end{document}
