@@ -46,8 +46,8 @@
         <!-- INTESTAZIONE CON PULSANTE RIPRISTINA FILTRI A DESTRA -->
         <div style="display: flex; width: 100%; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; gap: 1rem; flex-wrap: wrap;">
             <div>
-                <p style="font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); line-height: 1.2;">Esplora e Filtra le Campagne</p>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">Sostieni le iniziative della comunità o trova partner sul territorio.</p>
+                <h1 style="font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); line-height: 1.2;">Esplora e Filtra le Campagne</h1>
+                <h2 style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">Sostieni le iniziative della comunità o trova partner sul territorio.</h2>
             </div>
             <button onclick="resetFilters()" class="btn-outline" style="font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer; white-space: nowrap;" aria-controls="projects-grid category-filters keyword-filter">
                 <span aria-hidden="true">🔄</span> Ripristina Filtri
@@ -115,9 +115,7 @@
 
             <!-- MAIN PROJECTS GRID -->
             <div>
-                <div
-                        id="projects-grid" class="grid-projects" aria-live="polite" style="margin-bottom: 0;">
-                </div>
+                <div id="projects-grid" class="grid-projects" aria-live="polite" style="margin-bottom: 0;"></div>
 
                 <!-- ZERO STATE (No Results - Nascosto di default) -->
                 <div id="no-results" class="partner-box" style="padding: 3rem 2rem; margin-bottom: 0;" role="alert">
