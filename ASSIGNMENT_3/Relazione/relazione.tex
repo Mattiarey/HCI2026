@@ -7,6 +7,9 @@
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{titlesec}
+\usepackage{anyfontsize}
+
+\fontsize{10.5pt}{12.5pt}\selectfont
 
 % Pacchetti per layout e margini
 \usepackage{geometry}
@@ -41,9 +44,16 @@
 
     \section{Errori riscontrati con gli strumenti}
 
-    Per verificare oggettivamente il livello di conformità del prototipo alle linee guida  abbiamo sottoposto tutte le pagine dell'applicazione all'analisi automatica tramite i validatori previsti dalla consegna.
+    Per verificare oggettivamente il livello di conformità del prototipo alle linee guida abbiamo sottoposto tutte le pagine dell'applicazione all'analisi automatica tramite i validatori previsti dalla consegna.
 
-    I report iniziali hanno evidenziato diverse criticità ricorrenti, raggruppabili in quattro macro-categorie: assenza di etichette nei controlli dei moduli, errori nella gerarchia delle intestazioni, mancanza di alternative testuali per i contenuti non testuali e problemi di contrasto visivo o visibilità del focus. La Tabella~\ref{tab:errori-accessibilita} riassume le tipologie di errore individuate, gli interventi correttivi applicati e l'esito della seconda verifica effettuata post-intervento.
+\noindent I report iniziali hanno evidenziato diverse criticità ricorrenti, raggruppabili in quattro macro-categorie:
+\begin{itemize}
+    \item Assenza di etichette nei controlli dei moduli
+    \item Errori nella gerarchia delle intestazioni
+    \item Mancanza di alternative testuali per i contenuti non testuali
+    \item Problemi di contrasto visivo o visibilità del focus
+\end{itemize}
+\noindent La Tabella riassume le tipologie di errore individuate dai validatori automatici, gli interventi correttivi applicati e l'esito della seconda verifica effettuata post-intervento.
 
 
 \small
@@ -56,21 +66,15 @@
 >{\raggedright\arraybackslash}p{4.5cm}|
 >{\raggedright\arraybackslash}p{5.5cm}|
 >{\raggedright\arraybackslash}p{2.5cm}|}
-\caption{Riepilogo degli errori rilevati dai validatori automatici e degli interventi correttivi.}
-\label{tab:errori-accessibilita} \\
 \hline
 \textbf{Problema rilevato} & \textbf{Pagine o elementi interessati} & \textbf{Correzione effettuata} & \textbf{Esito della nuova verifica} \\
 \hline
 \endfirsthead
 
-\multicolumn{4}{c}{\textit{(Continua dalla pagina precedente)}} \\
-\hline
 \textbf{Problema rilevato} & \textbf{Pagine o elementi interessati} & \textbf{Correzione effettuata} & \textbf{Esito della nuova verifica} \\
 \hline
 \endhead
 
-\hline
-\multicolumn{4}{r}{\textit{(Continua nella pagina successiva)}} \\
 \endfoot
 
 \hline
